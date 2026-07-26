@@ -1,0 +1,208 @@
+{
+  "cities": {
+    "Oradea": {
+      "x": 196.8,
+      "y": 89.1
+    },
+    "Neamt": {
+      "x": 494.0,
+      "y": 126.0
+    },
+    "Zerind": {
+      "x": 172.8,
+      "y": 131.7
+    },
+    "Iasi": {
+      "x": 567.2,
+      "y": 159.0
+    },
+    "Arad": {
+      "x": 154.2,
+      "y": 174.6
+    },
+    "Sibiu": {
+      "x": 280.2,
+      "y": 210.3
+    },
+    "Fagaras": {
+      "x": 387.0,
+      "y": 220.5
+    },
+    "Vaslui": {
+      "x": 605.6,
+      "y": 225.6
+    },
+    "Rimnicu Vilcea": {
+      "x": 307.5,
+      "y": 262.8
+    },
+    "Timisoara": {
+      "x": 157.5,
+      "y": 262.8
+    },
+    "Pitesti": {
+      "x": 402.2,
+      "y": 309.0
+    },
+    "Urziceni": {
+      "x": 548.9,
+      "y": 327.3
+    },
+    "Hirsova": {
+      "x": 630.8,
+      "y": 327.3
+    },
+    "Lugoj": {
+      "x": 235.2,
+      "y": 297.0
+    },
+    "Mehadia": {
+      "x": 237.0,
+      "y": 339.0
+    },
+    "Bucharest": {
+      "x": 488.3,
+      "y": 351.6
+    },
+    "Drobeta": {
+      "x": 235.2,
+      "y": 382.5
+    },
+    "Craiova": {
+      "x": 327.6,
+      "y": 394.8
+    },
+    "Giurgiu": {
+      "x": 460.1,
+      "y": 412.7
+    },
+    "Eforie": {
+      "x": 662.3,
+      "y": 388.5
+    }
+  },
+  "edges": [
+    {
+      "from": "Oradea",
+      "to": "Zerind",
+      "cost": 71
+    },
+    {
+      "from": "Oradea",
+      "to": "Sibiu",
+      "cost": 151
+    },
+    {
+      "from": "Zerind",
+      "to": "Arad",
+      "cost": 75
+    },
+    {
+      "from": "Arad",
+      "to": "Sibiu",
+      "cost": 140
+    },
+    {
+      "from": "Arad",
+      "to": "Timisoara",
+      "cost": 118
+    },
+    {
+      "from": "Timisoara",
+      "to": "Lugoj",
+      "cost": 111
+    },
+    {
+      "from": "Lugoj",
+      "to": "Mehadia",
+      "cost": 70
+    },
+    {
+      "from": "Mehadia",
+      "to": "Drobeta",
+      "cost": 75
+    },
+    {
+      "from": "Drobeta",
+      "to": "Craiova",
+      "cost": 120
+    },
+    {
+      "from": "Craiova",
+      "to": "Rimnicu Vilcea",
+      "cost": 146
+    },
+    {
+      "from": "Craiova",
+      "to": "Pitesti",
+      "cost": 138
+    },
+    {
+      "from": "Sibiu",
+      "to": "Fagaras",
+      "cost": 99
+    },
+    {
+      "from": "Sibiu",
+      "to": "Rimnicu Vilcea",
+      "cost": 80
+    },
+    {
+      "from": "Rimnicu Vilcea",
+      "to": "Pitesti",
+      "cost": 97
+    },
+    {
+      "from": "Fagaras",
+      "to": "Bucharest",
+      "cost": 211
+    },
+    {
+      "from": "Pitesti",
+      "to": "Bucharest",
+      "cost": 101
+    },
+    {
+      "from": "Bucharest",
+      "to": "Giurgiu",
+      "cost": 90
+    },
+    {
+      "from": "Bucharest",
+      "to": "Urziceni",
+      "cost": 85
+    },
+    {
+      "from": "Urziceni",
+      "to": "Hirsova",
+      "cost": 98
+    },
+    {
+      "from": "Urziceni",
+      "to": "Vaslui",
+      "cost": 142
+    },
+    {
+      "from": "Hirsova",
+      "to": "Eforie",
+      "cost": 86
+    },
+    {
+      "from": "Vaslui",
+      "to": "Iasi",
+      "cost": 92
+    },
+    {
+      "from": "Iasi",
+      "to": "Neamt",
+      "cost": 87
+    }
+  ],
+  "meta": {
+    "source": "Pixel coordinates extracted from the assignment PDF map image via image processing (blob detection) + OCR label matching. Edge costs are the numbers printed on the map. No GPS or external distance data used.",
+    "viewbox": {
+      "width": 800,
+      "height": 450
+    }
+  }
+}
