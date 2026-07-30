@@ -16,23 +16,24 @@ updated: 2026-07-24
 
 | Due          | Assignment                                     | Course  | Weight | Status |
 | ------------ | ---------------------------------------------- | ------- | ------ | ------ |
-| Aug 3, 2026  | UX/UI Wk3: Market Comparison (group)           | UX/UI   | 10 pts | ⬜      |
-| Aug 3, 2026  | UX/UI Wk4: User Journey Map (group)            | UX/UI   | —      | ⬜      |
+| Aug 3, 2026  | UX/UI Wk3: Market Comparison (group)           | UX/UI   | 10 pts | 🔄     |
+| Aug 3, 2026  | UX/UI Wk4: User Journey Map (group)            | UX/UI   | —      | 🔄     |
 | Aug 6, 2026  | OS Case Study — Group Registration             | OS      | —      | ⬜      |
-| Aug 6, 2026  | OS Homework 1–4                                | OS      | —      | ⬜      |
-| Aug 13, 2026 | Report No. 1: Bonds/Debentures                 | Finance | 20 pts | ⬜      |
+| Aug 6, 2026  | OS Homework 1–4                                | OS      | —      | ✅      |
+| Aug 13, 2026 | Report No. 1: Bonds/Debentures                 | Finance | 20 pts | 🔄     |
 | Sep 7, 2026  | UX/UI: UI Hunt — Unusual Screens (individual)  | UX/UI   | 6 pts  | ⬜      |
 | Done         | RTW A1: Foundation Knowledge for New Graduates | RTW     | —      | ✅      |
 | Done         | RTW A2: Labour Law and Social Insurance Fund   | RTW     | —      | ✅      |
 | Done         | RTW Unit 3: Case Study — Corporate Culture     | RTW     | —      | ✅      |
 | Done         | RTW Unit 3: Which Company Most Attractive?     | RTW     | —      | ✅      |
 | Oct 13, 2026 | AI Romania-Map Pathfinding Web App             | AI      | 50%    | 🔄     |
+| Done         | RTW Unit 5: IKAIGI                             | RTW     | —      | ✅      |
 
 ---
 
 ## Details
 
-### ⬜ UX/UI Wk3 — Market Comparison `Aug 3` · 10 pts
+### 🔄 UX/UI Wk3 — Market Comparison `Aug 3` · 10 pts
 
 Group. See [[uxui-week3-market-comparison]] for full brief and rubric.
 

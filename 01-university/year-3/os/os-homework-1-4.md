@@ -11,7 +11,7 @@ All due: **Aug 6, 2026, 11:59 PM**
 
 ---
 
-## HW1 — Device Interrupts
+## ✅ HW1 — Device Interrupts
 
 Do you have any ideas about how device interrupts work?
 
@@ -24,7 +24,7 @@ Do you have any ideas about how device interrupts work?
 
 ---
 
-## HW2 — User Stack
+## ✅ HW2 — User Stack
 
 Why can't we just use the user stack?
 

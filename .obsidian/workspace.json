@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "fe02ad48bead29b8",
+        "id": "93acbf5c70f0677b",
         "type": "tabs",
         "children": [
           {
-            "id": "8d25bae868f24b82",
+            "id": "5f9c6a32e5059b2f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "01-university/assignments-tracker.md",
-                "mode": "source",
-                "source": false
+                "file": "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images/wallet-service-state-macghine.png"
               },
-              "icon": "lucide-file",
-              "title": "assignments-tracker"
+              "icon": "lucide-image",
+              "title": "wallet-service-state-macghine"
             }
           }
         ]
@@ -78,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 387.5
+    "width": 203.5
   },
   "right": {
     "id": "d564aeacb742aa70",
@@ -94,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05-ai/ai-vault-plan.md",
+                "file": "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images/wallet-service-state-macghine.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ai-vault-plan"
+              "title": "Backlinks for wallet-service-state-macghine"
             }
           },
           {
@@ -113,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05-ai/ai-vault-plan.md",
+                "file": "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images/wallet-service-state-macghine.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from ai-vault-plan"
+              "title": "Outgoing links from wallet-service-state-macghine"
             }
           },
           {
@@ -156,21 +154,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05-ai/ai-vault-plan.md",
+                "file": "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images/wallet-service-state-macghine.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ai-vault-plan"
+              "title": "Outline of wallet-service-state-macghine"
+            }
+          },
+          {
+            "id": "97baa4c34c9a5e6e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,48 +188,57 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d25bae868f24b82",
+  "active": "5f9c6a32e5059b2f",
   "lastOpenFiles": [
-    "01-university/year-3/rtw/rtw-unit3-corporate-culture.md",
-    "01-university/year-3/rtw/rtw-a2-labour-law.md",
-    "01-university/year-3/rtw/rtw-a1-foundation-knowledge.md",
-    "01-university/year-3/os/os-case-study-1-2.md",
-    "01-university/courses/cei-study-plan.md",
-    "01-university/courses/semester-schedule-2026.md",
-    "01-university/year-3/uxui/uxui-week3-market-comparison.md",
+    "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/images/wal-optimization.png",
+    "05-ai/projects/nacl-nextpath-x/session-state.md",
+    "05-ai/projects/nacl-nextpath-x/edit-log.md",
     "01-university/assignments-tracker.md",
-    "01-university/year-3/finance/finance-bonds-debentures-report.md",
     "01-university/year-3/os/os-homework-1-4.md",
-    "05-ai/projects/drunkbill/session-state.md",
-    "01-university/year-3/rtw",
-    "01-university/year-3/uxui/uxui-week4-user-journey-map.md",
-    "01-university/year-3/uxui/uxui-ui-hunt.md",
-    "01-university/regulations/cei-regulations-summary.md",
-    "01-university/internship/Leave of Absence Form 16 July.pdf",
-    "01-university/internship/internship-diary.md",
-    "01-university/internship/67011178_Internship_Report.pdf",
-    "06-nacl-kmitl/lab-setup/601-lab-layout.png",
-    "01-university/year-3/os",
-    "01-university/year-3/uxui",
-    "01-university/year-3/os-case-study-1-2.md",
-    "01-university/year-3/finance",
-    "01-university/year-3",
-    "01-university/year-4",
-    "01-university/year-2",
-    "01-university/year-1",
-    "05-ai/ai-vault-plan.md",
-    "01-university/assignments/finance/finance-bonds-debentures-report.md",
-    "01-university/assignments/uxui/uxui-week4-user-journey-map.md",
-    "01-university/assignments/uxui/uxui-week3-market-comparison.md",
-    "01-university/assignments/uxui/uxui-ui-hunt.md",
-    "01-university/assignments/os/os-case-study-1-2.md",
-    "06-nacl-kmitl/lab-setup/lab-power-strip-planning.md",
-    "06-nacl-kmitl/lab-setup/PLAN.md",
-    "03-programming/projects/nacl-nextpath-x.md",
-    "03-programming/guides/senior-frontend-developer-guide.md",
-    "06-nacl-kmitl/601-lab-layout.png"
+    "01-university/year-3/os/os-case-study-1-2.md",
+    "01-university/year-3/finance/finance-bonds-debentures-report.md",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/world-stock-exchanges.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer-deep-dive.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/reporting-flow.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/replication-across-servers.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/product-order-execution-data-model.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/order-book-impl.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/order-book-execution.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/mmap-bus.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/market-data.png",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images",
+    "03-programming/guides/system-design-notes-main/28. Stock Exchange/README.md",
+    "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images",
+    "03-programming/guides/system-design-notes-main/27.  Digital Wallet/README.md",
+    "03-programming/guides/system-design-notes-main/26. Payment System/images",
+    "03-programming/guides/system-design-notes-main/26. Payment System/README.md",
+    "03-programming/guides/system-design-notes-main/25. Real-time Gaming Leaderboard/images",
+    "03-programming/guides/system-design-notes-main/25. Real-time Gaming Leaderboard/README.md",
+    "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/images",
+    "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/README.md",
+    "03-programming/guides/system-design-notes-main/23. Distributed Email Service/images",
+    "03-programming/guides/system-design-notes-main/23. Distributed Email Service/README.md",
+    "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/images",
+    "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/README.md",
+    "03-programming/guides/system-design-notes-main/21. Ad Click Event Aggregation/images",
+    "03-programming/guides/system-design-notes-main/21. Ad Click Event Aggregation/README.md",
+    "03-programming/guides/system-design-notes-main/20. Metrics Monitoring and Alerting System/images",
+    "03-programming/guides/system-design-notes-main/20. Metrics Monitoring and Alerting System/README.md",
+    "03-programming/guides/system-design-notes-main/19. Distributed Message Queue/images",
+    "03-programming/guides/system-design-notes-main/19. Distributed Message Queue/README.md",
+    "03-programming/guides/system-design-notes-main/18. Google Maps/README.md",
+    "03-programming/guides/system-design-notes-main/17. Nearby Friends/README.md",
+    "03-programming/guides/system-design-notes-main/16. Proximity Service/Readme.md",
+    "03-programming/guides/system-design-notes-main/15. Google Drive/Readme.md",
+    "03-programming/guides/system-design-notes-main/14. Youtube/Readme.md",
+    "03-programming/guides/system-design-notes-main/13. Search Autocomplete/Readme.md",
+    "03-programming/guides/system-design-notes-main/12. Chat System/Readme.md",
+    "03-programming/guides/system-design-notes-main/11. News Feed System/Readme.md",
+    "03-programming/guides/system-design-notes-main/10. Notification System/Readme.md"
   ]
 }
