@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "93acbf5c70f0677b",
+        "id": "5386cc04a27795bb",
         "type": "tabs",
         "children": [
           {
-            "id": "5f9c6a32e5059b2f",
+            "id": "d80a907a0920d5e2",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images/wallet-service-state-macghine.png"
+                "file": "05-ai/projects/rome-wasnt-build-in-a-day/Coversation.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "wallet-service-state-macghine"
+              "icon": "lucide-file",
+              "title": "Coversation"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -76,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 203.5
+    "width": 200
   },
   "right": {
     "id": "d564aeacb742aa70",
@@ -192,14 +196,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9c6a32e5059b2f",
+  "active": "d80a907a0920d5e2",
   "lastOpenFiles": [
+    "05-ai/projects/rome-wasnt-build-in-a-day/ASSIGNMENT.md.md",
+    "01-university/assignments-tracker.md",
+    "01-university/year-3/os/os-case-study-1-2.md",
+    "01-university/investment-planning/claude-word-prompt-v3.md",
+    "01-university/investment-planning/claude-word-prompt-v2.md",
+    "01-university/investment-planning/claude-word-prompt.md",
+    "01-university/investment-planning/assets/mud-set-financial.png",
+    "01-university/investment-planning/assets/bts-set-financial.png",
+    "01-university/investment-planning/assets/sawad-set-financial.png",
+    "01-university/investment-planning/thai-corp-bond-report-draft.md",
     "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/images/wal-optimization.png",
     "05-ai/projects/nacl-nextpath-x/session-state.md",
     "05-ai/projects/nacl-nextpath-x/edit-log.md",
-    "01-university/assignments-tracker.md",
     "01-university/year-3/os/os-homework-1-4.md",
-    "01-university/year-3/os/os-case-study-1-2.md",
     "01-university/year-3/finance/finance-bonds-debentures-report.md",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/world-stock-exchanges.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer.png",
@@ -207,10 +219,6 @@
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/reporting-flow.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/replication-across-servers.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/product-order-execution-data-model.png",
-    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/order-book-impl.png",
-    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/order-book-execution.png",
-    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/mmap-bus.png",
-    "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/market-data.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/README.md",
     "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images",
@@ -235,10 +243,6 @@
     "03-programming/guides/system-design-notes-main/17. Nearby Friends/README.md",
     "03-programming/guides/system-design-notes-main/16. Proximity Service/Readme.md",
     "03-programming/guides/system-design-notes-main/15. Google Drive/Readme.md",
-    "03-programming/guides/system-design-notes-main/14. Youtube/Readme.md",
-    "03-programming/guides/system-design-notes-main/13. Search Autocomplete/Readme.md",
-    "03-programming/guides/system-design-notes-main/12. Chat System/Readme.md",
-    "03-programming/guides/system-design-notes-main/11. News Feed System/Readme.md",
-    "03-programming/guides/system-design-notes-main/10. Notification System/Readme.md"
+    "03-programming/guides/system-design-notes-main/14. Youtube/Readme.md"
   ]
 }

@@ -16,8 +16,8 @@ updated: 2026-07-24
 
 | Due          | Assignment                                     | Course  | Weight | Status |
 | ------------ | ---------------------------------------------- | ------- | ------ | ------ |
-| Aug 3, 2026  | UX/UI Wk3: Market Comparison (group)           | UX/UI   | 10 pts | 🔄     |
-| Aug 3, 2026  | UX/UI Wk4: User Journey Map (group)            | UX/UI   | —      | 🔄     |
+| Aug 3, 2026  | UX/UI Wk3: Market Comparison (group)           | UX/UI   | 10 pts | ✅      |
+| Aug 3, 2026  | UX/UI Wk4: User Journey Map (group)            | UX/UI   | —      | ✅      |
 | Aug 6, 2026  | OS Case Study — Group Registration             | OS      | —      | ⬜      |
 | Aug 6, 2026  | OS Homework 1–4                                | OS      | —      | ✅      |
 | Aug 13, 2026 | Report No. 1: Bonds/Debentures                 | Finance | 20 pts | 🔄     |
