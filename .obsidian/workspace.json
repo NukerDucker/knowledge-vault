@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-ai/projects/rome-wasnt-build-in-a-day/Coversation.md",
+                "file": "01-university/year-3/investment-planning/nvda-stock-risk-analysis-wk5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Coversation"
+              "title": "nvda-stock-risk-analysis-wk5"
             }
           }
         ]
@@ -182,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,23 +196,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d80a907a0920d5e2",
+  "active": "63cfb21de8ee66a8",
   "lastOpenFiles": [
+    "01-university/year-3/investment-planning/ko-stock-risk-analysis-wk5.md",
+    "01-university/year-3/investment-planning/nvda-stock-risk-analysis-wk5.md",
+    "01-university/year-3/finance/finance-bonds-debentures-report.md",
+    "01-university/year-3/ai/rome-pathfinding.md",
+    "05-ai/projects/rome-wasnt-build-in-a-day/Coversation.md",
+    "01-university/year-3/ai",
     "05-ai/projects/rome-wasnt-build-in-a-day/ASSIGNMENT.md.md",
     "01-university/assignments-tracker.md",
     "01-university/year-3/os/os-case-study-1-2.md",
-    "01-university/investment-planning/claude-word-prompt-v3.md",
-    "01-university/investment-planning/claude-word-prompt-v2.md",
-    "01-university/investment-planning/claude-word-prompt.md",
-    "01-university/investment-planning/assets/mud-set-financial.png",
-    "01-university/investment-planning/assets/bts-set-financial.png",
-    "01-university/investment-planning/assets/sawad-set-financial.png",
-    "01-university/investment-planning/thai-corp-bond-report-draft.md",
+    "01-university/year-3/investment-planning/claude-word-prompt-v3.md",
+    "01-university/year-3/investment-planning/claude-word-prompt-v2.md",
+    "01-university/year-3/investment-planning/claude-word-prompt.md",
+    "01-university/year-3/investment-planning/assets/mud-set-financial.png",
+    "01-university/year-3/investment-planning/assets/bts-set-financial.png",
+    "01-university/year-3/investment-planning/assets/sawad-set-financial.png",
+    "01-university/year-3/investment-planning/thai-corp-bond-report-draft.md",
     "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/images/wal-optimization.png",
     "05-ai/projects/nacl-nextpath-x/session-state.md",
     "05-ai/projects/nacl-nextpath-x/edit-log.md",
     "01-university/year-3/os/os-homework-1-4.md",
-    "01-university/year-3/finance/finance-bonds-debentures-report.md",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/world-stock-exchanges.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer-deep-dive.png",
@@ -237,12 +242,7 @@
     "03-programming/guides/system-design-notes-main/21. Ad Click Event Aggregation/README.md",
     "03-programming/guides/system-design-notes-main/20. Metrics Monitoring and Alerting System/images",
     "03-programming/guides/system-design-notes-main/20. Metrics Monitoring and Alerting System/README.md",
-    "03-programming/guides/system-design-notes-main/19. Distributed Message Queue/images",
     "03-programming/guides/system-design-notes-main/19. Distributed Message Queue/README.md",
-    "03-programming/guides/system-design-notes-main/18. Google Maps/README.md",
-    "03-programming/guides/system-design-notes-main/17. Nearby Friends/README.md",
-    "03-programming/guides/system-design-notes-main/16. Proximity Service/Readme.md",
-    "03-programming/guides/system-design-notes-main/15. Google Drive/Readme.md",
-    "03-programming/guides/system-design-notes-main/14. Youtube/Readme.md"
+    "03-programming/guides/system-design-notes-main/18. Google Maps/README.md"
   ]
 }
