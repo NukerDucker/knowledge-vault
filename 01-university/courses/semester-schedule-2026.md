@@ -27,8 +27,8 @@ All exams 13:30–16:30.
 
 | Course | Midterm | Final |
 |--------|---------|-------|
-| Operating Systems | Mon 17 Aug 2026 | Wed 28 Oct 2026 |
-| Microcontroller Interfacing | Thu 20 Aug 2026 | Wed 4 Nov 2026 |
+| Operating Systems | — (no midterm) | Wed 28 Oct 2026 |
+| Microcontroller Interfacing | — (no midterm) | Wed 4 Nov 2026 |
 | Artificial Intelligence | self-arranged | Mon 26 Oct 2026 |
 | Practice of System Administration | self-arranged | Fri 30 Oct 2026 |
 | Intro to Data Analytics | self-arranged | Mon 2 Nov 2026 |

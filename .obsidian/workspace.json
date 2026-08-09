@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5386cc04a27795bb",
+        "id": "3be901939f7dfc12",
         "type": "tabs",
         "children": [
           {
-            "id": "d80a907a0920d5e2",
+            "id": "08b5402d88c07711",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-university/year-3/investment-planning/nvda-stock-risk-analysis-wk5.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "nvda-stock-risk-analysis-wk5"
+              "title": "New tab"
             }
           }
         ]
@@ -80,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 279.00390625
   },
   "right": {
     "id": "d564aeacb742aa70",
@@ -158,17 +154,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images/wallet-service-state-macghine.png",
+                "file": "01-university/assignments-tracker.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of wallet-service-state-macghine"
+              "title": "Outline"
             }
           },
           {
-            "id": "97baa4c34c9a5e6e",
+            "id": "6367748eaf0677bc",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -198,15 +194,30 @@
   },
   "active": "63cfb21de8ee66a8",
   "lastOpenFiles": [
-    "01-university/year-3/investment-planning/ko-stock-risk-analysis-wk5.md",
+    "01-university/year-3/uxui/uxui-hooked-individual.md",
+    "01-university/year-3/uxui/uxui-ui-hunt.md",
+    "01-university/year-3/os/os-case-study-1.md",
+    "01-university/year-3/uxui/uxui-week6-hooked-kano.md",
+    "01-university/year-3/os/os-case-study-1.md.tmp.19512.0512be0d423e",
+    "01-university/year-3/os/os-case-study-1-2.md",
+    "CLAUDE.md",
+    "01-university/year-3/os/os-homework-1-4.md",
+    "01-university/year-3/uxui/uxui-week4-user-journey-map.md",
+    "01-university/year-3/uxui/uxui-week5-pov-hmw.md",
+    "01-university/year-3/uxui/uxui-week3-market-comparison.md",
+    "01-university/year-3/rtw/rtw-a1-foundation-knowledge.md",
+    "05-ai/projects/casestudy01-os/session-state.md",
+    "05-ai/projects/casestudy01-os",
+    "03-programming/guides/system-design-notes-main/23. Distributed Email Service/README.md",
+    "03-programming/guides/system-design-notes-main/Readme.md",
     "01-university/year-3/investment-planning/nvda-stock-risk-analysis-wk5.md",
+    "01-university/year-3/investment-planning/ko-stock-risk-analysis-wk5.md",
     "01-university/year-3/finance/finance-bonds-debentures-report.md",
     "01-university/year-3/ai/rome-pathfinding.md",
     "05-ai/projects/rome-wasnt-build-in-a-day/Coversation.md",
     "01-university/year-3/ai",
     "05-ai/projects/rome-wasnt-build-in-a-day/ASSIGNMENT.md.md",
     "01-university/assignments-tracker.md",
-    "01-university/year-3/os/os-case-study-1-2.md",
     "01-university/year-3/investment-planning/claude-word-prompt-v3.md",
     "01-university/year-3/investment-planning/claude-word-prompt-v2.md",
     "01-university/year-3/investment-planning/claude-word-prompt.md",
@@ -216,8 +227,6 @@
     "01-university/year-3/investment-planning/thai-corp-bond-report-draft.md",
     "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/images/wal-optimization.png",
     "05-ai/projects/nacl-nextpath-x/session-state.md",
-    "05-ai/projects/nacl-nextpath-x/edit-log.md",
-    "01-university/year-3/os/os-homework-1-4.md",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/world-stock-exchanges.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/sequencer-deep-dive.png",
@@ -225,24 +234,11 @@
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/replication-across-servers.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images/product-order-execution-data-model.png",
     "03-programming/guides/system-design-notes-main/28. Stock Exchange/images",
-    "03-programming/guides/system-design-notes-main/28. Stock Exchange/README.md",
     "03-programming/guides/system-design-notes-main/27.  Digital Wallet/images",
-    "03-programming/guides/system-design-notes-main/27.  Digital Wallet/README.md",
     "03-programming/guides/system-design-notes-main/26. Payment System/images",
-    "03-programming/guides/system-design-notes-main/26. Payment System/README.md",
     "03-programming/guides/system-design-notes-main/25. Real-time Gaming Leaderboard/images",
-    "03-programming/guides/system-design-notes-main/25. Real-time Gaming Leaderboard/README.md",
     "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/images",
-    "03-programming/guides/system-design-notes-main/24. S3-like Object Storage/README.md",
     "03-programming/guides/system-design-notes-main/23. Distributed Email Service/images",
-    "03-programming/guides/system-design-notes-main/23. Distributed Email Service/README.md",
-    "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/images",
-    "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/README.md",
-    "03-programming/guides/system-design-notes-main/21. Ad Click Event Aggregation/images",
-    "03-programming/guides/system-design-notes-main/21. Ad Click Event Aggregation/README.md",
-    "03-programming/guides/system-design-notes-main/20. Metrics Monitoring and Alerting System/images",
-    "03-programming/guides/system-design-notes-main/20. Metrics Monitoring and Alerting System/README.md",
-    "03-programming/guides/system-design-notes-main/19. Distributed Message Queue/README.md",
-    "03-programming/guides/system-design-notes-main/18. Google Maps/README.md"
+    "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/images"
   ]
 }

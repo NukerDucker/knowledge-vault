@@ -1,45 +1,46 @@
 ---
-title: OS Case Study 1 & 2
+title: OS Case Studies — Overview
 tags:
   - university
   - os
   - group-work
 status: active
 created: 2026-07-24
+updated: 2026-08-08
 ---
 
-# OS Case Study 1 & 2
+# OS Case Studies — Overview
 
-> [!warning] Registration Deadline
-> Group must register by **August 6, 2026**. KMITL account required.
+## Group Requirements (all case studies)
 
-## Group Requirements
-
-- 5 members per group
+- 5 members per group (45 students enrolled → 9 groups)
 - At least 1 laptop per group
-
-## Status
-
-| Item | Status |
-|------|--------|
-| Group formed | ⬜ |
-| Group registered | ⬜ |
-| Instructions received | ⬜ (TBA) |
-| Case Study 1 submitted | ⬜ (TBA) |
-| Case Study 2 submitted | ⬜ (TBA) |
+- Group registered by **August 6, 2026**
 
 ## Group Members
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. 67011081 Aphichaphon Phatthanakun
+2. 67011178 Napaul Intharasing
+3. 67011214 Nuttawee Wachiratienchai
+4. 67011717 Phyo Arkar Win
+5. 67011736 Yu Yu Khaing
 
-## Notes
+## Case Studies
 
-> [!info] Instructions & Submission
-> Both instructions and submission details are TBA. Check course portal after registration.
+| # | Topic | Due | Status |
+|---|-------|-----|--------|
+| 1 | Multithreading (C#) | Aug 14, 2026 | 🔄 |
+| 2 | TBA | TBA | ⬜ |
+
+→ [[os-case-study-1]] for full CS1 details, scoring, and checklist.
+
+## Scoring Formula (all case studies)
+
+**A (Peer within group) : B (Peer other groups) : B (Instructor) = 35 : 20 : 45**
+
+- Miss peer eval → 0 pts section A + group score halved
+- Miss evaluating other groups → 0 pts section B peer
+- Deductions are **individual**
 
 ---
 *See also: [[assignments-tracker]]*
