@@ -25,7 +25,7 @@ Numbered prefixes control sidebar order in Obsidian:
 | `05-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
 | `06-nacl-kmitl` | NACL lab work — system docs, ADRs, architecture |
 | `06-nacl-kmitl/nextpath-x/01-architecture/` | NACL design specs and integration docs |
-| `AgodaInternshipVault 3/` | Separate Obsidian vault — Agoda IT internship 2026 |
+| `01-university/internship/agoda/` | Agoda IT internship 2026 (own Obsidian sub-vault) |
 | `90-archive` | Retired notes |
 
 See `VAULT-GUIDE.md` for full filing rules, naming conventions, and tag taxonomy.

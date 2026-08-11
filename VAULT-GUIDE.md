@@ -29,7 +29,9 @@ Single source of truth for how this vault is organized. Read this before creatin
     ai/                           ← Artificial Intelligence (Rome pathfinding)
   year-4/
   courses/                        ← semester schedule, degree/study plans
-  internship/                     ← internship diary, reports, leave forms
+  internship/
+    internship-diary.md           ← general internship diary / leave forms
+    agoda/                        ← Agoda IT internship sub-vault (2026)
   regulations/                    ← university rules, CEI regulations
 
 02-homelab/                       ← hardware, network configs, self-hosting
@@ -57,7 +59,7 @@ Single source of truth for how this vault is organized. Read this before creatin
     04-adrs/
     05-schema-and-data-quirks/
 
-AgodaInternshipVault 3/           ← separate Obsidian vault, Agoda IT internship 2026
+01-university/internship/agoda/   ← Agoda IT internship 2026 (own Obsidian sub-vault)
   01 Daily Notes/                 ← daily standup logs (YYYY-MM-DD.md)
   03 Tasks/                       ← laptop tracker, replacement tasks
   04 Knowledge Base/              ← Windows/Mac build guides, TARS procedures
@@ -117,9 +119,9 @@ updated: 2026-07-24  # add when significantly revised
 | Physical lab docs, layouts | `06-nacl-kmitl/lab-setup/` | `601-lab-layout.png` |
 | System docs, ADRs, architecture | `06-nacl-kmitl/nextpath-x/` | `01-architecture/` |
 | NACL design specs / integration docs | `06-nacl-kmitl/nextpath-x/01-architecture/` | `2026-07-07-camellya-frontend-overhaul-design.md` |
-| Agoda internship daily notes | `AgodaInternshipVault 3/01 Daily Notes/` | `2026-05-26.md` |
-| Agoda internship project docs | `AgodaInternshipVault 3/06 Projects/<name>/` | `WallKeeper/` |
-| Agoda KB articles | `AgodaInternshipVault 3/04 Knowledge Base/` | `NH Laptop Spec.md` |
+| Agoda internship daily notes | `01-university/internship/agoda/01 Daily Notes/` | `2026-05-26.md` |
+| Agoda internship project docs | `01-university/internship/agoda/06 Projects/<name>/` | `WallKeeper/` |
+| Agoda KB articles | `01-university/internship/agoda/04 Knowledge Base/` | `NH Laptop Spec.md` |
 | Unprocessed capture | `00-inbox/` | — |
 | Old / closed / superseded | `90-archive/` | — |
 | University PDFs / slides / physical docs | `~/Documents/University/Year-N/<Subject>/` | `A1 Foundation knowledge.pdf` |
