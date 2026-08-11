@@ -6,6 +6,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 An Obsidian knowledge vault. No build system, no tests, no CI. All files are Markdown with YAML frontmatter.
 
+---
+
+## Two-Vault System
+
+This vault and `~/Documents/University/` work as a pair. Each has a strict role:
+
+| | `~/KnowledgeVault/` (here) | `~/Documents/University/` |
+|---|---|---|
+| **Role** | Markdown notes & tracking | Work files |
+| **Contains** | `.md` notes, assignment briefs, session state, project logs | PDFs, PPTX, Word docs, source code, submission files |
+| **Examples** | `01-university/year-3/uxui/uxui-week7-crazy8s-storyboard.md` | `Year-3/AI/rome-pathfinding/` repo, lab slides, `.pdf` submissions |
+
+**Rule:** Never put raw work files here. Never put markdown notes in Documents/University.  
+Vault notes reference their source files with a `**File:**` path pointing to `~/Documents/University/`.
+
+### Key Documents/University paths cross-referenced from vault notes
+
+| What | Documents path |
+|------|---------------|
+| nacl-nextpath-x repos | `~/Documents/University/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
+| Rome pathfinding app | `~/Documents/University/Year-3/AI/rome-pathfinding/` |
+| Agoda internship files | `~/Documents/University/Internship/` |
+| Year-3 UX/UI slides + PDFs | `~/Documents/University/Year-3/` |
+| Investment Planning report doc | `~/Documents/University/Year-3/` |
+
+---
+
 ## Folder Convention
 
 Numbered prefixes control sidebar order in Obsidian:
