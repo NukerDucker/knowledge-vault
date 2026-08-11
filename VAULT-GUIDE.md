@@ -10,6 +10,9 @@ updated: 2026-08-11
 
 Single source of truth for how this vault is organized. Read this before creating new notes.
 
+**Navigation hub:** See [[BRIDGE]] for the cross-reference map between this vault and `~/Documents/University/`.  
+**Symlink:** `university-files/` in vault root → `~/Documents/University/` (excluded from Obsidian indexing).
+
 ---
 
 ## Folder Map

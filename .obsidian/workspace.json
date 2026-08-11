@@ -11,14 +11,12 @@
             "id": "08b5402d88c07711",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "CLAUDE.md",
-                "mode": "source",
-                "source": false
+                "file": "01-university/internship/67011178_Internship_Report.pdf"
               },
-              "icon": "lucide-file",
-              "title": "CLAUDE"
+              "icon": "lucide-file-text",
+              "title": "67011178_Internship_Report"
             }
           }
         ]
@@ -158,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "01-university/internship/67011178_Internship_Report.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -198,6 +196,8 @@
   },
   "active": "08b5402d88c07711",
   "lastOpenFiles": [
+    "01-university/internship/internship-diary.md",
+    "CLAUDE.md",
     "01-university/internship/agoda/99 Archive/Replacement/Replacement - Tachpol Trakulmaykee.md",
     "01-university/internship/agoda/99 Archive/Replacement/Replacement - Sinthawat Ivy.md",
     "01-university/internship/agoda/99 Archive/Replacement/Replacement - Saranpol Guest.md",
@@ -226,8 +226,6 @@
     "01-university/internship/agoda/07 Templates/Project.md",
     "01-university/internship/agoda/07 Templates/NH Laptop Tracker.md",
     "01-university/internship/agoda/07 Templates/Meeting Note.md",
-    "01-university/internship/agoda/07 Templates/Laptop Replacement.md",
-    "01-university/internship/agoda/07 Templates/Knowledge Base Article.md",
     "01-university/internship/agoda/06 Projects/WallKeeper",
     "01-university/internship/agoda/06 Projects/Project Keep Alive",
     "01-university/internship/agoda/04 Knowledge Base/Windows Related",
