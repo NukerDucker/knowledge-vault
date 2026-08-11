@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-university/year-3/uxui/uxui-week7-crazy8s-storyboard.md",
+                "file": "01-university/assignments-tracker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "uxui-week7-crazy8s-storyboard"
+              "title": "assignments-tracker"
             }
           }
         ]
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01-university/year-3/uxui/uxui-week7-crazy8s-storyboard.md",
+                "file": "01-university/assignments-tracker.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -198,8 +198,19 @@
   },
   "active": "08b5402d88c07711",
   "lastOpenFiles": [
-    "01-university/year-3/os/os-case-study-1.md",
+    "05-ai/projects/rome-wasnt-build-in-a-day/ASSIGNMENT.md.md",
+    "05-ai/projects/nacl-nextpath-x/session-state.md",
+    "05-ai/projects/drunkbill/session-state.md",
+    "05-ai/projects/casestudy01-os/session-state.md",
+    "03-programming/guides/senior-frontend-developer-guide.md",
     "01-university/year-3/uxui/uxui-week7-crazy8s-storyboard.md",
+    "01-university/year-3/investment-planning/finance-bonds-debentures-report.md",
+    "AgodaInternshipVault 3/06 Projects/WallKeeper/2026-06-26-wallkeeper-plan.md",
+    "AgodaInternshipVault 3/06 Projects/WallKeeper/2026-06-26-wallkeeper-keepalive-design.md",
+    "AgodaInternshipVault 3/06 Projects/WallKeeper",
+    "06-nacl-kmitl/nextpath-x/01-architecture/2026-07-07-nextpath-camellya-booking-sync-design.md",
+    "06-nacl-kmitl/nextpath-x/01-architecture/2026-07-07-camellya-frontend-overhaul-design.md",
+    "01-university/year-3/os/os-case-study-1.md",
     "AgodaInternshipVault 3/01 Daily Notes/Internship_Diary_Complete.md",
     "CLAUDE.md",
     "Photos-1-001-1/IMG_1663-1.jpeg",
@@ -230,20 +241,9 @@
     "AgodaInternshipVault 3/01 Daily Notes",
     "AgodaInternshipVault 3/CLAUDE.md",
     "AgodaInternshipVault 3/Autopilot Training.pdf",
-    "AgodaInternshipVault 3/07 Templates/Project.md",
-    "AgodaInternshipVault 3/07 Templates/NH Laptop Tracker.md",
-    "AgodaInternshipVault 3/07 Templates/Meeting Note.md",
-    "AgodaInternshipVault 3/07 Templates/Laptop Replacement.md",
-    "AgodaInternshipVault 3/07 Templates/Knowledge Base Article.md",
-    "AgodaInternshipVault 3/07 Templates/Device Fix.md",
-    "AgodaInternshipVault 3/07 Templates/Daily Note.md",
-    "AgodaInternshipVault 3/07 Templates/Bulk Task.md",
     "AgodaInternshipVault 3/07 Templates",
-    "AgodaInternshipVault 3/06 Projects/Project Keep Alive/WallKeeper.md",
-    "AgodaInternshipVault 3/06 Projects/Project Keep Alive/Uptime Kuma Setup.md",
     "AgodaInternshipVault 3/06 Projects/Project Keep Alive",
     "AgodaInternshipVault 3/06 Projects",
-    "AgodaInternshipVault 3/04 Knowledge Base/Windows Related",
     "AgodaInternshipVault 3/Untitled.canvas"
   ]
 }

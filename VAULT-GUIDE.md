@@ -3,6 +3,7 @@ title: Vault Structure Guide
 tags: [meta, guide]
 status: active
 created: 2026-07-24
+updated: 2026-08-11
 ---
 
 # Vault Structure Guide
@@ -21,9 +22,11 @@ Single source of truth for how this vault is organized. Read this before creatin
   year-1/                         ← add subject subfolders when content exists
   year-2/
   year-3/
-    os/
-    uxui/
-    finance/
+    os/                           ← Operating Systems
+    uxui/                         ← UX/UI Design
+    rtw/                          ← Ready to Work
+    investment-planning/          ← Investment Planning (bonds report, stock analysis)
+    ai/                           ← Artificial Intelligence (Rome pathfinding)
   year-4/
   courses/                        ← semester schedule, degree/study plans
   internship/                     ← internship diary, reports, leave forms
@@ -39,10 +42,32 @@ Single source of truth for how this vault is organized. Read this before creatin
 
 05-ai/
   projects/<name>/                ← session-state.md + edit-log.md per project
+    nacl-nextpath-x/              ← NACL NextPath X session state + edit log
+    rome-wasnt-build-in-a-day/   ← AI Rome pathfinding project
+    casestudy01-os/               ← OS case study session notes
+    drunkbill/                    ← Drunkbill project
 
 06-nacl-kmitl/
   lab-setup/                      ← physical lab: layouts, power, TOR docs
   nextpath-x/                     ← system docs, ADRs, architecture, playbooks
+    00-system-map/
+    01-architecture/              ← design specs, integration designs
+    02-operations-and-seeding/
+    03-incident-playbooks/
+    04-adrs/
+    05-schema-and-data-quirks/
+
+AgodaInternshipVault 3/           ← separate Obsidian vault, Agoda IT internship 2026
+  01 Daily Notes/                 ← daily standup logs (YYYY-MM-DD.md)
+  03 Tasks/                       ← laptop tracker, replacement tasks
+  04 Knowledge Base/              ← Windows/Mac build guides, TARS procedures
+  06 Projects/
+    WallKeeper/                   ← Grafana video wall NUC restart script + keepalive design
+    Project Keep Alive/           ← NUC uptime monitoring (Uptime Kuma / Proxmox)
+  07 Templates/                   ← task/note templates
+  08 Reference/                   ← scripts, external references
+  99 Archive/                     ← deprecated notes
+  CLAUDE.md                       ← Agoda vault–specific guidance
 
 90-archive/                       ← closed / superseded, keep for reference
 ```
@@ -91,6 +116,10 @@ updated: 2026-07-24  # add when significantly revised
 | AI project session state | `05-ai/projects/<name>/` | `session-state.md` |
 | Physical lab docs, layouts | `06-nacl-kmitl/lab-setup/` | `601-lab-layout.png` |
 | System docs, ADRs, architecture | `06-nacl-kmitl/nextpath-x/` | `01-architecture/` |
+| NACL design specs / integration docs | `06-nacl-kmitl/nextpath-x/01-architecture/` | `2026-07-07-camellya-frontend-overhaul-design.md` |
+| Agoda internship daily notes | `AgodaInternshipVault 3/01 Daily Notes/` | `2026-05-26.md` |
+| Agoda internship project docs | `AgodaInternshipVault 3/06 Projects/<name>/` | `WallKeeper/` |
+| Agoda KB articles | `AgodaInternshipVault 3/04 Knowledge Base/` | `NH Laptop Spec.md` |
 | Unprocessed capture | `00-inbox/` | — |
 | Old / closed / superseded | `90-archive/` | — |
 | University PDFs / slides / physical docs | `~/Documents/University/Year-N/<Subject>/` | `A1 Foundation knowledge.pdf` |

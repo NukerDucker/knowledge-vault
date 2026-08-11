@@ -14,11 +14,18 @@ Numbered prefixes control sidebar order in Obsidian:
 |--------|---------|
 | `00-inbox` | Unprocessed captures |
 | `01-university` | Academic notes, assignments, internship docs, regulations |
+| `01-university/year-3/os/` | Operating Systems coursework |
+| `01-university/year-3/uxui/` | UX/UI Design coursework |
+| `01-university/year-3/rtw/` | Ready to Work coursework |
+| `01-university/year-3/investment-planning/` | Investment Planning (bonds report, stock analysis) |
+| `01-university/year-3/ai/` | Artificial Intelligence (Rome pathfinding) |
 | `02-homelab` | Home lab planning and docs |
 | `03-programming` | Dev project notes and vault wiring docs |
 | `04-fitness` | Personal fitness tracking |
-| `05-ai` | AI project plans and session state |
+| `05-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
 | `06-nacl-kmitl` | NACL lab work — system docs, ADRs, architecture |
+| `06-nacl-kmitl/nextpath-x/01-architecture/` | NACL design specs and integration docs |
+| `AgodaInternshipVault 3/` | Separate Obsidian vault — Agoda IT internship 2026 |
 | `90-archive` | Retired notes |
 
 See `VAULT-GUIDE.md` for full filing rules, naming conventions, and tag taxonomy.
