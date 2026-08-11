@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3be901939f7dfc12",
+        "id": "d880b7d1cbbead57",
         "type": "tabs",
         "children": [
           {
-            "id": "08b5402d88c07711",
+            "id": "739c602d371cbe42",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "01-university/internship/67011178_Internship_Report.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "67011178_Internship_Report"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -194,8 +192,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "08b5402d88c07711",
+  "active": "739c602d371cbe42",
   "lastOpenFiles": [
+    "university-files/Internship/Photos-1-001-1/IMG_1663-1.jpeg",
+    "university-files/Internship/Photos-1-001-1/20260522_134235.jpg",
+    "university-files/Internship/Photos-1-001-1/20260522_113126.jpg",
+    "university-files/Internship/Photos-1-001-1/20260522_113459.jpg",
+    "university-files/Internship/Photos-1-001-1/20260522_113349.jpg",
+    "university-files/Internship/Photos-1-001-1/20260522_091829.jpg",
+    "university-files/Internship/Photos-1-001-1",
+    "university-files/Internship/Photos-1-001/20260731_153315.jpg",
+    "university-files/Internship/Photos-1-001/20260731_114922.jpg",
+    "university-files/Internship/Photos-1-001/20260730_112940.jpg",
+    "university-files/Internship/Photos-1-001/20260724_143523.jpg",
+    "university-files/Internship/Photos-1-001/20260722_155743.jpg",
+    "university-files/Internship/Photos-1-001",
+    "01-university/assignments-tracker.md",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/refint/CaseStudy01.dll",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/ref/CaseStudy01.dll",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/refint",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/ref",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/apphost",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/CaseStudy01.sourcelink.json",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/CaseStudy01.pdb",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/obj/Release/net10.0/CaseStudy01.genruntimeconfig.cache",
+    "university-files/Year-3/OS/Tony-OS-Case-Study-01/README.md",
+    "university-files/Year-3/OS/OS-Case-Study-01/README.md",
+    "BRIDGE.md",
     "01-university/internship/internship-diary.md",
     "CLAUDE.md",
     "01-university/internship/agoda/99 Archive/Replacement/Replacement - Tachpol Trakulmaykee.md",
@@ -217,32 +240,7 @@
     "01-university/internship/agoda/03 Tasks/Replacement/Replacement - Sanuja Saji.md",
     "01-university/internship/agoda/03 Tasks/Replacement/Replacement - Ravitpong Mahaariyatip.md",
     "01-university/internship/agoda/03 Tasks/Replacement/Replacement - Nandhini Chinnasamy.md",
-    "01-university/internship/agoda/99 Archive/Tech Camp - Kace Update.md",
-    "01-university/internship/agoda/99 Archive/Replacement",
-    "01-university/internship/agoda/99 Archive/NH Laptop Tracker - 2026-06.md",
-    "01-university/internship/agoda/99 Archive/Fix",
-    "01-university/internship/agoda/08 Reference/claude_code_setup_win.ps1",
-    "01-university/internship/agoda/08 Reference/Untitled.base",
-    "01-university/internship/agoda/07 Templates/Project.md",
-    "01-university/internship/agoda/07 Templates/NH Laptop Tracker.md",
-    "01-university/internship/agoda/07 Templates/Meeting Note.md",
-    "01-university/internship/agoda/06 Projects/WallKeeper",
-    "01-university/internship/agoda/06 Projects/Project Keep Alive",
-    "01-university/internship/agoda/04 Knowledge Base/Windows Related",
-    "01-university/internship/agoda/04 Knowledge Base/Mac Related",
-    "01-university/internship/agoda/04 Knowledge Base/General",
-    "01-university/internship/agoda/03 Tasks/Replacement",
     "01-university/internship/agoda/Untitled.canvas",
-    "Photos-1-001-1/IMG_1663-1.jpeg",
-    "Photos-1-001-1/20260522_134235.jpg",
-    "Photos-1-001-1/20260522_113459.jpg",
-    "Photos-1-001-1/20260522_113349.jpg",
-    "Photos-1-001-1/20260522_113126.jpg",
-    "Photos-1-001-1/20260522_091829.jpg",
-    "Photos-1-001/20260730_112940.jpg",
-    "Photos-1-001/20260722_155150.jpg",
-    "Photos-1-001/20260609_100744.jpg",
-    "Photos-1-001/20260722_155743.jpg",
     "AgodaInternshipVault 3/Untitled.canvas"
   ]
 }

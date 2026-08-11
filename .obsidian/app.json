@@ -1,3 +1,5 @@
 {
-  "userIgnoreFilters": ["university-files"]
+  "userIgnoreFilters": [
+    "university-files"
+  ]
 }
