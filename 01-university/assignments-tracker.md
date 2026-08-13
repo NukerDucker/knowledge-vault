@@ -28,16 +28,16 @@ updated: 2026-08-11
 
 ## Upcoming
 
-| Due | Assignment | Subject | Weight | Status |
-|-----|-----------|---------|--------|--------|
-| Aug 24, 2026 | Wk7: Crazy 8s & Storyboard (group) | UX/UI | 5 pts | 🔄 |
-| Aug 13, 2026 | Case Study 1 — Peer Eval deadline | Operating Systems | 35% | ⬜ |
-| Aug 13, 2026 | Report No. 1: Bonds/Debentures | Investment Planning | 20 pts | 🔄 |
-| Aug 14, 2026 | Case Study 1 — Submit + Presentation | Operating Systems | 65% | 🔄 |
-| Aug 31, 2026 | Hooked — Individual Summary + App Example | UX/UI | 10 pts | ⬜ |
-| Sep 7, 2026 | UI Hunt — Unusual Screens (individual) | UX/UI | 6 pts | ⬜ |
-| Oct 13, 2026 | Romania-Map Pathfinding Web App | AI | 50% | 🔄 |
-| TBA | Microcontroller — STM32 Project | Microcontroller | — | ⬜ |
+| Due          | Assignment                                | Subject             | Weight | Status |
+| ------------ | ----------------------------------------- | ------------------- | ------ | ------ |
+| Aug 24, 2026 | Wk7: Crazy 8s & Storyboard (group)        | UX/UI               | 5 pts  | 🔄     |
+| Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
+| Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
+| Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | 🔄     |
+| Aug 31, 2026 | Hooked — Individual Summary + App Example | UX/UI               | 10 pts | ⬜      |
+| Sep 7, 2026  | UI Hunt — Unusual Screens (individual)    | UX/UI               | 6 pts  | ⬜      |
+| Oct 13, 2026 | Romania-Map Pathfinding Web App           | AI                  | 50%    | 🔄     |
+| TBA          | Microcontroller — STM32 Project           | Microcontroller     | —      | 🔄     |
 
 ---
 

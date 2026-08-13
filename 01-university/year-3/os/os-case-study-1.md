@@ -92,17 +92,17 @@ Evaluated by classmates from **other groups** (30%) + instructor (70%) → weigh
 
 ## Status
 
-| Item | Status |
-|------|--------|
-| Group formed | ✅ |
-| Group registered | ✅ |
-| Program.cs downloaded | ✅ |
-| Multithreading implemented | ✅ |
-| Benchmark measured | ✅ |
-| Presentation prepared | ⬜ |
-| program.cs submitted | ⬜ |
-| Peer eval (members) submitted | ⬜ |
-| Group eval (other groups) submitted | ⬜ |
+| Item                                | Status |
+| ----------------------------------- | ------ |
+| Group formed                        | ✅      |
+| Group registered                    | ✅      |
+| Program.cs downloaded               | ✅      |
+| Multithreading implemented          | ✅      |
+| Benchmark measured                  | ✅      |
+| Presentation prepared               | ✅      |
+| program.cs submitted                | ⬜      |
+| Peer eval (members) submitted       | ✅      |
+| Group eval (other groups) submitted | ⬜      |
 
 ## Group Members
 
