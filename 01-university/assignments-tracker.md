@@ -5,10 +5,10 @@ tags:
   - tracker
 status: active
 created: 2026-07-24
-updated: 2026-08-11
+updated: 2026-08-14
 ---
 
-<!-- Last synced: 2026-08-11 -->
+<!-- Last synced: 2026-08-14 -->
 
 # University Assignments Tracker — 2026
 
@@ -31,9 +31,6 @@ updated: 2026-08-11
 | Due          | Assignment                                | Subject             | Weight | Status |
 | ------------ | ----------------------------------------- | ------------------- | ------ | ------ |
 | Aug 24, 2026 | Wk7: Crazy 8s & Storyboard (group)        | UX/UI               | 5 pts  | 🔄     |
-| Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
-| Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
-| Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | 🔄     |
 | Aug 31, 2026 | Hooked — Individual Summary + App Example | UX/UI               | 10 pts | ⬜      |
 | Sep 7, 2026  | UI Hunt — Unusual Screens (individual)    | UX/UI               | 6 pts  | ⬜      |
 | Oct 13, 2026 | Romania-Map Pathfinding Web App           | AI                  | 50%    | 🔄     |
@@ -45,6 +42,9 @@ updated: 2026-08-11
 
 | Completed   | Assignment                                 | Subject           | Weight | Status |
 | ----------- | ------------------------------------------ | ----------------- | ------ | ------ |
+| Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | ✅      |
+| Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
+| Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
 | Aug 9, 2026 | Wk5: POV + HMW (group)                     | UX/UI             | —      | ✅      |
 | Aug 9, 2026 | Wk6: Hooked Loop + Kano Model (group)      | UX/UI             | —      | ✅      |
 | Aug 6, 2026 | Homework 1–4                               | Operating Systems | —      | ✅      |
@@ -80,7 +80,7 @@ Group work — one member submits `GroupNumber_Crazy8s_Storyboard.pdf`
 
 ---
 
-### 🔄 OS — Case Study 1: Multithreading `Aug 13 / Aug 14`
+### ✅ OS — Case Study 1: Multithreading `Aug 14` · DONE
 
 See [[os-case-study-1]] for full brief, implementation, and benchmarks.
 
@@ -91,24 +91,20 @@ See [[os-case-study-1]] for full brief, implementation, and benchmarks.
 | Group registered | ✅ |
 | `Program.cs` implemented (partitioned threads) | ✅ |
 | Benchmark measured (best: 4 workers, 3.94×) | ✅ |
-| Presentation prepared | ⬜ |
-| `program.cs` submitted | ⬜ |
-| Peer eval (own group members) | ⬜ **Aug 13 11:59 PM** |
-| Group eval (other groups) | ⬜ |
-
-**Submit:** `program.cs` + presentation file. One rep submits. Use KMITL institutional email for eval forms.
+| Presentation prepared | ✅ |
+| `program.cs` submitted | ✅ |
+| Peer eval (own group members) | ✅ |
+| Group eval (other groups) | ✅ |
 
 Group: 67011081 · **67011178** · 67011214 · 67011717 · 67011736
 
 ---
 
-### 🔄 Investment Planning — Report No. 1: Bonds/Debentures `Aug 13` · 20 pts
+### ✅ Investment Planning — Report No. 1: Bonds/Debentures `Aug 13` · 20 pts · SUBMITTED
 
 See [[finance-bonds-debentures-report]] and draft at [[thai-corp-bond-report-draft]].
 
-Individual or pair. 1,000,000 THB debenture investment analysis. **No AI allowed — 0% if detected.**
-
-NotebookLM id: `15e93f01` (44 sources)
+PDF: `~/Documents/University/Year-3/Investment Planning/67011178_Report1.pdf`
 
 ---
 

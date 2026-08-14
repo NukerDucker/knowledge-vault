@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d880b7d1cbbead57",
+        "id": "460a305b932659b4",
         "type": "tabs",
         "children": [
           {
-            "id": "739c602d371cbe42",
+            "id": "7d2f0980022d2c5e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01-university/assignments-tracker.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "assignments-tracker"
+              "title": "New tab"
             }
           }
         ]
@@ -196,19 +192,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "739c602d371cbe42",
+  "active": "7d2f0980022d2c5e",
   "lastOpenFiles": [
+    "01-university/assignments-tracker.md",
+    "university-files/G3_OS-Case-Study-01.zip",
+    "university-files/Archive.zip",
+    "university-files/G3_OS-Case-Study-01-DynamicVer.cs",
+    "university-files/Program-3.cs",
+    "university-files/G3_OS-Case-Study-01.cs",
+    "university-files/G3_OS-Case-Study-01.pdf",
+    "university-files/OS Case Study 01.pdf",
+    "university-files/Program.cs",
+    "university-files/Program-2.cs",
+    "university-files/Year-3/OS/all-program/static-base/kim-casestudy1.cs",
     "01-university/year-3/os/os-case-study-1.md",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/obj/Release/net10.0/CaseStudy01.csproj.FileListAbsolute.txt",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/bin/Release/net10.0/CaseStudy01.pdb",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/obj/Release/net10.0/ref/CaseStudy01.dll",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/bin/Release/net10.0/CaseStudy01.dll",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/bin/Release/net10.0/CaseStudy01.runtimeconfig.json",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/obj/Release/net10.0/CaseStudy01.genruntimeconfig.cache",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/bin/Release/net10.0/CaseStudy01.deps.json",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/bin/Release/net10.0/CaseStudy01",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/obj/Release/net10.0/apphost",
-    "university-files/Year-3/OS/2026-os/CaseStudy01/obj/Release/net10.0/CaseStud.32D452DE.Up2Date",
     "university-files/Year-3/OS/2026-os/CaseStudy01/README.md",
     "university-files/Year-3/OS/2026-os/CaseStudy01/PIPELINE.md",
     "university-files/Year-3/OS/2026-os/CaseStudy01/DYNAMIC_SCHEDULING.md",
@@ -226,7 +223,6 @@
     "university-files/Year-3/OS/OS-Benchamark/messageImage_1786540295306.jpg",
     "01-university/year-3/os/os-case-study-1-2.md",
     "VAULT-GUIDE.md",
-    "01-university/assignments-tracker.md",
     "university-files/Year-3/OS/Tony-OS-Case-Study-01/README.md",
     "university-files/Year-3/OS/OS-Case-Study-01/README.md",
     "BRIDGE.md",
