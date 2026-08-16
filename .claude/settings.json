@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"/Users/nukerducker/.claude/hooks/vault-stop-reminder.sh\"",
+            "timeout": 5,
+            "asyncRewake": true,
+            "rewakeMessage": "📝 Vault session notes reminder:",
+            "rewakeSummary": "Update vault session notes"
+          }
+        ]
+      }
+    ]
+  }
+}
