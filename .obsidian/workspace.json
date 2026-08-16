@@ -11,10 +11,14 @@
             "id": "7d2f0980022d2c5e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "README"
             }
           }
         ]
@@ -192,8 +196,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6367748eaf0677bc",
+  "active": "63cfb21de8ee66a8",
   "lastOpenFiles": [
+    "03-programming/vault-maintenance-log.md",
     "01-university/year-3/rtw/rtw-resume-assignment.md",
     "01-university/assignments-tracker.md",
     "university-files/G3_OS-Case-Study-01.zip",
@@ -239,7 +244,6 @@
     "01-university/internship/agoda/04 Knowledge Base/Windows Related/Windows Laptop Build.md",
     "01-university/internship/agoda/04 Knowledge Base/Windows Related/PPID.md",
     "01-university/internship/agoda/04 Knowledge Base/Windows Related/Autopilot Training Summary.md",
-    "01-university/internship/agoda/06 Projects/Project Keep Alive/WallKeeper.md",
     "01-university/internship/agoda/Untitled.canvas",
     "AgodaInternshipVault 3/Untitled.canvas"
   ]
