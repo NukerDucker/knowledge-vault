@@ -1,8 +1,9 @@
 ---
 title: RTW — Resume Assignment
 tags: [rtw, assignment, resume]
-status: active
+status: submitted
 created: 2026-08-16
+updated: 2026-08-17
 ---
 
 # Resume — Individual Work
@@ -13,19 +14,21 @@ created: 2026-08-16
 
 ## Required Sections
 
-- [ ] Photo (polite manner, appropriate dress, clean background)
-- [ ] Job position
-- [ ] Summary profile
-- [ ] Education
-- [ ] Work experience
-- [ ] Activities
-- [ ] Skills
+- [x] Photo (polite manner, appropriate dress, clean background)
+- [x] Job position
+- [x] Summary profile
+- [x] Education
+- [x] Work experience
+- [x] Activities
+- [x] Skills
   - Technical skills
   - Soft skills
-- [ ] Language skills
+- [x] Language skills
   - English: level or TOEIC score
   - Thai: Native
   - Other languages (if any)
+
+**Submitted:** 2026-08-17 | File: `Napaul_Intharasing_Resume.pdf`
 
 ## Rubric
 

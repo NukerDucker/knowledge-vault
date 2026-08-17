@@ -14,15 +14,15 @@ updated: 2026-08-14
 
 ## Subjects
 
-| Code | Subject | Day |
-|------|---------|-----|
-| 01276545 | UX/UI Design | Tue |
-| 01276342 | Artificial Intelligence | Tue |
-| 01276324 | Operating Systems | Fri |
+| Code     | Subject                           | Day |
+| -------- | --------------------------------- | --- |
+| 01276545 | UX/UI Design                      | Tue |
+| 01276342 | Artificial Intelligence           | Tue |
+| 01276324 | Operating Systems                 | Fri |
 | 01276521 | Practice of System Administration | Wed |
-| 01276314 | Microcontroller Interfacing | Wed |
-| — | Investment Planning | — |
-| — | Ready to Work (RTW) | — |
+| 01276314 | Microcontroller Interfacing       | Wed |
+| —        | Investment Planning               | Thu |
+| —        | Ready to Work (RTW)               | Thu |
 
 ---
 

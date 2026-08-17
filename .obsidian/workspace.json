@@ -11,12 +11,14 @@
             "id": "7d2f0980022d2c5e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01-university/internship/67011178_Internship_Report.pdf"
+                "file": "01-university/internship/agoda/07 Templates/Bulk Task.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "67011178_Internship_Report"
+              "icon": "lucide-file",
+              "title": "Bulk Task"
             }
           }
         ]
@@ -194,23 +196,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7d2f0980022d2c5e",
+  "active": "63cfb21de8ee66a8",
   "lastOpenFiles": [
+    "01-university/internship/agoda/03 Tasks/Replacement/Replacement - Pattiya, Tiya.md",
+    "01-university/internship/agoda/03 Tasks/Replacement/Replacement - Jitsawad, Thanachot.md",
+    "university-files/Internship/claude_code_setup_win.ps1",
+    "university-files/Internship/videowall.ps1",
+    "university-files/Internship/Summer Internship 22 May 2026 Laptop Collection & System Training at BKK29.pdf",
+    "university-files/Internship/New Hire Training Intern 2026.xlsx",
+    "university-files/Internship/NUC Training.pdf",
+    "university-files/Internship/Autopilot Training.pdf",
+    "university-files/Internship/Agoda One Bangkok Playbook.pdf",
+    "university-files/Internship/Leave of Absence Form 16 July.pdf",
+    "university-files/Internship/67011178_Internship_Report.pdf",
+    "90-archive/nacl-nextpath-x/06-nacl-kmitl-nextpath-x/00-system-map/README.md",
+    "01-university/assignments-tracker.md",
+    "university-files/Year-3/AI/rome-pathfinding/src/search.ts.tmp.56032.5f08a90b909b",
+    "01-university/year-3/rtw/rtw-resume-assignment.md",
     "03-programming/vault-maintenance-log.md",
     "03-programming/guides/senior-frontend-developer-guide.md",
-    "university-files/Internship/Napaul_Intharasing_Resume.pdf",
     "03-programming/guides/system-design-notes-main/22. Hotel Reservation System/README.md",
-    "01-university/year-3/rtw/rtw-resume-assignment.md",
-    "01-university/assignments-tracker.md",
-    "university-files/G3_OS-Case-Study-01.zip",
-    "university-files/Archive.zip",
-    "university-files/G3_OS-Case-Study-01-DynamicVer.cs",
-    "university-files/Program-3.cs",
-    "university-files/G3_OS-Case-Study-01.cs",
-    "university-files/G3_OS-Case-Study-01.pdf",
-    "university-files/OS Case Study 01.pdf",
-    "university-files/Program.cs",
-    "university-files/Program-2.cs",
     "01-university/year-3/os/os-case-study-1.md",
     "university-files/Year-3/OS/2026-os/CaseStudy01/README.md",
     "university-files/Year-3/OS/2026-os/CaseStudy01/PIPELINE.md",
@@ -239,9 +244,6 @@
     "01-university/internship/agoda/99 Archive/Replacement/Replacement - Saranpol Guest.md",
     "01-university/internship/agoda/99 Archive/Replacement/Replacement - Pornsriniyom Pongsachon.md",
     "01-university/internship/agoda/99 Archive/Fix/Fix - Lisa Wang.md",
-    "01-university/internship/agoda/06 Projects/WallKeeper/2026-06-26-wallkeeper-plan.md",
-    "01-university/internship/agoda/06 Projects/WallKeeper/2026-06-26-wallkeeper-keepalive-design.md",
-    "01-university/internship/agoda/04 Knowledge Base/Windows Related/Windows Laptop Build.md",
     "01-university/internship/agoda/Untitled.canvas",
     "AgodaInternshipVault 3/Untitled.canvas"
   ]
