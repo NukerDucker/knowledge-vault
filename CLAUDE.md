@@ -25,7 +25,6 @@ Vault notes reference their source files with a `**File:**` path pointing to `~/
 
 | What | Documents path |
 |------|---------------|
-| nacl-nextpath-x repos | `~/Documents/University/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
 | Rome pathfinding app | `~/Documents/University/Year-3/AI/rome-pathfinding/` |
 | Agoda internship files | `~/Documents/University/Internship/` |
 | Year-3 UX/UI slides + PDFs | `~/Documents/University/Year-3/` |
@@ -48,8 +47,6 @@ Numbered prefixes control sidebar order in Obsidian:
 | `01-university/year-3/ai/` | Artificial Intelligence (Rome pathfinding) |
 | `03-programming` | Dev project notes and vault wiring docs |
 | `05-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
-| `06-nacl-kmitl` | NACL lab work — system docs, ADRs, architecture |
-| `06-nacl-kmitl/nextpath-x/01-architecture/` | NACL design specs and integration docs |
 | `01-university/internship/agoda/` | Agoda IT internship 2026 (own Obsidian sub-vault) |
 | `90-archive` | Retired notes |
 
@@ -69,24 +66,3 @@ updated: 2026-06-01  # optional
 ---
 ```
 
-## nacl-nextpath-x Session State
-
-`05-ai/projects/nacl-nextpath-x/session-state.md` is the **primary source of truth** for the NACL NextPath X coding project. Read it before any work on that project. It contains:
-
-- Repo layout and git branch state
-- Safety rules (what never to commit)
-- Web (Next.js/Bun) and API (Go/Gin) commands and architecture
-- Frontend/backend contract notes with dates
-- Running log of completed work per session
-
-**Update rule:** After meaningful coding sessions on nacl-nextpath-x, append a dated section to `session-state.md` with: changed subsystem + intent, new commands/contracts/pitfalls, unresolved TODOs. Remove stale details.
-
-## Vault ↔ Child Repo Wiring (nacl-nextpath-x)
-
-The child repos (`nacl-nextpath-x-web`, `nacl-nextpath-x-api`) contain hook scripts that read/write this vault:
-
-- `scripts/session-start.sh` → reads vault into `.ai/context.md` inside the child repo
-- `scripts/session-end.sh` → writes session notes/state/decisions back here
-- `.github/hooks/memory.json` → wires the above to sessionStart/sessionEnd events
-
-Never commit `.ai/`, `.claude/`, `.codex/`, `session-state.md`, or `KnowledgeVault/**` from inside child repos. Existing tracked AI docs (`AGENTS.md`, `CLAUDE.md` in each repo) are allowed.
