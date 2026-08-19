@@ -45,10 +45,10 @@ Numbered prefixes control sidebar order in Obsidian:
 | `01-university/year-3/rtw/` | Ready to Work coursework |
 | `01-university/year-3/investment-planning/` | Investment Planning (bonds report, stock analysis) |
 | `01-university/year-3/ai/` | Artificial Intelligence (Rome pathfinding) |
-| `03-programming` | Dev project notes and vault wiring docs |
-| `05-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
+| `02-programming` | Dev project notes and vault wiring docs |
+| `03-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
 | `01-university/internship/agoda/` | Agoda IT internship 2026 (own Obsidian sub-vault) |
-| `90-archive` | Retired notes |
+| `04-archive` | Retired notes |
 
 See `VAULT-GUIDE.md` for full filing rules, naming conventions, and tag taxonomy.
 

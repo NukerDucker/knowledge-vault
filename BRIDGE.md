@@ -32,9 +32,9 @@ Navigation hub between the KnowledgeVault (notes) and `~/Documents/University/` 
 
 | Project | Vault | Code |
 |---------|-------|------|
-| NextPath-X (session state) | [[session-state]] (`05-ai/projects/nacl-nextpath-x/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
+| NextPath-X (session state) | [[session-state]] (`03-ai/projects/nacl-nextpath-x/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
 | NextPath-X (system docs) | `06-nacl-kmitl/nextpath-x/` | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
-| NACL Website | [[nacl-nextpath-x]] (`03-programming/projects/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-website/` |
+| NACL Website | [[nacl-nextpath-x]] (`02-programming/projects/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-website/` |
 
 ---
 

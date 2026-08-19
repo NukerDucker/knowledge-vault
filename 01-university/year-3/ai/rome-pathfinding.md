@@ -3,11 +3,12 @@ title: Rome Pathfinding — AI Assignment
 tags: [university, year-3, ai, project]
 status: active
 created: 2026-08-06
+updated: 2026-08-19
 ---
 
 # Rome Pathfinding (AI Assignment)
 
-Repo: `~/Documents/University/Year-3/AI/rome-pathfinding`
+Repo: `~/Documents/University/Year-3/AI/rome-pathfinding` → `github.com/NukerDucker/rome-pathfinding`
 Due: **2026-10-13**
 
 ## Stack
@@ -17,108 +18,133 @@ Due: **2026-10-13**
 - React Compiler enabled (`babel-plugin-react-compiler`)
 - Pure client-side SPA, no SSR
 
-**Why:** React over Svelte for familiarity under deadline; Vite for fast dev; Vercel for zero-config deploy with stable grader URL.
-
 ## Grading priorities (from prof)
 
-Where the marks live — the **creativity** the prof looks for:
-1. **Creative heuristic function** — the core
+1. **Creative heuristic function** — the core mark
 2. **UX/UI presentation quality**
 3. **Presentation delivery**
 
-**NOT** the creativity prof cares about:
-- **Multiple search algorithms** — allowed, but no creativity credit. Prof said **present ONE best, not all 6**. Extras can go in but don't move score.
-- **Road block feature** — optional, **zero score impact**.
+**Present ONE best algorithm, not all 8.** Multiple algos = no creativity credit. Road block feature = zero score impact.
 
-Prof cares most about the **core**: heuristic + presentation.
+## Heuristic rules
 
-## Heuristic rules (custom heuristic, A*/greedy phase)
+- **Data source:** ONLY page 2 of assignment PDF. Nothing external.
+- **Allowed:** pixel coordinates, protractor degrees, road km — anything derivable from PDF.
+- **Banned:** GPS data. **Straight-line distance (SLD) in any form** — measuring from map, real-world SLD+terrain, SLD from any source.
+- **Must be custom.**
 
-- **Data source:** ONLY data on **page 2 of assignment PDF**. Nothing external.
-- **Allowed:** anything derivable from that PDF — pixel coordinates, protractor/angle degrees, etc.
-- **Banned:** GPS data, and **straight-line distance (SLD) as heuristic**. SLD may not even be used to *derive* another value.
-- **Must be a CUSTOM heuristic.**
-- Does NOT affect BFS (uninformed, no heuristic).
+### What counts as SLD (banned) vs what's allowed
+| Method | Verdict |
+|--------|---------|
+| Measure SLD from map image | ❌ banned |
+| Real-world SLD + terrain adjustment | ❌ banned (still SLD) |
+| SLD from any external source | ❌ banned |
+| Road km from PDF | ✅ allowed |
+| Dijkstra precomputed road distances | ✅ allowed |
+| Pixel coords for vector decomposition | ✅ allowed |
 
-## Team status (2026-08-06)
+*Clarified 2026-08-19 — other groups asked prof directly.*
 
-| Who         | Task                    | Status                                            |
-| ----------- | ----------------------- | ------------------------------------------------- |
-| bento       | Custom algo (heuristic) | Done — behavior issue, discussing with prof today |
-| cheesy      | Bidirectional search    | Done                                              |
-| mind        | Uniform cost search     | Done                                              |
-| putt + nhow | Visual map adjustments  | In progress                                       |
+## Current heuristic: Combined LP+ALT (`heuristic.ts`)
 
-## Planned viz
+Two admissible components combined via `h = max(hLP, hALT)`. Max of admissibles = admissible and tighter.
 
-Dual animated step-by-step search viz, live metrics ticker, speed slider.
+### LP Vector-Decomposition (`heuristic_table.ts`)
+- h(a,b) = min Σ αᵢ·kmᵢ s.t. Σ αᵢ·vecᵢ = chord_AB
+- Solved offline with scipy/HiGHS; uses pixel coords + road km only
+- Mean h/road: **0.729** — admissible on all 190 pairs
 
----
+### ALT — Landmarks + Triangle Inequality (`alt.ts`)
+- h(n, goal) = max_L |d(L,n) − d(L,goal)|
+- Three presets: **lm2** (Eforie, Oradea), **lm4** (+ Neamt, Giurgiu), **lm8** (+ Timisoara, Vaslui, Drobeta, Hirsova)
+- Selectable in UI — `setALTPreset()` in `heuristic.ts`
+- Admissible by triangle inequality — no empirical testing needed
+- Same technique used in Waze/Google Maps at scale
+- Dijkstra precomputed at module load (8 × 20 nodes, negligible cost)
 
-## Code status (read from repo, 2026-08-06)
+#### Degree-1 "backdoor" landmarks — give exact h for specific goals
+When a landmark L is degree-1 (only one edge), and goal = L's only neighbor:
+```
+d(L, n) = edge_km + d(neighbor, n)   for all n
+|d(L,n) − d(L,goal)| = d(goal, n)   ← exact true distance
+```
+Romania backdoors:
+| Landmark | Backdoor to | In preset |
+|---|---|---|
+| Giurgiu (degree-1→Bucharest) | exact h for goal=Bucharest | lm4+ |
+| Eforie (degree-1→Hirsova) | exact h for goal=Eforie | lm2+ (all) |
+| Neamt (degree-1→Iasi) | exact h for goal=Neamt | lm4+ |
 
-Branch `main`, 5 commits. Latest: *Add algorithm comparison panel (time, memory, path cost)*.
-**Uncommitted:** modified `App.tsx`, `greedy.ts`, `heuristic.ts`, `search.ts`; untracked `_core.ts`, `astar.ts`, `bench.ts` (A* + heuristic engine + benchmark not committed yet).
+Consequence: landmark count effect is **invisible** for queries where goal has a backdoor landmark already in scope. e.g. Arad→Bucharest (Giurgiu, lm4), Oradea→Eforie (Eforie, lm2) all show same generated count at lm2/lm4/lm8.
 
-This local checkout = **bento (kk)'s work** (arc-heuristic branch content, uncommitted locally). All teammate work lives on **remote branches — none merged to `main` yet** (main frozen since first panel build).
+#### How to choose landmarks
 
-Remote: `github.com/NukerDucker/rome-pathfinding`
+**1. Farthest-first (best general method)**
+1. Pick any node as first landmark
+2. Each next = node farthest from all existing landmarks (max min-dist)
+3. Repeat until k landmarks
+Spreads maximally across graph. Used by Waze/Google Maps.
 
-### Remote branches (not yet merged)
-| Branch | Owner | Contents | New files |
-|--------|-------|----------|-----------|
-| `arc-heuristic` | bento (kk) | Arc/Bento heuristic + A* + greedy, hi-res 4000×2250 coords, arc viz | `astar.ts`, `heuristic.ts` |
-| `bidirectionalucs` | cheesy | Bidirectional UCS/Dijkstra module | `biucs.ts` |
-| `uniform-cost-search` | mind | UCS + path cost side panel | `ucs.ts` |
-| `frontend-refinements` | putt + nhow | Map redesign, ring markers on select, slider readouts, random-city dice button | — |
+**2. Geographic extremes (our approach)**
+Pick nodes at compass corners — far N/S/E/W. Works well on map graphs because road networks are spatially embedded.
 
-### Integration — DONE on `integrate` branch (2026-08-06)
+**3. Avoid high-degree hubs**
+Central nodes give weak bounds — `|d(L,n) - d(L,goal)|` is small when L is close to everything. Dead-ends (degree-1) give strong bounds for their specific goals.
 
-All 4 remote branches combined into `integrate` (off `main`, **not merged to main, not pushed** — awaiting review).
+**4. Boundary/convex hull nodes**
+Every shortest path tends to hug the boundary → boundary landmarks are likely near optimal paths → tight bounds.
 
-**Coordinate conflict resolution — DECOUPLE:** heuristic keeps its 4000×2250 geometry via a private `HCOORDS` const embedded in `heuristic.ts`; `romania.ts` uses frontend-refinements' 600×450 map coords. Heuristic reads `HCOORDS` for x/y, `ROMANIA` for edges/km only. No heuristic retuning, no map rescaling.
+| Strategy | Our landmarks | Quality |
+|---|---|---|
+| Geographic extremes | Eforie (E), Oradea (W), Neamt (NE), Giurgiu (S) | ✓ Good |
+| Degree-1 backdoors | Eforie, Neamt, Giurgiu | ✓ Exact h for those goals |
+| Farthest-first | Converges to similar nodes on 20-node graph | ≈ Same |
 
-**File provenance:**
-| File | Source |
-|------|--------|
-| App.tsx, App.css, index.css, romania.ts | frontend-refinements (+ arc overlay, footnotes) |
-| heuristic.ts, astar.ts | arc-heuristic (+ HCOORDS decouple) |
-| ucs.ts | uniform-cost-search |
-| biucs.ts | bidirectionalucs (13 type-only fixes, no logic change; lockfile dropped) |
-| bfs/dfs/greedy.ts | main |
+On 20 nodes, all strategies pick similar landmarks. Difference matters at millions of nodes. For presentation: lm8 geographic extremes + corner fill ≈ farthest-first — defensible.
 
-**Registry:** 6 algos wired — BFS, DFS, Greedy (Bento), A* (Bento), UCS, Bidirectional UCS.
+#### Where landmark count actually matters
+Goal must have NO backdoor in the smaller preset. Try: goal = Arad, Sibiu, Pitesti, Craiova, Lugoj, Rimnicu Vilcea. None of these are degree-1 neighbors of a landmark.
 
-**Arc overlay:** heuristic viz re-expressed in 600×450 map coords (`mapArcGeometry` in App.tsx), shown for greedy + astar.
+#### Why `generated` count often doesn't change between presets
+`generated` = nodes ever discovered (added to frontier), not nodes expanded. Even with perfect h, A* still discovers neighbors of each node it expands. Count only drops if weaker heuristic causes *extra* expansions → exposing more neighbors. On a 20-node graph, most heuristics are tight enough that expansion count is identical.
 
-**Verified:** `tsc -b` clean, `bun run build` clean, A* Arad→Bucharest = 418 (Arad·Sibiu·Rimnicu Vilcea·Pitesti·Bucharest). All 6 algos run; ucs/biucs/astar optimal 418, bfs/dfs 450.
+### Combined
+- `h = max(hLP, hALT)` → mean h/road **~0.85–0.90**
+- `hLP` exported separately for A*(LP) baseline comparison
+- A*(ALT only) also available as separate algorithm for comparison
 
-`integrate` log: c6b27b7 map redesign → 0ed4d9e algo files → 3e4aa70 union registry → df6974e footnotes+arc overlay.
+### Other groups (2026-08-19)
+Exploring random h, eye/feel h, favor h — all inadmissible, A* loses optimality. Our LP+ALT is stronger on every axis.
 
-**Next:** review `integrate`, then merge to `main`. Note: `heuristic.ts` still exports unused `arcGeometry` in HCOORDS space (dead, harmless). A* admissible-but-inconsistent reopening still a prof discussion.
+## Algorithms — 8 total
 
-### Algorithms wired in UI (`search.ts` → `ALGORITHMS`)
-| Key | Label | Optimal | Complete |
-|-----|-------|---------|----------|
-| bfs | BFS | Yes* (equal step costs) | Yes* |
-| dfs | DFS | No | Yes* (visited set) |
-| greedy | Greedy (Bento) | No | No* |
-| astar | A* (Bento) | Yes* | Yes* |
+| Key | Label | Heuristic | Optimal | Complete |
+|-----|-------|-----------|---------|----------|
+| bfs | BFS | — | Yes* | Yes |
+| dfs | DFS | — | No | No* |
+| greedy | Greedy | LP+ALT | No | No* |
+| astar | A* (LP) | LP only | Yes | Yes |
+| astaralt | A* (LP+ALT) | combined | Yes | Yes |
+| astaraltonly | A* (ALT only) | ALT only (active preset) | Yes | Yes |
+| biastar | Bidir. A* (LP+ALT) | combined | Yes | Yes |
+| ucs | UCS | — | Yes | Yes |
+| biucs | Bidirectional UCS | — | Yes | Yes |
 
-### Bento heuristic (`_core.ts` + `heuristic.ts`)
-- **Friction-weighted chord length** — chord between map pixel coords × per-region "friction" (km/px). Pixel coords are legal per heuristic rules; **no SLD, no GPS**.
-- Direct-edge pairs return exact km; others = friction-sum (3 samples along chord) × chord / 3.
-- Friction grid: **200×112 cells**, 20px each, sampled within 150px of road edges; floor = slowest road on map (`GLOBAL_MIN_FRIC`, derived from data so it can't drift).
-- **Admissible on all 190 city pairs** (self-checked via Floyd-Warshall ground truth).
-- **NOT consistent** — 59 triples violate triangle inequality.
+**Bidirectional A*:** Pohl 1971 stopping (minF_fwd + minF_bwd ≥ μ). Slower on 20 nodes (overhead > savings at small scale); O(b^(d/2)) advantage appears at millions of nodes.
 
-### ⚠ The behavior issue for prof
-A* uses an **admissible-but-inconsistent** heuristic. Because it's not consistent, the closed set is unsafe: `astar.ts` **reopens** nodes (removes from closed, re-expands) when a strictly lower `g` is found. Goal-test on pop (not on generation) to keep optimality. This reopening behavior — correct but non-standard vs textbook A* — is the thing to confirm with the prof.
+## Self-checks (run at module load)
 
-### Self-checks (run at module load)
-- `heuristic.ts`: asserts `romania.ts` ↔ `_core.ts` graph stay in sync + heuristic admissible on all pairs.
-- `astar.ts`: asserts Arad→Bucharest = **418** via Arad·Sibiu·Rimnicu Vilcea·Pitesti·Bucharest.
-- `bench.ts`: compares Dijkstra vs SLD vs Bento — nodes expanded, timing, admissibility (`deno run bench.ts`).
+- `heuristic.ts`: hLP(Arad,Bucharest) ≈ 388; combined h ≤ 418 (admissibility)
+- `astar.ts`: Arad→Bucharest = 418
+- `biastar.ts`: Arad→Bucharest = 418; trivial same-city case
+- `search.ts`: pathCost(Arad→Sibiu→Fagaras→Bucharest) = 450
 
-### UI
-React SPA, shadcn/ui + lucide-react. Step-by-step search visualizer with frontier/visited highlight, algorithm comparison panel (time / memory / path cost), speed slider, play/pause/step.
+## UI
+
+Bento two-lane side-by-side algo comparison. Step-by-step visualizer, frontier/visited highlight, arc overlay (greedy/astar/astaralt/biastar), speed slider, play/pause/step. shadcn/ui + lucide-react.
+
+## Git state (2026-08-19)
+
+Branch `main` — clean, pushed. Last 2 commits:
+- `d2d76b7` — A*(LP+ALT) + ALT heuristic + side-by-side comparison
+- `6b1ed4d` — Bidirectional A*(LP+ALT) + arc overlay fix

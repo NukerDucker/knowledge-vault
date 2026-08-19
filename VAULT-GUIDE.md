@@ -37,30 +37,18 @@ Single source of truth for how this vault is organized. Read this before creatin
     agoda/                        ← Agoda IT internship sub-vault (2026)
   regulations/                    ← university rules, CEI regulations
 
-02-homelab/                       ← hardware, network configs, self-hosting
-
-03-programming/
+02-programming/
   guides/                         ← dev reference guides
   projects/                       ← per-project vault-wiring notes
 
-04-fitness/                       ← workout logs, PRs, plans
-
-05-ai/
+03-ai/
   projects/<name>/                ← session-state.md + edit-log.md per project
     nacl-nextpath-x/              ← NACL NextPath X session state + edit log
     rome-wasnt-build-in-a-day/   ← AI Rome pathfinding project
     casestudy01-os/               ← OS case study session notes
     drunkbill/                    ← Drunkbill project
 
-06-nacl-kmitl/
-  lab-setup/                      ← physical lab: layouts, power, TOR docs
-  nextpath-x/                     ← system docs, ADRs, architecture, playbooks
-    00-system-map/
-    01-architecture/              ← design specs, integration designs
-    02-operations-and-seeding/
-    03-incident-playbooks/
-    04-adrs/
-    05-schema-and-data-quirks/
+04-archive/                       ← closed / superseded, keep for reference
 
 01-university/internship/agoda/   ← Agoda IT internship 2026 (own Obsidian sub-vault)
   01 Daily Notes/                 ← daily standup logs (YYYY-MM-DD.md)
@@ -73,8 +61,6 @@ Single source of truth for how this vault is organized. Read this before creatin
   08 Reference/                   ← scripts, external references
   99 Archive/                     ← deprecated notes
   CLAUDE.md                       ← Agoda vault–specific guidance
-
-90-archive/                       ← closed / superseded, keep for reference
 ```
 
 ---
@@ -116,9 +102,9 @@ updated: 2026-07-24  # add when significantly revised
 | Degree / study plan | `01-university/courses/` | `cei-study-plan.md` |
 | University regulations | `01-university/regulations/` | `cei-regulations-summary.md` |
 | Internship diary / reports / forms | `01-university/internship/` | `internship-diary.md` |
-| Dev reference guide | `03-programming/guides/` | `senior-frontend-developer-guide.md` |
-| Vault wiring notes (per repo) | `03-programming/projects/` | `nacl-nextpath-x.md` |
-| AI project session state | `05-ai/projects/<name>/` | `session-state.md` |
+| Dev reference guide | `02-programming/guides/` | `senior-frontend-developer-guide.md` |
+| Vault wiring notes (per repo) | `02-programming/projects/` | `nacl-nextpath-x.md` |
+| AI project session state | `03-ai/projects/<name>/` | `session-state.md` |
 | Physical lab docs, layouts | `06-nacl-kmitl/lab-setup/` | `601-lab-layout.png` |
 | System docs, ADRs, architecture | `06-nacl-kmitl/nextpath-x/` | `01-architecture/` |
 | NACL design specs / integration docs | `06-nacl-kmitl/nextpath-x/01-architecture/` | `2026-07-07-camellya-frontend-overhaul-design.md` |
@@ -126,7 +112,7 @@ updated: 2026-07-24  # add when significantly revised
 | Agoda internship project docs | `01-university/internship/agoda/06 Projects/<name>/` | `WallKeeper/` |
 | Agoda KB articles | `01-university/internship/agoda/04 Knowledge Base/` | `NH Laptop Spec.md` |
 | Unprocessed capture | `00-inbox/` | — |
-| Old / closed / superseded | `90-archive/` | — |
+| Old / closed / superseded | `04-archive/` | — |
 | University PDFs / slides / physical docs | `~/Documents/University/Year-N/<Subject>/` | `A1 Foundation knowledge.pdf` |
 
 ---
@@ -176,6 +162,30 @@ Example:
 Clear `00-inbox/` weekly:
 1. File into the correct folder with proper frontmatter
 2. Or delete if no longer relevant
+
+---
+
+## Adding a New Top-Level Folder
+
+Only create a new numbered folder when content genuinely doesn't fit anywhere existing.
+
+**Rules:**
+1. Use the next sequential number after the highest non-archive folder (currently `03-ai` → next is `05` since `04` is archive; insert new folder at `05+`).
+2. Name pattern: `NN-kebab-case/` — all lowercase, hyphens only.
+3. Add a row to the **Folder Map** and **Where Things Go** table in this file before creating the folder.
+4. Add a color group entry in `.obsidian/graph.json` so the new folder gets a distinct colour in the graph.
+5. Add a row to `BRIDGE.md` if the folder cross-references `~/Documents/University/`.
+6. Update `CLAUDE.md` (project root) folder convention table.
+
+**Number reservation:**
+| Slot | Purpose |
+|------|---------|
+| `00` | Inbox — fixed |
+| `01` | University — fixed |
+| `02` | Programming — fixed |
+| `03` | AI projects — fixed |
+| `04` | Archive — fixed |
+| `05+` | Future expansion |
 
 ---
 
