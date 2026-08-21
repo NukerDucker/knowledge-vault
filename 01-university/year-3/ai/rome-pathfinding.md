@@ -3,6 +3,7 @@ title: Rome Pathfinding — AI Assignment
 tags: [university, year-3, ai, project, assignment]
 status: active
 created: 2026-08-06
+updated: 2026-08-21
 ---
 
 # Rome Pathfinding (AI Assignment)
@@ -11,6 +12,15 @@ Repo: `~/Documents/University/Year-3/AI/rome-pathfinding` → `github.com/NukerD
 Due: **2026-10-13** | Submission: YouTube video + Vercel URL + GitHub link
 
 *Session log and git state → [[session-state]]*
+
+## Implementation status (2026-08-21)
+
+- ✅ Heuristic fully implemented — LP+ALT combined, mean h/road 0.986
+- ✅ All 9 algorithms wired and self-checked
+- ✅ UI complete — bento two-lane, heatmap, click-to-landmark, toolbar
+- ✅ Docs updated — `README.md` and `HEURISTIC_GUIDE.md` reflect current state
+- ⏳ Slides — 4/5 evidence slides captured, slide-2 (motivation) pending
+- ⏳ YouTube video + final Vercel URL
 
 ---
 
