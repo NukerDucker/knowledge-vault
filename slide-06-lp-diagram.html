@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #F0F4F8; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+</style>
+</head>
+<body>
+<!--
+  Export target: 1750 × 940 px
+  Open in browser → Cmd+Shift+4 → crop tight to SVG
+  Or: File → Save Page → open in Preview → Export as PNG
+-->
+<svg width="1750" height="980" viewBox="0 0 1750 980"
+     xmlns="http://www.w3.org/2000/svg"
+     style="font-family: Arial, 'Helvetica Neue', sans-serif; display:block;">
+  <defs>
+    <!-- chord arrowhead: #2E75B6 -->
+    <marker id="arr-chord" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#2E75B6"/>
+    </marker>
+    <!-- vector arrowhead: #1F4E79 -->
+    <marker id="arr-vec" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#1F4E79"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1750" height="980" fill="#F0F4F8"/>
+
+  <!-- ── NODES ───────────────────────────────────────────────────────────
+       Arad    A = (165, 265)
+       Sibiu   S = (590, 400)
+       Făgăraș F = (910, 362)
+       Bucharest B = (1540, 610)
+  ──────────────────────────────────────────────────────────────────── -->
+
+  <g transform="translate(0,40)">
+  <!-- CHORD: Arad → Bucharest (thick dashed blue) -->
+  <line x1="179" y1="265" x2="1524" y2="606"
+        stroke="#2E75B6" stroke-width="5" stroke-dasharray="18 10" opacity="0.80"
+        marker-end="url(#arr-chord)"/>
+
+  <!-- VECTOR 1: Arad → Sibiu, 140 km -->
+  <line x1="165" y1="265" x2="573" y2="398"
+        stroke="#1F4E79" stroke-width="7" stroke-linecap="round"
+        marker-end="url(#arr-vec)"/>
+
+  <!-- VECTOR 2: Sibiu → Făgăraș, 99 km -->
+  <line x1="590" y1="400" x2="893" y2="363"
+        stroke="#1F4E79" stroke-width="7" stroke-linecap="round"
+        marker-end="url(#arr-vec)"/>
+
+  <!-- VECTOR 3: Făgăraș → Bucharest, 211 km -->
+  <line x1="910" y1="362" x2="1524" y2="607"
+        stroke="#1F4E79" stroke-width="7" stroke-linecap="round"
+        marker-end="url(#arr-vec)"/>
+
+  <!-- NODE CIRCLES -->
+  <circle cx="165" cy="265" r="16" fill="#FFFFFF" stroke="#2D2D2D" stroke-width="2.5"/>
+  <circle cx="590" cy="400" r="12" fill="#FFFFFF" stroke="#1F4E79" stroke-width="2"/>
+  <circle cx="910" cy="362" r="12" fill="#FFFFFF" stroke="#1F4E79" stroke-width="2"/>
+  <circle cx="1540" cy="610" r="16" fill="#FFFFFF" stroke="#2D2D2D" stroke-width="2.5"/>
+
+  <!-- CITY LABELS -->
+  <text x="165" y="228" text-anchor="middle" fill="#2D2D2D" font-size="44" font-weight="700">Arad</text>
+  <text x="590" y="446" text-anchor="middle" fill="#2D2D2D" font-size="38" font-weight="700">Sibiu</text>
+  <text x="970" y="342" text-anchor="start" fill="#2D2D2D" font-size="38" font-weight="700">Făgăraș</text>
+  <text x="1540" y="660" text-anchor="middle" fill="#2D2D2D" font-size="44" font-weight="700">Bucharest</text>
+
+  <!-- α CHIPS on vectors (yellow pill: #FFF2CC bg, #E6C800 border, #7A5200 text) -->
+
+  <!-- chip 1: midpoint A→S ≈ (370, 322) -->
+  <rect x="262" y="296" width="218" height="52" rx="8"
+        fill="#FFF2CC" stroke="#E6C800" stroke-width="1.5"/>
+  <text x="371" y="330" text-anchor="middle"
+        fill="#7A5200" font-size="36" font-weight="700">α₁ · 140 km</text>
+
+  <!-- chip 2: midpoint S→F ≈ (750, 372) -->
+  <rect x="655" y="300" width="196" height="52" rx="8"
+        fill="#FFF2CC" stroke="#E6C800" stroke-width="1.5"/>
+  <text x="753" y="334" text-anchor="middle"
+        fill="#7A5200" font-size="36" font-weight="700">α₂ · 99 km</text>
+
+  <!-- chip 3: midpoint F→B ≈ (1225, 486) -->
+  <rect x="1098" y="456" width="218" height="52" rx="8"
+        fill="#FFF2CC" stroke="#E6C800" stroke-width="1.5"/>
+  <text x="1207" y="490" text-anchor="middle"
+        fill="#7A5200" font-size="36" font-weight="700">α₃ · 211 km</text>
+
+  <!-- CHORD LABEL -->
+  <text x="862" y="540" text-anchor="middle"
+        fill="#2E75B6" font-size="36" font-weight="700">chord  Arad → Bucharest</text>
+
+  <!-- EQUATION PANEL -->
+  <rect x="80" y="680" width="1590" height="210" rx="10"
+        fill="#EBF3FA" stroke="#2E75B6" stroke-width="1.5"/>
+
+  <text x="875" y="732" text-anchor="middle"
+        fill="#595959" font-size="30" letter-spacing="0.08em">HEURISTIC  ·  SOLVED OFFLINE  ·  ROAD KM ONLY  ·  ADMISSIBLE</text>
+
+  <text x="875" y="800" text-anchor="middle"
+        fill="#1F4E79" font-size="42" font-weight="700">h(A, B)  =  min Σ αᵢ · kmᵢ</text>
+
+  <text x="875" y="860" text-anchor="middle"
+        fill="#1F4E79" font-size="36">subject to  Σ αᵢ · vec<tspan font-size="28" dy="6">i</tspan><tspan dy="-6">  =  chord</tspan><tspan font-size="28" dy="6">AB</tspan><tspan dy="-6">,     0 ≤ αᵢ ≤ 1</tspan></text>
+  </g>
+</svg>
+</body>
+</html>

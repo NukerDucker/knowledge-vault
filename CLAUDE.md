@@ -48,6 +48,7 @@ Numbered prefixes control sidebar order in Obsidian:
 | `02-programming` | Dev project notes and vault wiring docs |
 | `03-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
 | `01-university/internship/agoda/` | Agoda IT internship 2026 (own Obsidian sub-vault) |
+| `03-ai` | Session log + git state for AI-assisted projects. Pair with `01-university/year-N/subject/` reference note. See Reference/Session Split rule below. |
 | `04-archive` | Retired notes |
 
 See `VAULT-GUIDE.md` for full filing rules, naming conventions, and tag taxonomy.
@@ -62,7 +63,28 @@ title: Note Title
 tags: [tag1, tag2]
 status: active   # or draft, archived
 created: 2026-05-15
-updated: 2026-06-01  # optional
+updated: 2026-06-01  # optional — omit on reference notes, keep on session logs
 ---
 ```
+
+---
+
+## Reference / Session Split Rule
+
+When a project is worked on across 3+ Claude sessions, split into two notes:
+
+- **`01-university/year-N/subject/topic.md`** — stable facts only (stack, design, technical content). Omit `updated:` to avoid date churn.
+- **`03-ai/projects/<name>/session-state.md`** — rolling session log, git state, open tasks, dated entries. Keep `updated:`.
+
+**Linking rule:**
+- Reference note footer: `*See also: [[session-state]] — session log, git state, dated progress*`
+- Session log header: `*Reference note → [[topic]]*`
+
+**New AI-assisted projects:** create `session-state.md` in `03-ai/projects/<name>/` from session 1.
+
+**Non-AI projects:** use a `-log.md` sibling in the same subject folder instead of `03-ai/`.
+
+Active example: `01-university/year-3/ai/rome-pathfinding.md` ↔ `03-ai/projects/rome-pathfinding/session-state.md`
+
+Full rule in `VAULT-GUIDE.md` → Reference / Session Split section.
 

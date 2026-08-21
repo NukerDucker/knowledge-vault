@@ -11,6 +11,8 @@ created: 2026-08-08
 
 # OS Case Study 1 — Multithreading
 
+*Session log → [[casestudy01-os/session-state]]*
+
 > [!warning] Deadlines
 > - **Peer eval form:** August 13, 2026, 11:59 PM (link expires)
 > - **Submission:** August 14, 2026, 11:59 PM

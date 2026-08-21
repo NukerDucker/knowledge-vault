@@ -1,5 +1,6 @@
 # CaseStudy01 — OS Multithreading
 
+*Reference note → [[os-case-study-1]]*
 **Path:** `~/Documents/University/Year-3/OS/CaseStudy01`
 **Last updated:** 2026-08-08
 

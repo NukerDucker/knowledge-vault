@@ -142,6 +142,29 @@ Example:
 
 ---
 
+## Reference / Session Split
+
+For projects with ongoing AI-assisted work (3+ Claude sessions), split across two notes:
+
+| Note type | Location | Contains | `updated:` field |
+|-----------|----------|----------|-----------------|
+| **Reference note** | `01-university/year-N/subject/<topic>.md` | Stable facts: stack, design, technical content, assignment brief | Omit — only changes when facts change |
+| **Session log** | `03-ai/projects/<name>/session-state.md` | Rolling session entries, git state, open tasks, dated progress | Keep — tracks last session |
+
+**Linking:**
+- Reference note footer: `*See also: [[session-state]] — session log, git state, dated progress*`
+- Session log header: `*Reference note → [[<topic>]]*`
+
+**Trigger:** Any note edited across 3+ Claude sessions should be split. Churn (dated entries, git state) belongs in the session log, not the reference note.
+
+**Non-AI projects** (no `03-ai` presence): keep a `-log.md` sibling in the subject folder instead (e.g., `investment-planning-log.md` next to `investment-planning.md`).
+
+**New projects:** create `session-state.md` in `03-ai/projects/<name>/` from day one if the project will span multiple sessions.
+
+Active example: `01-university/year-3/ai/rome-pathfinding.md` ↔ `03-ai/projects/rome-pathfinding/session-state.md`
+
+---
+
 ## Tag Conventions
 
 | Tag | Use |
