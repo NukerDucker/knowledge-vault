@@ -1,17 +1,19 @@
 ---
 title: "Week 7 — Crazy 8s & Storyboarding"
 tags: [uxui, assignment, group-work, ideation, storyboard]
-status: draft
+status: active
 created: 2026-08-11
+updated: 2026-08-21
 due: 2026-08-24
-points: 5
+points: 6
 type: group-work
-submit: GroupNumber_Crazy8s_Storyboard.pdf
+submit: G2_UserCases_Concept_Storyboard.pptx.pdf
+team: G2
 ---
 
 # Week 7 Assignment — Crazy 8s & Storyboarding
 
-**Due:** Aug 24, 11:59 PM · 5 pts · Group work · One member submits
+**Due:** Aug 24, 11:59 PM · 6 pts · Group work · One member submits
 
 ---
 
@@ -71,7 +73,7 @@ submit: GroupNumber_Crazy8s_Storyboard.pdf
 
 #### Sheet summaries
 
-**67011138 Norpoom (Image #3)**
+**67011178 Napaul (Image #3)**
 1. Map-First Floor Plan — interactive campus map, rooms labeled (L01–L05, etc.)
 2. Status Board — list: ECC 601 Booked 12:00 / ECC 607 Available / ECC 403 Available
 3. Calendar Grid — ECC 601 time grid
@@ -93,66 +95,75 @@ submit: GroupNumber_Crazy8s_Storyboard.pdf
 
 ---
 
+### Part 2b — Three User Cases (1.5 pts)
+
+Three distinct users with specific problems traceable to Weeks 2–4 research.
+
+| Case | Who | Situation | Specific Problem |
+|------|-----|-----------|-----------------|
+| **A** | Student club leader (3rd year) | Needs to book ECC room for club activity next week | Sent LINE to staff 2 days ago, no reply. Can't confirm with members. Doesn't know what's available or where request stands. |
+| **B** | Faculty member (Prof. New) | Needs seminar room for external guest lecture, specific equipment required | Walks to rooms physically to check availability. Doesn't know which rooms have projector + mic. No way to verify without asking staff. |
+| **C** | Final-year student (short notice) | Group project deadline in 3 days, needs room same week | By the time staff replies, preferred slots gone. No visibility into what's free today. Has to re-ask from scratch after rejection. |
+
+**Chosen for storyboard:** Case A — most common scenario, covers both discovery (what's free) and tracking (where is my request).
+
+---
+
 ### Part 3 — Chosen Concept + Storyboard
 
-**Concept name (≤5 words):** See It. Book It. Track It.
+**Concept name (≤5 words):** See It. Book It. Tracked.
 
 **How it answers the HMW:** Combines map-first live availability (HMW1) with approval timeline tracking (HMW2). User sees what's free without walking anywhere, books in-app, then watches approval progress without messaging anyone.
 
 **Selection method:** Silent vote → discussion
 
-#### Storyboard (6–8 frames)
+#### Storyboard — Case A: Club Leader (6 frames)
+
+*Tied to Three User Cases → Case A (student club leader, club activity booking)*
 
 | Frame | Scene | What's shown |
 |-------|-------|-------------|
 | 1 | **[BEFORE APP] Student at dorm** | Club activity next week. Needs to book a room. Sends LINE message to staff. Two days pass — no reply. Anxious, can't tell members if activity is on. |
 | 2 | **Opens app → Floor Plan** | Campus floor plan loads. ECC building. Rooms colored 🟢🔴🟡. Sees free slots without asking anyone. |
 | 3 | **Taps ECC-301 → Room Info Card** | Card: capacity 40, projector ✓, AC ✓, "Free Sat 1–4pm". Exactly what the club needs. One tap to proceed. |
-| 4 | **Selects slot → Conflict check** | Picks Sat 1–4pm. No clash. "Slot available." Submits request — takes 30 seconds total. |
-| 5 | **Approval Timeline appears** | Step tracker: `Submitted ✓ → Staff Review ⏳ → Dept Head → Approved`. Student bookmarks it. No follow-up LINE needed. |
-| 6 | **Push notification arrives** | "ECC-301 approved for Sat 1–4pm 🎉" Student sees it in class. Immediately messages club group: "We're confirmed." |
-| 7 | **[AFTER APP] Saturday arrives** | Student and club members walk to ECC-301. Door unlocked, room as booked. No last-minute "wait for staff" moment. |
-| 8 | **[AFTER APP] Outcome felt** | Activity runs. Members present. Whiteboard covered in plans. Student relaxed — knew 3 days in advance. No LINE chase. |
+| 4 | **Submit + Upload Doc** | Picks Sat 1–4pm. No clash. Attaches activity proposal doc. Submits — 1 minute total. |
+| 5 | **Approval Timeline appears** | Step tracker: `Submitted ✓ → Staff Review ⏳ → Dept Head → Approved`. No follow-up LINE needed. |
+| 6 | **Push notification + Outcome** | "ECC-301 approved 🎉" arrives in class. Messages club: "We're confirmed." Activity runs Saturday — knew 3 days early. No LINE chase. *(Rejection branch: app suggests EN-05 alternative.)* |
 
 ---
 
 ### Part 4 — Critique Note
 
-| | |
-|--|--|
-| **What other team flagged** | |
-| **What we changed** | |
-| **What we kept + why** | |
+**What other team flagged:**
+- No chat/contact if user doesn't know staff personally
+- Rejection flow missing — what happens after rejected?
+- Document system unclear — what format/template required?
+- Should split users by type (club vs individual vs faculty)
+- Priority system unclear — first come first serve or priority-based?
+- What if equipment broken or room has issue on the day?
+- Room review feature missing
+- Equipment repair report system missing
+
+**What we changed:**
+- Frame 6 redrawn to show rejection branch → app suggests EN-05 as alternative with available time
+
+**What we kept + why:**
+- No in-app staff chat: scope is booking flow, not staff communication. Chat adds complexity without solving the core problem (visibility). Flagged for v2.
+- First come first serve: priority logic requires policy decision outside our design scope. FCFS is default assumption — kept simple.
+- Equipment issue reporting: valid but separate flow. Out of scope for this storyboard which covers booking only.
 
 ---
 
-### Part 5 — User Stories + Acceptance Criteria (5–8 stories)
+## Rubric (actual — 6 pts)
 
-Formula: *As a [who] I want to [do what] so that [I get what]*
-
-| # | User Story | Acceptance Criterion |
-|---|-----------|---------------------|
-| 1 | As a **student**, I want to see which rooms are available right now on a map, so that I can find a free room without walking around campus or asking staff. | Done when: student opens app and sees a floor plan with each room colored by live status (Free / Pending / Booked) updated in real time. |
-| 2 | As a **student**, I want to view a room's details before booking — including capacity, equipment, and any restrictions — so that I can confirm the room fits my event before committing. | Done when: tapping any room shows a detail card with at minimum: capacity (number of people), equipment list, and current availability. |
-| 3 | As a **student**, I want to submit my booking request and upload the required documents in the app, so that I don't need to deliver physical paperwork or send files on LINE. | Done when: student can attach a document file during booking submission and receive a confirmation that the request was received. |
-| 4 | As a **student**, I want to track my booking's approval progress step by step, so that I always know where my request stands without messaging anyone. | Done when: student sees a live step tracker (Submitted → Staff Review → Dept Head → Approved/Rejected) that updates automatically at each stage. |
-| 5 | As a **student**, I want to receive a push notification when my booking is approved or rejected, so that I can inform my group immediately without checking the app repeatedly. | Done when: student's phone receives a notification within 5 minutes of a status change, showing the room name, result, and time slot. |
-| 6 | As a **student**, I want the app to suggest an available alternative room when my request is rejected, so that I can re-book quickly without starting the search from scratch. | Done when: rejection screen shows at least one alternative room with matching capacity that has a free slot on the same date. |
-| 7 | As a **student**, I want to cancel a booking I no longer need, so that the room becomes available for others immediately. | Done when: student can cancel a pending or approved booking from the booking detail screen, and the room status updates to Free within 1 minute. |
-
-⚠️ Write user goals, NOT technical specs ("the system must have a button" = half marks)
-
----
-
-## Rubric
-
-| Criterion | Full (1.0) | Half (0.5) |
-|-----------|-----------|-----------|
-| 1. Problem choice + idea range | HMW links to Week 6; everyone did 8 boxes; ideas genuinely different | < 8 boxes, same-shape ideas, or one sheet for whole team |
-| 2. Concept selection with criteria | Silent vote first; concept named; explains why it answers HMW | No reasoning linked to HMW |
-| 3. Storyboard tells a story | 6–8 frames; starts before app, ends after; context + action + felt outcome | App screens only, or no resolution shown |
-| 4. Revision after critique | All 3 lines done; change visible in storyboard; kept items have reasons | "No comments" or notes written but nothing changed |
-| 5. User stories well-formed | 5–8 stories; As a/I want/so that; user goals not implementation | < 5 stories, or written as specs |
+| # | Criterion | Full | Half | Pts |
+|---|-----------|------|------|-----|
+| 1 | HMW + Why | Links to Week 6 feature; clear rationale | Vague or no link | 1.0 |
+| 2 | Crazy 8s (each member) | All members, 8 boxes each, ideas genuinely different | < 8 boxes, same ideas, or one sheet for team | 1.5 |
+| 3 | Three User Cases | 3 distinct users, specific situation + problem, one chosen with reason | Generic or < 3 cases | 1.5 |
+| 4 | Concept + Storyboard | Named concept (≤5 words), 6 frames, starts before app, ends with felt outcome | App screens only, no resolution | 1.0 |
+| 5 | Critique Note | All 3 sections (flagged / changed / kept+why), change visible in storyboard | "No comments" or nothing changed | 1.0 |
+| | **Total** | | | **6.0** |
 
 ---
 
