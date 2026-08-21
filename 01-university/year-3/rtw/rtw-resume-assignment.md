@@ -41,4 +41,25 @@ updated: 2026-08-17
 ## Notes
 
 - Multiple submissions allowed
-- No additional instructions
+- Can resubmit to improve summary profile before Sep 10
+
+---
+
+## Sep 10 Presentation (in-class)
+
+**Date:** Sep 10, 2026 · in-class · **do not be absent**
+**Prep class:** Sep 3, 2026 (attend)
+
+### What to present
+
+1. **Introduce yourself** — name, background, brief
+2. **Summary profile** — deliver verbally from resume summary section
+3. **Answer job interview questions** — standard interview Q&A format
+
+### Action items
+
+- [ ] Polish summary profile on resume (teacher flagged this specifically)
+- [ ] Memorize + practice delivering summary profile out loud
+- [ ] Prepare answers to common interview questions
+- [ ] Attend Sep 3 class (prep/practice session implied)
+- [ ] Attend Sep 10 presentation (mandatory, teacher warned no absences)

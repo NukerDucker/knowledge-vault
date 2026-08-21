@@ -30,6 +30,8 @@ updated: 2026-08-21
 
 | Due          | Assignment                                | Subject             | Weight | Status |
 | ------------ | ----------------------------------------- | ------------------- | ------ | ------ |
+| Sep 3, 2026  | RTW Class — prep for Sep 10 presentation  | RTW                 | —      | ⬜      |
+| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW       | —      | ⬜      |
 | Aug 31, 2026 | Hooked — Individual Summary + App Example | UX/UI               | 10 pts | ⬜      |
 | Sep 7, 2026  | UI Hunt — Unusual Screens (individual)    | UX/UI               | 6 pts  | ⬜      |
 | Oct 13, 2026 | Romania-Map Pathfinding Web App           | AI                  | 50%    | 🔄     |
