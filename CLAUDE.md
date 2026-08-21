@@ -2,6 +2,20 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Assignment Tracker Rule
+
+**Always update `01-university/assignments-tracker.md` whenever an assignment status changes.**
+
+Triggers: assignment marked done, submitted, points corrected, status changed from draft/active to complete.
+Actions:
+- Move row from Upcoming → Completed table
+- Fix points/weight if wrong
+- Set status ✅
+- Update `updated:` frontmatter date and `<!-- Last synced -->` comment
+- Do this in the same edit session before committing
+
+Never commit an assignment status change without syncing the tracker.
+
 ## What This Is
 
 An Obsidian knowledge vault. No build system, no tests, no CI. All files are Markdown with YAML frontmatter.

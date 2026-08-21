@@ -5,10 +5,10 @@ tags:
   - tracker
 status: active
 created: 2026-07-24
-updated: 2026-08-14
+updated: 2026-08-21
 ---
 
-<!-- Last synced: 2026-08-14 -->
+<!-- Last synced: 2026-08-21 -->
 
 # University Assignments Tracker — 2026
 
@@ -30,7 +30,6 @@ updated: 2026-08-14
 
 | Due          | Assignment                                | Subject             | Weight | Status |
 | ------------ | ----------------------------------------- | ------------------- | ------ | ------ |
-| Aug 24, 2026 | Wk7: Crazy 8s & Storyboard (group)        | UX/UI               | 5 pts  | 🔄     |
 | Aug 31, 2026 | Hooked — Individual Summary + App Example | UX/UI               | 10 pts | ⬜      |
 | Sep 7, 2026  | UI Hunt — Unusual Screens (individual)    | UX/UI               | 6 pts  | ⬜      |
 | Oct 13, 2026 | Romania-Map Pathfinding Web App           | AI                  | 50%    | 🔄     |
@@ -45,6 +44,7 @@ updated: 2026-08-14
 | Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | ✅      |
 | Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
 | Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
+| Aug 21, 2026 | Wk7: Crazy 8s & Storyboard (group, G2)    | UX/UI             | 6 pts  | ✅      |
 | Aug 9, 2026 | Wk5: POV + HMW (group)                     | UX/UI             | —      | ✅      |
 | Aug 9, 2026 | Wk6: Hooked Loop + Kano Model (group)      | UX/UI             | —      | ✅      |
 | Aug 6, 2026 | Homework 1–4                               | Operating Systems | —      | ✅      |
