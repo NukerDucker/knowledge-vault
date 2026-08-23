@@ -5,10 +5,10 @@ tags:
   - tracker
 status: active
 created: 2026-07-24
-updated: 2026-08-21
+updated: 2026-08-23
 ---
 
-<!-- Last synced: 2026-08-21 -->
+<!-- Last synced: 2026-08-23 -->
 
 # University Assignments Tracker — 2026
 
@@ -28,14 +28,13 @@ updated: 2026-08-21
 
 ## Upcoming
 
-| Due          | Assignment                                | Subject             | Weight | Status |
-| ------------ | ----------------------------------------- | ------------------- | ------ | ------ |
-| Sep 3, 2026  | RTW Class — prep for Sep 10 presentation  | RTW                 | —      | ⬜      |
-| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW       | —      | ⬜      |
-| Aug 31, 2026 | Hooked — Individual Summary + App Example | UX/UI               | 10 pts | ⬜      |
-| Sep 7, 2026  | UI Hunt — Unusual Screens (individual)    | UX/UI               | 6 pts  | ⬜      |
-| Oct 13, 2026 | Romania-Map Pathfinding Web App           | AI                  | 50%    | 🔄     |
-| TBA          | Microcontroller — STM32 Project           | Microcontroller     | —      | 🔄     |
+| Due          | Assignment                                            | Subject         | Weight | Status |
+| ------------ | ----------------------------------------------------- | --------------- | ------ | ------ |
+| Sep 3, 2026  | RTW Class — prep for Sep 10 presentation              | RTW             | —      | ⬜      |
+| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW             | —      | ⬜      |
+| Sep 7, 2026  | UI Hunt — Unusual Screens (individual)                | UX/UI           | 6 pts  | ⬜      |
+| Oct 13, 2026 | Romania-Map Pathfinding Web App                       | AI              | 50%    | 🔄     |
+| TBA          | Microcontroller — STM32 Project                       | Microcontroller | —      | 🔄     |
 
 ---
 
@@ -46,6 +45,7 @@ updated: 2026-08-21
 | Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | ✅      |
 | Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
 | Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
+| Aug 22, 2026 | Hooked — Individual Summary + App Example | UX/UI             | 10 pts | ✅      |
 | Aug 21, 2026 | Wk7: Crazy 8s & Storyboard (group, G2)    | UX/UI             | 6 pts  | ✅      |
 | Aug 9, 2026 | Wk5: POV + HMW (group)                     | UX/UI             | —      | ✅      |
 | Aug 9, 2026 | Wk6: Hooked Loop + Kano Model (group)      | UX/UI             | —      | ✅      |
@@ -62,25 +62,6 @@ updated: 2026-08-21
 ---
 
 ## Details — Upcoming
-
-### 🔄 UX/UI Wk7 — Crazy 8s & Storyboard `Aug 24` · 5 pts
-
-See [[uxui-week7-crazy8s-storyboard]] for full brief, HMW, idea bank, storyboard, and user stories.
-
-Group work — one member submits `GroupNumber_Crazy8s_Storyboard.pdf`
-
-| Item | Status |
-|------|--------|
-| HMW selected + rationale | ✅ |
-| Crazy 8s — own sheet (8 boxes) | ✅ |
-| Team sheets collected | 🔄 (Teammate 3 pending) |
-| Concept chosen: "See It. Book It. Track It." | ✅ |
-| Storyboard (8 frames) | ✅ |
-| Critique notes filled | ⬜ |
-| User stories (7 written) | ✅ |
-| PDF exported + submitted | ⬜ **Aug 24 11:59 PM** |
-
----
 
 ### ✅ OS — Case Study 1: Multithreading `Aug 14` · DONE
 
@@ -110,14 +91,14 @@ PDF: `~/Documents/University/Year-3/Investment Planning/67011178_Report1.pdf`
 
 ---
 
-### ⬜ UX/UI — Hooked Individual `Aug 31` · 10 pts
+### ✅ UX/UI — Hooked Individual `Aug 31` · 10 pts · SUBMITTED Aug 22
 
 See [[uxui-hooked-individual]] for full brief.
 
-- Part 1: 1–2 A4 page summary of Hooked principles (own words)
-- Part 2: Real app screenshots annotating all 4 steps (Trigger / Action / Variable Reward / Investment)
+- Part 1: Hooked principles summary (1–2 A4 pages, own words, APA refs) ✅
+- Part 2: Duolingo — 6 annotated screenshots covering all 4 Hooked steps ✅
 
-Submit: `6701XXXX_Hooked.pdf` via Google Classroom
+PDF: `~/Documents/University/Year-3/UXUI/67011178_Hooked.pdf`
 
 ---
 

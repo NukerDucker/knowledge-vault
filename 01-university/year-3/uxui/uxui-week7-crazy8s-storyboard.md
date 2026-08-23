@@ -1,9 +1,9 @@
 ---
 title: "Week 7 — Crazy 8s & Storyboarding"
 tags: [uxui, assignment, group-work, ideation, storyboard]
-status: active
+status: archived
 created: 2026-08-11
-updated: 2026-08-21
+updated: 2026-08-23
 due: 2026-08-24
 points: 6
 type: group-work
@@ -13,7 +13,7 @@ team: G2
 
 # Week 7 Assignment — Crazy 8s & Storyboarding
 
-**Due:** Aug 24, 11:59 PM · 6 pts · Group work · One member submits
+**Due:** Aug 24, 11:59 PM · 6 pts · Group work · ✅ SUBMITTED — `G2_UserCases_Concept_Storyboard.pdf`
 
 ---
 
@@ -69,7 +69,7 @@ team: G2
 |--------|----|----------------|---------|
 | Norpoom | 67011138 | ✅ | ✅ |
 | Teammate 2 | — | ✅ | ✅ |
-| Teammate 3 | — | ⬜ pending | — |
+| Teammate 3 | — | ✅ | ✅ |
 
 #### Sheet summaries
 

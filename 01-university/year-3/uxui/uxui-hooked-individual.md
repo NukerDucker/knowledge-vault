@@ -5,9 +5,10 @@ tags:
   - uxui
   - individual
   - hooked
-status: active
+status: archived
 created: 2026-08-09
 updated: 2026-08-22
+submitted: 2026-08-22
 due: 2026-08-31
 app: Duolingo
 ---
@@ -79,13 +80,15 @@ Annotate in Canva or PowerPoint — colored rectangle around element, text label
 
 ## Submission Checklist
 
-- [ ] Part 1 written (1–2 A4 pages, own words)
-- [ ] App chosen
-- [ ] ≥1 screenshot per Hooked step (trigger / action / reward / investment)
-- [ ] Each screenshot annotated (highlight or border the relevant element)
-- [ ] All contents merged into one PDF
-- [ ] File renamed `6701XXXX_Hooked.pdf`
-- [ ] Submitted on Google Classroom
+- [x] Part 1 written (1–2 A4 pages, own words)
+- [x] App chosen — Duolingo
+- [x] ≥1 screenshot per Hooked step (trigger / action / reward / investment)
+- [x] Each screenshot annotated (highlight or border the relevant element)
+- [x] All contents merged into one PDF
+- [x] File renamed `67011178_Hooked.pdf`
+- [x] Submitted on Google Classroom ✅ Aug 22, 2026
+
+**PDF:** `~/Documents/University/Year-3/UXUI/67011178_Hooked.pdf`
 
 ---
 
