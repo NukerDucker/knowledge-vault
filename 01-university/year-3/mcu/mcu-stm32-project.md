@@ -93,6 +93,7 @@ Separate power supply for multi-board setup. Clean regulated 3.3V analog rail fo
 | UART | Point-to-point; shared bus = collision if 2 slaves send simultaneously |
 | CAN | Good but needs TJA1050 transceiver chip, more complex, overkill for desktop |
 | I2C | ✅ Chosen — 2 wires, addressable, HAL native, sufficient for short runs |
+| PCM5102 I2S DAC | Tried, failed; also line-level out (1kΩ min load), needs amp to drive headphones |
 
 ---
 

@@ -8,7 +8,7 @@ created: 2026-07-24
 updated: 2026-08-23
 ---
 
-<!-- Last synced: 2026-08-23 -->
+<!-- Last synced: 2026-08-23 (UI Hunt submitted) -->
 
 # University Assignments Tracker — 2026
 
@@ -32,7 +32,6 @@ updated: 2026-08-23
 | ------------ | ----------------------------------------------------- | --------------- | ------ | ------ |
 | Sep 3, 2026  | RTW Class — prep for Sep 10 presentation              | RTW             | —      | ⬜      |
 | Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW             | —      | ⬜      |
-| Sep 7, 2026  | UI Hunt — Unusual Screens (individual)                | UX/UI           | 6 pts  | ⬜      |
 | Oct 13, 2026 | Romania-Map Pathfinding Web App                       | AI              | 50%    | 🔄     |
 | TBA          | Microcontroller — STM32 Project                       | Microcontroller | —      | 🔄     |
 
@@ -45,6 +44,7 @@ updated: 2026-08-23
 | Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | ✅      |
 | Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
 | Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
+| Aug 23, 2026 | UI Hunt — Unusual Screens (individual)    | UX/UI             | 6 pts  | ✅      |
 | Aug 22, 2026 | Hooked — Individual Summary + App Example | UX/UI             | 10 pts | ✅      |
 | Aug 21, 2026 | Wk7: Crazy 8s & Storyboard (group, G2)    | UX/UI             | 6 pts  | ✅      |
 | Aug 9, 2026 | Wk5: POV + HMW (group)                     | UX/UI             | —      | ✅      |
@@ -102,13 +102,11 @@ PDF: `~/Documents/University/Year-3/UXUI/67011178_Hooked.pdf`
 
 ---
 
-### ⬜ UX/UI — UI Hunt: Unusual Screens `Sep 7` · 6 pts
+### ✅ UX/UI — UI Hunt: Unusual Screens `Sep 7` · 6 pts · SUBMITTED Aug 23
 
 See [[uxui-ui-hunt]] for full brief.
 
-Collect 3+ screenshots of confusing/unusual UIs from different product types. Analysis vs. UI design principles added after the relevant lesson.
-
-Rubric: Examples quality 1.0 · Principles analysis 3.0 · Improvement proposal 1.5 · Presentation 0.5
+PDF: `~/Documents/University/Year-3/UXUI/67011178_UIHunt.pdf`
 
 ---
 

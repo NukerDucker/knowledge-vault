@@ -39,6 +39,7 @@ Course: MCU Interfacing (01276314, Wed)
 - **UART** — shared bus → TX collision, no arbitration
 - **CAN** — needs TJA1050 transceiver, overkill for <30cm desktop runs
 - **STM32F7** — team IOC is on F4, no measurable benefit to migrate
+- **PCM5102 I2S DAC** — tried and failed; also line-level out (1kΩ min load), can't drive headphones without amp → scrapped
 
 ### Key constraints
 
