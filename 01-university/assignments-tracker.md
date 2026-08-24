@@ -5,10 +5,10 @@ tags:
   - tracker
 status: active
 created: 2026-07-24
-updated: 2026-08-23
+updated: 2026-08-24
 ---
 
-<!-- Last synced: 2026-08-23 (UI Hunt submitted) -->
+<!-- Last synced: 2026-08-24 (RTW Resume added) -->
 
 # University Assignments Tracker — 2026
 
@@ -45,6 +45,7 @@ updated: 2026-08-23
 | Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
 | Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
 | Aug 23, 2026 | UI Hunt — Unusual Screens (individual)    | UX/UI             | 6 pts  | ✅      |
+| Aug 17, 2026 | Individual Resume                         | RTW               | 4 pts  | ✅      |
 | Aug 22, 2026 | Hooked — Individual Summary + App Example | UX/UI             | 10 pts | ✅      |
 | Aug 21, 2026 | Wk7: Crazy 8s & Storyboard (group, G2)    | UX/UI             | 6 pts  | ✅      |
 | Aug 9, 2026 | Wk5: POV + HMW (group)                     | UX/UI             | —      | ✅      |
@@ -176,6 +177,13 @@ See [[os-homework-1-4]].
 ### ✅ OS — Case Study 1: Group Registration `Aug 6`
 
 See [[os-case-study-1-2]]. 5-person group registered. Main work tracked in Upcoming section above.
+
+---
+
+### ✅ RTW — Individual Resume `Aug 17` · 4 pts · SUBMITTED
+
+PDF: `~/Documents/University/Year-3/RTW/Napaul_Intharasing_Resume.pdf`  
+Due: Aug 27 · submitted early.
 
 ---
 
