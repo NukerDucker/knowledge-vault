@@ -3,7 +3,7 @@ title: Vault Structure Guide
 tags: [meta, guide]
 status: active
 created: 2026-07-24
-updated: 2026-08-11
+updated: 2026-08-25
 ---
 
 # Vault Structure Guide
@@ -32,36 +32,30 @@ Single source of truth for how this vault is organized. Read this before creatin
     ai/                           ← Artificial Intelligence (Rome pathfinding)
   year-4/
   courses/                        ← semester schedule, degree/study plans
-  internship/
-    internship-diary.md           ← general internship diary / leave forms
-    agoda/                        ← Agoda IT internship sub-vault (2026)
   regulations/                    ← university rules, CEI regulations
+  (internship/ — archived 2026-08 → 04-archive/agoda-internship/)
 
 02-programming/
   guides/                         ← dev reference guides
   projects/                       ← per-project vault-wiring notes
 
 03-ai/
-  projects/<name>/                ← session-state.md + edit-log.md per project
-    nacl-nextpath-x/              ← NACL NextPath X session state + edit log
-    rome-wasnt-build-in-a-day/   ← AI Rome pathfinding project
+  projects/<name>/                ← session-state.md per project
+    rome-pathfinding/             ← AI Rome pathfinding project
     casestudy01-os/               ← OS case study session notes
+    modular-synth/                ← MCU STM32 modular synth project
     drunkbill/                    ← Drunkbill project
 
 04-archive/                       ← closed / superseded, keep for reference
-
-01-university/internship/agoda/   ← Agoda IT internship 2026 (own Obsidian sub-vault)
-  01 Daily Notes/                 ← daily standup logs (YYYY-MM-DD.md)
-  03 Tasks/                       ← laptop tracker, replacement tasks
-  04 Knowledge Base/              ← Windows/Mac build guides, TARS procedures
-  06 Projects/
-    WallKeeper/                   ← Grafana video wall NUC restart script + keepalive design
-    Project Keep Alive/           ← NUC uptime monitoring (Uptime Kuma / Proxmox)
-  07 Templates/                   ← task/note templates
-  08 Reference/                   ← scripts, external references
-  99 Archive/                     ← deprecated notes
-  CLAUDE.md                       ← Agoda vault–specific guidance
+  agoda-internship/               ← Agoda IT internship 2026 — READ-ONLY
+    _index.md
+    daily-notes/                  ← daily standup logs (YYYY-MM-DD.md)
+    internship-diary.md
+    Internship_Diary_Complete.md
+    knowledge-base/               ← Windows/Mac build guides, laptop specs
 ```
+
+**Archive is read-only.** Read it freely; do not edit or reorganize it. If something in there needs updating, it is not archived — move it out first.
 
 ---
 
@@ -101,16 +95,13 @@ updated: 2026-07-24  # add when significantly revised
 | Semester schedule | `01-university/courses/` | `semester-schedule-2026.md` |
 | Degree / study plan | `01-university/courses/` | `cei-study-plan.md` |
 | University regulations | `01-university/regulations/` | `cei-regulations-summary.md` |
-| Internship diary / reports / forms | `01-university/internship/` | `internship-diary.md` |
+| Internship diary / reports / forms | `04-archive/agoda-internship/` (archived, read-only) | `internship-diary.md` |
 | Dev reference guide | `02-programming/guides/` | `senior-frontend-developer-guide.md` |
 | Vault wiring notes (per repo) | `02-programming/projects/` | `nacl-nextpath-x.md` |
 | AI project session state | `03-ai/projects/<name>/` | `session-state.md` |
-| Physical lab docs, layouts | `06-nacl-kmitl/lab-setup/` | `601-lab-layout.png` |
-| System docs, ADRs, architecture | `06-nacl-kmitl/nextpath-x/` | `01-architecture/` |
-| NACL design specs / integration docs | `06-nacl-kmitl/nextpath-x/01-architecture/` | `2026-07-07-camellya-frontend-overhaul-design.md` |
-| Agoda internship daily notes | `01-university/internship/agoda/01 Daily Notes/` | `2026-05-26.md` |
-| Agoda internship project docs | `01-university/internship/agoda/06 Projects/<name>/` | `WallKeeper/` |
-| Agoda KB articles | `01-university/internship/agoda/04 Knowledge Base/` | `NH Laptop Spec.md` |
+| NACL system docs / ADRs / design specs | *(no vault folder — lives with the code)* | `~/Documents/University/Network-and-Cloud-Laboratory-KMITL/<repo>/` |
+| Agoda internship daily notes | `04-archive/agoda-internship/daily-notes/` (read-only) | `2026-05-26.md` |
+| Agoda KB articles | `04-archive/agoda-internship/knowledge-base/` (read-only) | `NH Laptop Spec.md` |
 | Unprocessed capture | `00-inbox/` | — |
 | Old / closed / superseded | `04-archive/` | — |
 | University PDFs / slides / physical docs | `~/Documents/University/Year-N/<Subject>/` | `A1 Foundation knowledge.pdf` |

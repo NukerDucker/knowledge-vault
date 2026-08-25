@@ -60,8 +60,8 @@ Numbered prefixes control sidebar order in Obsidian:
 | `01-university/year-3/investment-planning/` | Investment Planning (bonds report, stock analysis) |
 | `01-university/year-3/ai/` | Artificial Intelligence (Rome pathfinding) |
 | `02-programming` | Dev project notes and vault wiring docs |
-| `03-ai` | AI project plans and session state (nacl-nextpath-x, rome, etc.) |
-| `01-university/internship/agoda/` | Agoda IT internship 2026 (own Obsidian sub-vault) |
+| `03-ai` | AI project plans and session state (rome-pathfinding, casestudy01-os, modular-synth, drunkbill) |
+| `04-archive/agoda-internship/` | Agoda IT internship 2026 — archived, read-only |
 | `03-ai` | Session log + git state for AI-assisted projects. Pair with `01-university/year-N/subject/` reference note. See Reference/Session Split rule below. |
 | `04-archive` | Retired notes |
 

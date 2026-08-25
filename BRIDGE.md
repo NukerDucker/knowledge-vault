@@ -3,6 +3,7 @@ title: Two-Vault Bridge
 tags: [meta, bridge, navigation]
 status: active
 created: 2026-08-11
+updated: 2026-08-25
 ---
 
 # Two-Vault Bridge
@@ -32,9 +33,11 @@ Navigation hub between the KnowledgeVault (notes) and `~/Documents/University/` 
 
 | Project | Vault | Code |
 |---------|-------|------|
-| NextPath-X (session state) | [[session-state]] (`03-ai/projects/nacl-nextpath-x/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
-| NextPath-X (system docs) | `06-nacl-kmitl/nextpath-x/` | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
-| NACL Website | [[nacl-nextpath-x]] (`02-programming/projects/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-website/` |
+| NextPath-X | [[nacl-nextpath-x]] (`02-programming/projects/`) | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-nextpath-x/` |
+| NACL Website | *(no vault note)* | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-website/` |
+| NACL Camellya | *(no vault note)* | `university-files/Network-and-Cloud-Laboratory-KMITL/nacl-camellya/` |
+
+System docs and ADRs for these live with the code, not in the vault.
 
 ---
 
@@ -42,7 +45,7 @@ Navigation hub between the KnowledgeVault (notes) and `~/Documents/University/` 
 
 | | Vault | Files |
 |--|-------|-------|
-| Agoda 2026 | `01-university/internship/agoda/` | `university-files/Internship/` |
+| Agoda 2026 | `04-archive/agoda-internship/` (archived, read-only) | `university-files/Internship/` |
 
 ---
 
