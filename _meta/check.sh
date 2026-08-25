@@ -87,7 +87,9 @@ strip_code() {
 }
 
 vault_md | while read -r f; do
-  case "$f" in ./04-archive/*) continue ;; esac
+  # Templates are placeholders by definition — [[related-note]] is an example,
+  # not a link, and flagging it teaches you to ignore the checker.
+  case "$f" in ./04-archive/*|./_meta/templates/*) continue ;; esac
   strip_code "$f" | grep -oE '\[\[[^]|#]+\]\]' 2>/dev/null \
   | sed 's/^\[\[//; s/\]\]$//' | sort -u \
   | while read -r link; do
@@ -126,7 +128,7 @@ VALID_STATUS="active|stable|submitted|graded|archived|draft"
 FM_ISSUES=0
 while read -r f; do
   # CLAUDE.md is agent config, not a note — no frontmatter expected.
-  case "$f" in ./04-archive/*|./.claude/*|./CLAUDE.md|*/CLAUDE.md) continue ;; esac
+  case "$f" in ./04-archive/*|./.claude/*|./CLAUDE.md|*/CLAUDE.md|./_meta/templates/*) continue ;; esac
   is_vendored "$f" && continue
   if [ "$(head -n1 "$f")" != "---" ]; then
     err "no frontmatter block: $f"; FM_ISSUES=1; continue
@@ -202,7 +204,7 @@ done < <(vault_md)
 head2 "7. Assignment notes carry due / subject / status"
 ASSIGN_ISSUES=0
 while read -r f; do
-  case "$f" in ./04-archive/*) continue ;; esac
+  case "$f" in ./04-archive/*|./_meta/templates/*) continue ;; esac
   head -30 "$f" | grep -qE '^due:' || continue
   fm=$(awk 'NR>1{if($0=="---")exit; print}' "$f")
   for field in due subject status; do

@@ -9,6 +9,20 @@ subject: mcu
 
 # Modular Synthesizer — Piano Project
 
+**What:** modular synth/piano — per-octave PCB boards that snap together via 4-pin magnetic connectors.
+**Why:** Microcontroller Interfacing coursework (01276314, Wed). Deadline TBA.
+**Where:** files → `~/Documents/University/Year-3/Microcon/`
+**Stack:** STM32F4 Black Pill (F411) · HAL + CubeIDE · I2C bus · MPR121 cap touch.
+**Constraint:** HAL Library + CubeIDE are required by the prof. F411 is fixed — F7 was ruled out (team unfamiliar, IOC migration cost). F411 has no TSC peripheral, hence MPR121.
+
+*Session log → [[mcu-stm32-log]]*
+
+> [!warning] Unresolved: audio output path
+> This note specifies **PWM via Timer 3/4 → MOSFET + RC low-pass**, no external DAC.
+> A Claude memory written the same day specifies **PCM5102 over I2S** instead.
+> These are incompatible designs and only one can be current. Resolve it, record
+> the decision below, then delete this callout.
+
 Reference: AKAI MPK mini form factor. Modular PCB system, snap together via magnetic connectors.
 
 ---

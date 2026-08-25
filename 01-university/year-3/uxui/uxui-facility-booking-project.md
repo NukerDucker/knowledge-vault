@@ -11,7 +11,10 @@ subject: uxui
 
 # KMITL Campus Facility Booking System
 
-Group 2 · Napaul Intharasing (67011178)
+**What:** a campus room-booking system for KMITL — the design project behind every UX/UI weekly deliverable.
+**Why:** UX/UI Design coursework (01276545, Tue). Group 2 · Napaul Intharasing (67011178).
+**Where:** files → `~/Documents/University/Year-3/UXUI/` · NotebookLM id `ab79df06-a734-46f4-a9a8-f97f4d753982` (14 sources)
+**Constraint:** every feature must trace to a POV or an HMW. Untraceable ideas (AI room suggestion, loyalty points) were cut for exactly that reason.
 
 The design project that Weeks 3–7 all build on. Each week's note holds that
 week's deliverable; this note holds the through-line — the reasoning that
