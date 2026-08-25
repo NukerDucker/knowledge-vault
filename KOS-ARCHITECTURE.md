@@ -359,7 +359,7 @@ What genuinely speeds up a daily start is a single note you open into:
 [[uxui-week7-crazy8s-storyboard]] · [[os-case-study-1]] · [[rome-pathfinding]] · …
 
 ## Links
-[[assignments-tracker]] · [[VAULT-GUIDE]]
+[[assignments-tracker]] · [[KOS]]
 ```
 
 The same `sync-tracker.py` writes the generated block, so what is due is on screen without you maintaining anything.

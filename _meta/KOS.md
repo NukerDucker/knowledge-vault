@@ -12,8 +12,10 @@ updated: 2026-08-25
 Read this before creating notes or moving anything. If this document and the disk
 disagree, one of them is wrong — run `bash _meta/check.sh` to find out which.
 
-> **Status:** this document is live, but `VAULT-GUIDE.md` and `BRIDGE.md` still
-> exist and are retired in Milestone 7. Until then, **`KOS.md` wins on conflict.**
+> **This is the only governing document.** `VAULT-GUIDE.md` and `BRIDGE.md` were
+> retired on 2026-08-26; everything still true from them lives here. Two copies of
+> a rule is a design that needs perfect discipline forever, and that is exactly
+> how the August drift happened.
 
 Design reasoning: `KOS-ARCHITECTURE.md`. Day-to-day usage: `KOS-MANUAL.md`.
 Rules for Claude: `_meta/CLAUDE.md`.
@@ -136,8 +138,8 @@ in `~/Documents/`.
 | Images | `<note-name>-<what-it-shows>.png` |
 | Folders | same convention; plural for collections |
 
-Exempt: root governing docs (`CLAUDE.md`, `BRIDGE.md`, `VAULT-GUIDE.md`,
-`KOS-*.md`) use uppercase by deliberate convention.
+Exempt: root docs (`CLAUDE.md`, `HOME.md`, `KOS-*.md`) use uppercase by
+deliberate convention.
 
 ---
 
@@ -219,6 +221,82 @@ a folder for one note, or one named after a tool, a format, or a year.
 
 ---
 
+## Hub and spoke
+
+**Hub notes** aggregate and link out. **Spoke notes** link back at the bottom.
+
+- Hub: `assignments-tracker.md` → every assignment · `HOME.md` → everything
+- Spoke: `uxui-ui-hunt.md` ends with `*See also: [[assignments-tracker]]*`
+- Project hub: `uxui-facility-booking-project.md` ↔ weeks 3–7
+
+A hub earns its place when 5+ notes share a thread that none of them owns.
+
+---
+
+## Reference / session split
+
+Once a project has run across 3+ sessions, split it in two:
+
+| Note | Holds | `updated:` |
+|---|---|---|
+| **Reference** — `<subject>/<topic>.md` | stable facts: stack, design, brief | omit |
+| **Log** — `<subject>/<topic>-log.md` | dated entries, git state, open tasks | keep |
+
+Link both ways: reference footer `*See also: [[<topic>-log]]*`, log header
+`*Reference note → [[<topic>]]*`.
+
+**Why:** dated churn inside a reference note forces a re-read to work out what is
+still true. Splitting keeps the durable half durable. This applies to every
+project — there is no AI / non-AI distinction, because everything is
+AI-assisted now.
+
+---
+
+## Tags
+
+Cross-cutting topics only. If a tag matches exactly one folder, delete it — the
+folder already says it. Keep the list under twenty, and merge anything used
+fewer than three times at the yearly review.
+
+Current: `university` `assignment` `kmitl` `nacl` `ai` `programming` `guide`
+`project` `group-work` `meta` `kos` `dashboard` `tracker`
+
+---
+
+## Adding a top-level folder
+
+Rare. All three conditions in Governance rules must hold, and then:
+
+1. Take the next free number — `03` and `05`–`08` are free.
+2. `NN-kebab-case/`, lowercase, hyphens only.
+3. Add it to the Folder map **and** the Where-things-go table in this file first.
+4. Add a colour group in `.obsidian/graph.json`.
+5. Run `bash _meta/check.sh`.
+
+| Slot | Purpose |
+|---|---|
+| `00` | Inbox — fixed |
+| `01` | University — fixed |
+| `02` | Programming — fixed |
+| `03` | free (was AI projects, retired 2026-08-25) |
+| `04` | Archive — fixed |
+| `05`–`08` | free |
+
+---
+
+## What does not belong in this vault
+
+- Source code — lives in `~/Code/<repo>/`
+- Binary deliverables — PDFs, slides, DOCX in `~/Documents/`
+- Agent session files (`.ai/`, `.claude/` inside child repos)
+- Scratch notes — delete them after use
+- Generated content that is not fenced by `GENERATED` markers
+
+When a NotebookLM or AI summary is worth keeping, paste it into the relevant
+vault note under a `## Summary` heading. Do not keep it as a separate file.
+
+---
+
 ## Vendored content
 
 `02-programming/guides/system-design-notes/` is an external repository, not your
@@ -255,11 +333,27 @@ Symlink: `university-files/` → `~/Documents/University/` (excluded from indexi
 | Microcontroller | `university-files/Year-3/Microcon/` |
 | Ready to Work | `university-files/Year-3/Ready To Work/` |
 
-NACL repos live at `university-files/Network-and-Cloud-Laboratory-KMITL/`
-(`nacl-nextpath-x`, `nacl-website`, `nacl-camellya`). Their system docs live with
-the code, not in the vault.
+Vault notes reference work files with a `**File:**` path. `check.sh` check 8
+verifies those paths still exist.
 
-Vault notes reference work files with a `**File:**` path.
+### Code
+
+All repos live flat in `~/Code/` — moved out of `~/Documents/University/` on
+2026-08-26 so that archiving university at graduation does not archive the code
+with it.
+
+| Repo | Vault note | Git |
+|---|---|---|
+| `~/Code/rome-pathfinding` | [[rome-pathfinding]] | yes |
+| `~/Code/nacl-nextpath-x` | [[nacl-nextpath-x]] | **no — not a repo yet** |
+| `~/Code/nacl-website` | *(none)* | yes |
+| `~/Code/nacl-camellya` | *(none)* | **no — not a repo yet** |
+| `~/Code/drunkbill` | [[drunkbill-log]] | yes |
+| `~/Code/timetable-website` | *(none)* | yes |
+
+System docs and ADRs for these live **with the code**, not in the vault. What
+belongs in the vault is why the project exists and what you learned — the part
+that outlives the repo.
 
 ---
 
@@ -267,7 +361,6 @@ Vault notes reference work files with a `**File:**` path.
 
 Tracked here rather than forgotten. Cleared as milestones land.
 
-- `VAULT-GUIDE.md` and `BRIDGE.md` still exist — Milestone 7 retires them.
 - `assignments-tracker.md` still has hand-written `## Details` sections that
   duplicate note content. Harmless, but they are the next duplication to remove.
 - Due dates for pre-August coursework are completion dates, not deadlines — the
