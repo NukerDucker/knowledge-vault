@@ -1,3 +1,9 @@
+---
+title: DrunkBill — Session State
+tags: [programming, project]
+status: active
+---
+
 # DrunkBill — session state
 
 **Repo:** `~/Documents/University/drunkbill` (Svelte 5 runes + TS + Vite + Tailwind 4, Bun)

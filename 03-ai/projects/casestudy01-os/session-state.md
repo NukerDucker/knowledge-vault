@@ -1,3 +1,9 @@
+---
+title: OS Case Study 1 — Session State
+tags: [university, os]
+status: stable
+---
+
 # CaseStudy01 — OS Multithreading
 
 *Reference note → [[os-case-study-1]]*

@@ -1,3 +1,9 @@
+---
+title: Senior Frontend Developer Guide
+tags: [programming, guide]
+status: stable
+---
+
 # Senior Frontend Developer Best Practices Guide
 
 A comprehensive guide to the patterns, principles, and practices that separate senior frontend developers from the rest.

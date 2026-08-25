@@ -1,3 +1,9 @@
+---
+title: nacl-nextpath-x — Vault Wiring
+tags: [programming, nacl]
+status: stable
+---
+
 # nacl-nextpath-x
 
 ## Vault Notes

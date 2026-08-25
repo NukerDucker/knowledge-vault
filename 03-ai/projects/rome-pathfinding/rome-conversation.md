@@ -1,3 +1,9 @@
+---
+title: Rome Pathfinding — Heuristic Discussion
+tags: [university, ai]
+status: stable
+---
+
 # AI Project Analysis: Romania Pathfinding & Heuristics
 
 ## 💬 Conversation Summary: Bento & "Cream Bun"

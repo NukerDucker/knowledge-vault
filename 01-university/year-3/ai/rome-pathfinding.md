@@ -79,7 +79,7 @@ Due: **2026-10-13** | Submission: YouTube video + Vercel URL + GitHub link
 
 ![[slide-06-lp-diagram.html]]
 
-**File:** `~/Documents/University/Year-3/AI/rome-pathfinding/slides/slide-06-lp-diagram.png` | Source HTML: `~/KnowledgeVault/slide-06-lp-diagram.html`
+**File:** `~/Documents/University/Year-3/AI/rome-pathfinding/slides/slide-06-lp-diagram.png` | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
 
 ### ALT — Landmarks + Triangle Inequality (`alt.ts`)
 

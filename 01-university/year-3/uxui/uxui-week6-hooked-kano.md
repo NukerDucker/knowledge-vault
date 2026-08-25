@@ -78,4 +78,4 @@ Notifications fire only on real state changes (status update, slot freed, deadli
 ## Relationships
 
 - [[uxui-week5-pov-hmw]] — POV + HMW that drive the feature decisions above
-- [[project-uxui-week6]] — memory snapshot with full reasoning
+- `project-uxui-week6` — Claude memory snapshot with full reasoning (not a vault note)

@@ -1,3 +1,9 @@
+---
+title: OS Case Study 1 — Benchmark Comparison
+tags: [university, os]
+status: stable
+---
+
 # OS CaseStudy01 — Full Benchmark + Comparison
 
 **Last updated:** 2026-08-12 (rerun with 3-run averages + original baseline + W=8)
