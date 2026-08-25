@@ -77,8 +77,9 @@ The assignment note's frontmatter is the source of truth.
 - Never hand-edit anything between `<!-- BEGIN GENERATED -->` markers.
 - Never ask the user to sync the tracker, and never sync it by hand yourself.
 
-*(Generator lands in Milestone 3. Until then the tracker is hand-maintained —
-check `_meta/KOS.md` for current state before assuming.)*
+Generator: `python3 _meta/sync-tracker.py` (runs automatically on SessionStart).
+Rows with no backing note live *outside* the markers and are hand-maintained —
+leave them alone.
 
 ## Archiving is two steps
 

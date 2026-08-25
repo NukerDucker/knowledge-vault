@@ -26,39 +26,68 @@ updated: 2026-08-24
 
 ---
 
+> **The tables below are generated from note frontmatter.** Change `status:`,
+> `due:`, or `points:` in the assignment note — never here. Anything inside a
+> `GENERATED` block is overwritten on the next run.
+>
+> Regenerate by hand: `python3 _meta/sync-tracker.py`
+
 ## Upcoming
 
-| Due          | Assignment                                            | Subject         | Weight | Status |
-| ------------ | ----------------------------------------------------- | --------------- | ------ | ------ |
-| Sep 3, 2026  | RTW Class — prep for Sep 10 presentation              | RTW             | —      | ⬜      |
-| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW             | —      | ⬜      |
-| Oct 13, 2026 | Romania-Map Pathfinding Web App                       | AI              | 50%    | 🔄     |
-| TBA          | Microcontroller — STM32 Project                       | Microcontroller | —      | 🔄     |
+<!-- BEGIN GENERATED: upcoming -->
+<!-- regenerated 2026-08-25 — do not edit by hand -->
+
+| Due | Assignment | Subject | Points | Status |
+| --- | ---------- | ------- | ------ | ------ |
+| 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
+| TBA | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | — | 🔄 active |
+
+<!-- END GENERATED: upcoming -->
+
+### Not backed by a note — hand-maintained
+
+Class sessions and sub-deadlines with no note of their own. The generator never
+touches this table.
+
+| Due          | Assignment                                            | Subject | Weight | Status |
+| ------------ | ----------------------------------------------------- | ------- | ------ | ------ |
+| Sep 3, 2026  | RTW Class — prep for Sep 10 presentation              | RTW     | —      | ⬜      |
+| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW     | —      | ⬜      |
 
 ---
 
 ## Completed
 
-| Completed   | Assignment                                 | Subject           | Weight | Status |
-| ----------- | ------------------------------------------ | ----------------- | ------ | ------ |
-| Aug 14, 2026 | Case Study 1 — Submit + Presentation      | Operating Systems   | 65%    | ✅      |
-| Aug 13, 2026 | Case Study 1 — Peer Eval deadline         | Operating Systems   | 35%    | ✅      |
-| Aug 13, 2026 | Report No. 1: Bonds/Debentures            | Investment Planning | 20 pts | ✅      |
-| Aug 23, 2026 | UI Hunt — Unusual Screens (individual)    | UX/UI             | 6 pts  | ✅      |
-| Aug 17, 2026 | Individual Resume                         | RTW               | 4 pts  | ✅      |
-| Aug 22, 2026 | Hooked — Individual Summary + App Example | UX/UI             | 10 pts | ✅      |
-| Aug 21, 2026 | Wk7: Crazy 8s & Storyboard (group, G2)    | UX/UI             | 6 pts  | ✅      |
-| Aug 9, 2026 | Wk5: POV + HMW (group)                     | UX/UI             | —      | ✅      |
-| Aug 9, 2026 | Wk6: Hooked Loop + Kano Model (group)      | UX/UI             | —      | ✅      |
-| Aug 6, 2026 | Homework 1–4                               | Operating Systems | —      | ✅      |
-| Aug 6, 2026 | Case Study 1 — Group Registration          | Operating Systems | —      | ✅      |
-| Aug 3, 2026 | Wk3: Market Comparison (group)             | UX/UI             | 10 pts | ✅      |
-| Aug 3, 2026 | Wk4: User Journey Map (group)              | UX/UI             | —      | ✅      |
-| Done        | A1: Foundation Knowledge for New Graduates | RTW               | —      | ✅      |
-| Done        | A2: Labour Law and Social Insurance Fund   | RTW               | —      | ✅      |
-| Done        | Unit 3: Case Study — Corporate Culture     | RTW               | —      | ✅      |
-| Done        | Unit 3: Which Company Most Attractive?     | RTW               | —      | ✅      |
-| Done        | Unit 5: IKAIGI                             | RTW               | —      | ✅      |
+<!-- BEGIN GENERATED: completed -->
+<!-- regenerated 2026-08-25 — do not edit by hand -->
+
+| Due | Assignment | Subject | Points | Status |
+| --- | ---------- | ------- | ------ | ------ |
+| 2026-09-07 | [[uxui-ui-hunt\|UX/UI: UI Hunt — Unusual Screens]] | uxui | 6 | ✅ submitted |
+| 2026-08-31 | [[uxui-hooked-individual\|UX/UI — Hooked Individual Assignment]] | uxui | 10 | ✅ submitted |
+| 2026-08-27 | [[rtw-resume-assignment\|RTW — Resume Assignment]] | rtw | 4 | ✅ submitted |
+| 2026-08-24 | [[uxui-week7-crazy8s-storyboard\|Week 7 — Crazy 8s & Storyboarding]] | uxui | 6 | ✅ submitted |
+| 2026-08-14 | [[os-case-study-1\|OS Case Study 1 — Multithreading]] | os | 65% | ✅ submitted |
+| 2026-08-13 | [[finance-bonds-debentures-report\|Finance Report No.1: Bonds / Debentures]] | investment-planning | 20 | ✅ submitted |
+| 2026-08-09 | [[uxui-week5-pov-hmw\|UX/UI Wk5: POV + HMW — Facility Booking]] | uxui | — | ✅ submitted |
+| 2026-08-09 | [[uxui-week6-hooked-kano\|UX/UI Wk6: Hooked + Kano — Facility Booking]] | uxui | — | ✅ submitted |
+| 2026-08-06 | [[os-case-study-1-2\|OS Case Studies — Overview]] | os | — | ✅ submitted |
+| 2026-08-06 | [[os-homework-1-4\|OS Homework 1–4]] | os | — | ✅ submitted |
+| 2026-08-06 | [[rtw-a1-foundation-knowledge\|RTW A1 — Foundation Knowledge for New Graduates]] | rtw | — | ✅ submitted |
+| 2026-08-06 | [[rtw-a2-labour-law\|RTW A2 — Labour Law and Social Insurance Fund]] | rtw | — | ✅ submitted |
+| 2026-08-06 | [[rtw-unit3-corporate-culture\|RTW Unit 3 — Corporate Culture Assignments]] | rtw | — | ✅ submitted |
+| 2026-08-03 | [[uxui-week3-market-comparison\|UX/UI Wk3: Market Comparison]] | uxui | 10 | ✅ submitted |
+| 2026-08-03 | [[uxui-week4-user-journey-map\|UX/UI Wk4: User Journey Map]] | uxui | — | ✅ submitted |
+
+<!-- END GENERATED: completed -->
+
+### Not backed by a note — hand-maintained
+
+| Completed    | Assignment                             | Subject           | Weight | Status |
+| ------------ | -------------------------------------- | ----------------- | ------ | ------ |
+| Aug 13, 2026 | Case Study 1 — Peer Eval deadline      | Operating Systems | 35%    | ✅      |
+| Done         | Unit 3: Which Company Most Attractive? | RTW               | —      | ✅      |
+| Done         | Unit 5: IKAIGI                         | RTW               | —      | ✅      |
 
 ---
 

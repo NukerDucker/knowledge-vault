@@ -45,7 +45,7 @@ is_vendored() {
 # Root governing docs use SHOUTING.md by deliberate convention.
 is_root_doc() {
   case "$1" in
-    ./CLAUDE.md|./BRIDGE.md|./VAULT-GUIDE.md|./KOS-*.md|./MEMORY.md) return 0 ;;
+    ./CLAUDE.md|./BRIDGE.md|./VAULT-GUIDE.md|./KOS-*.md|./MEMORY.md|./HOME.md) return 0 ;;
     ./_meta/*) return 0 ;;
     *) return 1 ;;
   esac

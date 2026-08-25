@@ -178,8 +178,18 @@ Assignment notes additionally carry `due:` (ISO date or `TBA`), `points:`, and
 When something changes — submitted, date moved, points announced — edit the
 note's frontmatter. That is the entire action. Never hand-sync the tracker.
 
-*(Automated generation lands in Milestone 3. Until then the tracker is
-hand-maintained, and this rule describes the target rather than the present.)*
+`_meta/sync-tracker.py` regenerates the tracker and `HOME.md` from frontmatter.
+It runs automatically on SessionStart; run it by hand with
+`python3 _meta/sync-tracker.py`, or `--check` to diff without writing.
+
+It only writes between `<!-- BEGIN GENERATED: name -->` markers. Rows with no
+backing note — class sessions, peer-eval deadlines — live outside the markers in
+a hand-maintained table and are never touched.
+
+**Staleness is the known limit.** Edit a note in Obsidian and the tracker is out
+of date until the next session starts, or until you run the script. That is a
+visible, one-command fix; a file-watcher would be more machinery than the
+problem deserves.
 
 ---
 
@@ -260,11 +270,14 @@ Vault notes reference work files with a `**File:**` path.
 
 Tracked here rather than forgotten. Cleared as milestones land.
 
-- Tracker is still hand-maintained — Milestone 3 automates it.
-- Assignment notes do not yet carry `due`/`points`/`subject` — Milestone 2.
 - `03-ai/` still exists — Milestone 4 retires it.
 - `VAULT-GUIDE.md` and `BRIDGE.md` still exist — Milestone 7 retires them.
+- `assignments-tracker.md` still has hand-written `## Details` sections that
+  duplicate note content. Harmless, but they are the next duplication to remove.
+- Due dates for pre-August coursework are completion dates, not deadlines — the
+  originals were never recorded. Inert for submitted work.
 - Top-level restructure deferred; revisit at graduation or ~1,000 notes.
 
 **Cleared 2026-08-25:** three stale paths in the governing docs; eight notes
-missing frontmatter; one broken wikilink. `check.sh` reports 0 errors.
+missing frontmatter; one broken wikilink; assignment frontmatter normalized
+across 17 notes; tracker and `HOME.md` now generated. `check.sh` reports 0 errors.
