@@ -289,3 +289,5 @@ STYLE: Google flat illustration style. Friendly, clean. Color palette: teal, ora
 
 - [[uxui-week5-pov-hmw]] — POV + HMW from week 5
 - [[uxui-week6-hooked-kano]] — Feature order (Kano model output)
+
+*Project hub → [[uxui-facility-booking-project]]*

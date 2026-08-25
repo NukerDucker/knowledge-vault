@@ -41,3 +41,5 @@ subject: uxui
 ## Top 2 HMWs
 
 **HMW 1 + HMW 2** — all other HMWs subsume into these two (submission channel ⊆ booking status; approval time + auto-release ⊆ live availability + notification).
+
+*Project hub → [[uxui-facility-booking-project]]*

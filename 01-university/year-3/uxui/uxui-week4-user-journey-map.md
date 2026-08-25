@@ -82,3 +82,5 @@ rather than resolving it. Two troughs, not one.
 ---
 
 *See also: [[assignments-tracker]]*
+
+*Project hub → [[uxui-facility-booking-project]]*

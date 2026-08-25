@@ -160,3 +160,5 @@ Recommended function set (each maps to a criterion argued in Part 1):
 ---
 
 *See also: [[assignments-tracker]]*
+
+*Project hub → [[uxui-facility-booking-project]]*

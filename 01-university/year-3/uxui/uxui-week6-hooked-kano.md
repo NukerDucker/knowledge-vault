@@ -79,5 +79,5 @@ Notifications fire only on real state changes (status update, slot freed, deadli
 
 ## Relationships
 
+- [[uxui-facility-booking-project]] — project hub: the through-line across weeks 3–7
 - [[uxui-week5-pov-hmw]] — POV + HMW that drive the feature decisions above
-- `project-uxui-week6` — Claude memory snapshot with full reasoning (not a vault note)
