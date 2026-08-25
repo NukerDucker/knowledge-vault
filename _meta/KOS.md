@@ -345,9 +345,9 @@ with it.
 | Repo | Vault note | Git |
 |---|---|---|
 | `~/Code/rome-pathfinding` | [[rome-pathfinding]] | yes |
-| `~/Code/nacl-nextpath-x` | [[nacl-nextpath-x]] | **no — not a repo yet** |
+| `~/Code/nacl-nextpath-x` | [[nacl-nextpath-x]] | no — project finished, left as-is |
 | `~/Code/nacl-website` | *(none)* | yes |
-| `~/Code/nacl-camellya` | *(none)* | **no — not a repo yet** |
+| `~/Code/nacl-camellya` | *(none)* | no — project finished, left as-is |
 | `~/Code/drunkbill` | [[drunkbill-log]] | yes |
 | `~/Code/timetable-website` | *(none)* | yes |
 

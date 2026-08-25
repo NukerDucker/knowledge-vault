@@ -5,15 +5,18 @@ tags:
   - uxui
   - individual
   - figma
-status: active
+status: submitted
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-08-26
+subject: uxui
 ---
 
 # UX/UI — Sign In / Sign Up Self-Checklist
 
 > [!info] Status
-> Design + clickable prototype complete in Figma · Deadline and points **TBA** · not yet in tracker
+> **Submitted 2026-08-26.** Design + clickable prototype complete in Figma.
+> Deadline and points still **TBA** — add `due:` and `points:` to the frontmatter
+> when known and the tracker will pick it up automatically.
 
 ## Assignment
 
@@ -133,5 +136,5 @@ Frames were generated through the Figma MCP plugin API, not drawn by hand. Two t
 ## Open
 
 - [ ] Confirm whether the brief wants clickable navigation only or a graded state demo — if the latter, add resting-state duplicates of `4:2` / `5:2`
-- [ ] Confirm deadline + point value, then add row to [[assignments-tracker]]
-- [ ] Export final submission PDF once naming format is confirmed (past pattern: `67011178_<Name>.pdf`)
+- [ ] Confirm deadline + point value, then add `due:`/`points:` to frontmatter (the tracker row generates itself)
+- [x] Export final submission PDF — submitted 2026-08-26
