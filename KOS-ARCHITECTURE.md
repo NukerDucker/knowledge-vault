@@ -362,7 +362,9 @@ What genuinely speeds up a daily start is a single note you open into:
 [[assignments-tracker]] · [[VAULT-GUIDE]]
 ```
 
-The same `sync-tracker.sh` writes the generated block, so what is due is on screen the moment Obsidian opens without you maintaining anything. Set it as the startup note in Obsidian's settings, or bookmark it — check the exact setting name in your version rather than trusting a menu path from me.
+The same `sync-tracker.py` writes the generated block, so what is due is on screen without you maintaining anything.
+
+**How to make it the thing you land on:** bookmark it (`Cmd+O` → `HOME` → star it) and pin its tab. Obsidian has **no core "startup note" setting** — it reopens whatever tabs were last open, so a pinned `HOME` tab is what actually makes it the landing page. A community plugin can force it, but that is a dependency for a problem a pinned tab already solves.
 
 No plugin required, and the file is plain Markdown, so Claude can read the same dashboard you do.
 

@@ -7,7 +7,7 @@ status: active
 # HOME
 
 <!-- BEGIN GENERATED: due-next -->
-<!-- regenerated 2026-08-25 — do not edit by hand -->
+<!-- regenerated 2026-08-26 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |

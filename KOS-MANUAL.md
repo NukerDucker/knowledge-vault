@@ -424,6 +424,9 @@ Then: change a `status`, start a new session, confirm the table updated. Edit a 
 3. Verify git works: open Terminal, `cd ~/KnowledgeVault`, `git status`. If it prints a status, you are done.
 4. Install VS Code from code.visualstudio.com.
 5. In Obsidian, Settings → Core plugins → enable **Templates**, set the template folder to `_meta/templates`.
+6. Open `HOME.md`, bookmark it, and pin its tab. Obsidian reopens the tabs you
+   left open, so a pinned `HOME` tab is what makes it your landing page — there
+   is no core "startup note" setting.
 
 **Verify the whole setup**
 

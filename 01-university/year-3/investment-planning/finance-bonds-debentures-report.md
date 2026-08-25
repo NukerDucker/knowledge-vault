@@ -13,6 +13,8 @@ subject: investment-planning
 
 # Finance — Report No. 1: Bonds / Debentures
 
+**File:** `~/Documents/University/Year-3/Investment Planning/67011178_Report1.pdf`
+
 > [!warning] Deadline
 > **August 13, 2026** · Individual or Pair · 20 points
 

@@ -35,7 +35,7 @@ updated: 2026-08-24
 ## Upcoming
 
 <!-- BEGIN GENERATED: upcoming -->
-<!-- regenerated 2026-08-25 — do not edit by hand -->
+<!-- regenerated 2026-08-26 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
@@ -59,7 +59,7 @@ touches this table.
 ## Completed
 
 <!-- BEGIN GENERATED: completed -->
-<!-- regenerated 2026-08-25 — do not edit by hand -->
+<!-- regenerated 2026-08-26 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
@@ -91,134 +91,14 @@ touches this table.
 
 ---
 
-## Details — Upcoming
-
-### ✅ OS — Case Study 1: Multithreading `Aug 14` · DONE
-
-See [[os-case-study-1]] for full brief, implementation, and benchmarks.
-
-**Scoring:** Peer eval 35% · Classmate eval 20% · Instructor 45%
-
-| Item | Status |
-|------|--------|
-| Group registered | ✅ |
-| `Program.cs` implemented (partitioned threads) | ✅ |
-| Benchmark measured (best: 4 workers, 3.94×) | ✅ |
-| Presentation prepared | ✅ |
-| `program.cs` submitted | ✅ |
-| Peer eval (own group members) | ✅ |
-| Group eval (other groups) | ✅ |
-
-Group: 67011081 · **67011178** · 67011214 · 67011717 · 67011736
-
 ---
 
-### ✅ Investment Planning — Report No. 1: Bonds/Debentures `Aug 13` · 20 pts · SUBMITTED
+## Where the detail lives
 
-See [[finance-bonds-debentures-report]] and draft at [[thai-corp-bond-report-draft]].
+Each row links to its note. The note holds the brief, the checklist, the
+submission path, and the working notes — this file holds only status.
 
-PDF: `~/Documents/University/Year-3/Investment Planning/67011178_Report1.pdf`
-
----
-
-### ✅ UX/UI — Hooked Individual `Aug 31` · 10 pts · SUBMITTED Aug 22
-
-See [[uxui-hooked-individual]] for full brief.
-
-- Part 1: Hooked principles summary (1–2 A4 pages, own words, APA refs) ✅
-- Part 2: Duolingo — 6 annotated screenshots covering all 4 Hooked steps ✅
-
-PDF: `~/Documents/University/Year-3/UXUI/67011178_Hooked.pdf`
-
----
-
-### ✅ UX/UI — UI Hunt: Unusual Screens `Sep 7` · 6 pts · SUBMITTED Aug 23
-
-See [[uxui-ui-hunt]] for full brief.
-
-PDF: `~/Documents/University/Year-3/UXUI/67011178_UIHunt.pdf`
-
----
-
-### 🔄 AI — Romania-Map Pathfinding `Oct 13` · 50%
-
-See [[rome-pathfinding]] for stack and heuristic rules.
-
-- Arbitrary start/goal city selection
-- One blind search + one custom heuristic (no SLD/GPS)
-- Compare: execution time, memory, path cost
-- GitHub repo link embedded in app
-- Submit: Web App URL + 10–15 min video
-
-Stack: Vite + React 19 + TS, Bun. Repo: `~/Documents/University/Year-3/AI/rome-pathfinding`
-
----
-
-### ⬜ Microcontroller — STM32 Project `TBA`
-
-Need to find and propose a project for STM32. No deadline confirmed yet.
-
----
-
-## Details — Completed
-
-### ✅ UX/UI Wk5 — POV + HMW `Aug 9`
-
-See [[uxui-week5-pov-hmw]]. Group 2 · KMITL Facility Booking System.
-
-POV: real-time booking status tracking. Top HMWs: live availability + automated notifications.
-
----
-
-### ✅ UX/UI Wk6 — Hooked Loop + Kano Model `Aug 9`
-
-See [[uxui-week6-hooked-kano]]. Group 2 · KMITL Facility Booking System.
-
-All 4 activities complete (slides 9–12). Submit: `TeamNumber_Hooked_Kano.pdf`
-
----
-
-### ✅ UX/UI Wk3 — Market Comparison `Aug 3` · 10 pts
-
-See [[uxui-week3-market-comparison]]. Submit: `GroupNo_MarketComparison.pdf`
-
----
-
-### ✅ UX/UI Wk4 — User Journey Map `Aug 3`
-
-See [[uxui-week4-user-journey-map]]. Journey map for Wk3 persona.
-
----
-
-### ✅ OS — Homework 1–4 `Aug 6`
-
-See [[os-homework-1-4]].
-
-| HW | Topic |
-|----|-------|
-| 1 | Device interrupts — CPU behaviour, stack, resume |
-| 2 | Why not use user stack? |
-| 3 | `fork()`, `exec()`, `wait()` error/return behaviour |
-| 4 | File syscall design (open/exist/create) |
-
----
-
-### ✅ OS — Case Study 1: Group Registration `Aug 6`
-
-See [[os-case-study-1-2]]. 5-person group registered. Main work tracked in Upcoming section above.
-
----
-
-### ✅ RTW — Individual Resume `Aug 17` · 4 pts · SUBMITTED
-
-PDF: `~/Documents/University/Year-3/RTW/Napaul_Intharasing_Resume.pdf`  
-Due: Aug 27 · submitted early.
-
----
-
-### ✅ RTW — All Units `Done`
-
-- [[rtw-a1-foundation-knowledge]] — HR skills, hard/soft skills, grad regulations
-- [[rtw-a2-labour-law]] — Working hours, OT, leave, SSF sections 33/39/40
-- [[rtw-unit3-corporate-culture]] — Corporate culture case study + company comparison
-- Unit 5: IKAIGI — complete
+*(The old `## Details` sections were removed 2026-08-26: they restated note
+content, which is the duplication the governance rules exist to prevent. Every
+fact in them was verified present in its note first; the one exception, the
+Report No.1 PDF path, was migrated to `finance-bonds-debentures-report.md`.)*
