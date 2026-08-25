@@ -8,15 +8,29 @@ tags:
 status: submitted
 created: 2026-08-25
 updated: 2026-08-26
+due: 2026-08-25
+points: 1
 subject: uxui
 ---
 
 # UX/UI — Sign In / Sign Up Self-Checklist
 
-> [!info] Status
-> **Submitted 2026-08-26.** Design + clickable prototype complete in Figma.
-> Deadline and points still **TBA** — add `due:` and `points:` to the frontmatter
-> when known and the tracker will pick it up automatically.
+**What:** design Login and Sign-up pages for the final project, against a self-checklist.
+**Why:** UX/UI Design (01276545) individual work, 1 point. Set by Brandon Darryl Lynn.
+**Where:** submitted to Google Classroom as `67011178_LoginSignup.pdf` · assets → `~/Documents/University/Year-3/UXUI/signin-signup-assets/`
+**Constraint:** PDF only, named `671101XX_LogInSignUp.pdf`. Must contain the UI checklist, a Figma wireframe screenshot, and exported Login/Signup layers. Google Slides must also be filled in.
+
+> [!success] Submitted
+> Turned in as `67011178_LoginSignup.pdf` · due 2026-08-25 · 1 point.
+
+> [!warning] No local copy
+> The PDF exists only in Google Classroom. Every other submission this term has a
+> copy in `~/Documents/University/Year-3/UXUI/`. Download it there so the
+> deliverable survives independently of Classroom, then add:
+>
+> `**File:** ~/Documents/University/Year-3/UXUI/67011178_LoginSignup.pdf`
+>
+> `check.sh` check 8 will verify that path from then on.
 
 ## Assignment
 

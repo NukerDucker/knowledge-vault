@@ -39,8 +39,8 @@ updated: 2026-08-24
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
+| 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
-| TBA | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | — | 🔄 active |
 
 <!-- END GENERATED: upcoming -->
 
@@ -66,6 +66,7 @@ touches this table.
 | 2026-09-07 | [[uxui-ui-hunt\|UX/UI: UI Hunt — Unusual Screens]] | uxui | 6 | ✅ submitted |
 | 2026-08-31 | [[uxui-hooked-individual\|UX/UI — Hooked Individual Assignment]] | uxui | 10 | ✅ submitted |
 | 2026-08-27 | [[rtw-resume-assignment\|RTW — Resume Assignment]] | rtw | 4 | ✅ submitted |
+| 2026-08-25 | [[uxui-signin-signup-checklist\|UX/UI: Sign In / Sign Up Self-Checklist (Student Version)]] | uxui | 1 | ✅ submitted |
 | 2026-08-24 | [[uxui-week7-crazy8s-storyboard\|Week 7 — Crazy 8s & Storyboarding]] | uxui | 6 | ✅ submitted |
 | 2026-08-14 | [[os-case-study-1\|OS Case Study 1 — Multithreading]] | os | 65% | ✅ submitted |
 | 2026-08-13 | [[finance-bonds-debentures-report\|Finance Report No.1: Bonds / Debentures]] | investment-planning | 20 | ✅ submitted |

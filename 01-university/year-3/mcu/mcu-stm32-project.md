@@ -3,19 +3,81 @@ title: Modular Synthesizer — Piano Project
 tags: [mcu, stm32, hardware, synth, piano]
 status: active
 created: 2026-08-23
-due: TBA
+due: 2026-09-08
+points: 100
 subject: mcu
 ---
 
 # Modular Synthesizer — Piano Project
 
 **What:** modular synth/piano — per-octave PCB boards that snap together via 4-pin magnetic connectors.
-**Why:** Microcontroller Interfacing coursework (01276314, Wed). Deadline TBA.
+**Why:** Microcontroller Interfacing coursework (01276314, Wed). **100 points**, group of 6–7.
 **Where:** files → `~/Documents/University/Year-3/Microcon/`
 **Stack:** STM32F4 Black Pill (F411) · HAL + CubeIDE · I2C bus · MPR121 cap touch.
-**Constraint:** HAL Library + CubeIDE are required by the prof. F411 is fixed — F7 was ruled out (team unfamiliar, IOC migration cost). F411 has no TSC peripheral, hence MPR121.
+**Constraint:** STM32 + HAL + CubeIDE mandatory. Must use **interrupts from 2 modules** (EXTI/UART/TIM) and **2 of 3** from {ADC, PWM, graphic LCD}, with **4–6 features**. F411 is fixed — F7 ruled out (team unfamiliar, IOC migration cost). F411 has no TSC peripheral, hence MPR121. **Late = −10 pts/day, per deadline.**
 
 *Session log → [[mcu-stm32-log]]*
+
+---
+
+## Schedule
+
+**Next up: proposal, 2026-09-08.** `due:` tracks the nearest open deadline, not
+the final one — update it as each passes so `HOME.md` shows what is actually next.
+
+| Deadline | Item | Weight |
+|---|---|---|
+| **Sept 8** | Proposal — [form](https://forms.gle/ZktBTfTz4MVToxwMA) | 10 pts |
+| Sept 9 | Proposal comments in lab; development starts | — |
+| Sept 23 | Progress report — [form](https://forms.gle/jjktDcC4a98Wker4A) | 10 pts |
+| Oct 7 | Answer questions, in class or online | — |
+| Oct 21 | Demonstrate the project | 60 pts |
+| Oct 21 | Report + demo clip + code — [form](https://forms.gle/n2s17x8d1tJonu2b9) | 20 pts |
+| Oct 21 | Return all lab equipment | — |
+
+**Penalty: −10 points per day, applied after *each* deadline.** With the proposal
+worth only 10, two days late on it is worth zero — the deadline matters more than
+the content.
+
+## Requirements check
+
+> [!warning] Gap: only one of the three required modules is covered
+> The rule is **2 of 3** from {ADC, PWM, graphic LCD}. The current design has
+> **PWM only** (audio out). Pick a second before the proposal:
+>
+> - **ADC** — cheapest fit. A potentiometer for volume, filter cutoff, or pitch
+>   bend is one knob, one pin, and it reads naturally as a synth control.
+> - **Graphic LCD** — more visible in a demo (waveform, patch name, octave), but
+>   more pins, more code, and more to go wrong on modular boards.
+>
+> ADC is the low-risk answer; the LCD is the one that scores better on "design and
+> creativity" at demo time. Decide and record it under Decisions.
+
+| Requirement | Status |
+|---|---|
+| Interrupts from 2 modules | ✅ EXTI (MPR121 IRQ) + TIM (PWM audio) |
+| 2 of 3: ADC / PWM / graphic LCD | ⚠️ **PWM only — needs one more** |
+| 4–6 features | ✅ likely (keys, audio, modularity, board ID, …) — enumerate for the proposal |
+| STM32 + HAL + CubeIDE | ✅ |
+
+## Proposal contents (10 pts, due Sept 8)
+
+≤10 slides:
+
+1. Motivation and main features
+2. Brief explanation of how it works + top-level flowchart
+3. Bill of materials
+4. Relevant pictures
+5. Links to the inspiration project (AKAI MPK mini)
+
+## Report contents (part of the final 20 pts)
+
+Introduction/motivation · design explanation (MCU↔device connectivity diagram,
+complete flowchart) · important functions · BOM with prices and links · results
+with pictures · problems and solutions · **knowledge used from other courses**
+(digital circuits, electronics, programming) · references.
+
+Demo clip: 3–6 min, uploaded to YouTube, for publication.
 
 ## Decisions
 

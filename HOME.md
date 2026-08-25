@@ -11,8 +11,8 @@ status: active
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
+| 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
-| TBA | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | — | 🔄 active |
 
 <!-- END GENERATED: due-next -->
 
