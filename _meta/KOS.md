@@ -251,7 +251,7 @@ Symlink: `university-files/` → `~/Documents/University/` (excluded from indexi
 | UX/UI Design | `university-files/Year-3/UXUI/` |
 | Operating Systems | `university-files/Year-3/OS/` |
 | Investment Planning | `university-files/Year-3/Investment Planning/` |
-| Artificial Intelligence | `university-files/Year-3/AI/rome-pathfinding/` |
+| Artificial Intelligence | code at `~/Code/rome-pathfinding/` |
 | Microcontroller | `university-files/Year-3/Microcon/` |
 | Ready to Work | `university-files/Year-3/Ready To Work/` |
 

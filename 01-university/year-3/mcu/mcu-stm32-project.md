@@ -17,11 +17,23 @@ subject: mcu
 
 *Session log → [[mcu-stm32-log]]*
 
-> [!warning] Unresolved: audio output path
-> This note specifies **PWM via Timer 3/4 → MOSFET + RC low-pass**, no external DAC.
-> A Claude memory written the same day specifies **PCM5102 over I2S** instead.
-> These are incompatible designs and only one can be current. Resolve it, record
-> the decision below, then delete this callout.
+## Decisions
+
+### 2026-08-26 — Audio out: PWM via Timer, not PCM5102/I2S
+
+**PWM via Timer 3/4 → MOSFET + RC low-pass → analog out.** No external DAC chip.
+
+Rejected PCM5102 over I2S. The F411 has no onboard DAC, which is what made an
+external DAC look necessary — but PWM plus an RC filter gets adequate audio for
+a prototype without adding a chip, a footprint, or I2S wiring to every board.
+Fewer parts per module matters more here than fidelity, because the whole design
+is modular boards that snap together.
+
+Revisit only if PWM audio quality proves unacceptable in testing; PCM5102 stays
+the fallback.
+
+*(Recorded because the vault note and a Claude memory disagreed — the memory
+claimed PCM5102/I2S. The memory was wrong and has been corrected.)*
 
 Reference: AKAI MPK mini form factor. Modular PCB system, snap together via magnetic connectors.
 

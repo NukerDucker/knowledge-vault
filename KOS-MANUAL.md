@@ -194,7 +194,7 @@ The Source Control panel is worth learning specifically because it shows you the
 
 **Hands-on**
 
-1. Open VS Code. `File → Open Folder` → `~/Documents/University/drunkbill`.
+1. Open VS Code. `File → Open Folder` → `~/Code/drunkbill`.
 2. `Cmd+P`, type part of a filename. Open it.
 3. `` Ctrl+` `` to open the terminal. Type `git status`.
 4. Click the Source Control icon. Compare what it shows against the terminal output — it is the same information.

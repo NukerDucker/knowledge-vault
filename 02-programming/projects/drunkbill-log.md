@@ -6,7 +6,7 @@ status: active
 
 # DrunkBill — session state
 
-**Repo:** `~/Documents/University/drunkbill` (Svelte 5 runes + TS + Vite + Tailwind 4, Bun)
+**Repo:** `~/Code/drunkbill` (Svelte 5 runes + TS + Vite + Tailwind 4, Bun)
 **What it is:** static client-only Thai-Baht bill splitter. Integer-satang money model, largest-remainder split, localStorage persistence with `parseBill` trust boundary. See repo `CLAUDE.md` for architecture invariants.
 
 ## 2026-07-22 — Receipt UI + drunk-proof layout

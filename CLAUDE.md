@@ -30,7 +30,7 @@ This vault and `~/Documents/University/` work as a pair. Each has a strict role:
 |---|---|---|
 | **Role** | Markdown notes & tracking | Work files |
 | **Contains** | `.md` notes, assignment briefs, session state, project logs | PDFs, PPTX, Word docs, source code, submission files |
-| **Examples** | `01-university/year-3/uxui/uxui-week7-crazy8s-storyboard.md` | `Year-3/AI/rome-pathfinding/` repo, lab slides, `.pdf` submissions |
+| **Examples** | `01-university/year-3/uxui/uxui-week7-crazy8s-storyboard.md` | lab slides, `.pdf` submissions (repos live in `~/Code/`) |
 
 **Rule:** Never put raw work files here. Never put markdown notes in Documents/University.  
 Vault notes reference their source files with a `**File:**` path pointing to `~/Documents/University/`.
@@ -39,7 +39,7 @@ Vault notes reference their source files with a `**File:**` path pointing to `~/
 
 | What | Documents path |
 |------|---------------|
-| Rome pathfinding app | `~/Documents/University/Year-3/AI/rome-pathfinding/` |
+| Rome pathfinding app | `~/Code/rome-pathfinding/` (moved out of Documents 2026-08-26) |
 | Agoda internship files | `~/Documents/University/Internship/` |
 | Year-3 UX/UI slides + PDFs | `~/Documents/University/Year-3/` |
 | Investment Planning report doc | `~/Documents/University/Year-3/` |

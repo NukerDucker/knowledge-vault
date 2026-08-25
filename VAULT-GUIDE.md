@@ -93,7 +93,7 @@ updated: 2026-07-24  # add when significantly revised
 | Dev reference guide | `02-programming/guides/` | `senior-frontend-developer-guide.md` |
 | Vault wiring notes (per repo) | `02-programming/projects/` | `nacl-nextpath-x.md` |
 | Project session log | `01-university/year-3/<subject>/` | `<project>-log.md` |
-| NACL system docs / ADRs / design specs | *(no vault folder — lives with the code)* | `~/Documents/University/Network-and-Cloud-Laboratory-KMITL/<repo>/` |
+| NACL system docs / ADRs / design specs | *(no vault folder — lives with the code)* | `~/Code/<repo>/` |
 | Agoda internship daily notes | `04-archive/agoda-internship/daily-notes/` (read-only) | `2026-05-26.md` |
 | Agoda KB articles | `04-archive/agoda-internship/knowledge-base/` (read-only) | `NH Laptop Spec.md` |
 | Unprocessed capture | `00-inbox/` | — |

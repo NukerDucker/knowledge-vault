@@ -13,7 +13,7 @@ subject: ai
 
 **What:** A* pathfinding over the 20-city Romania map, React SPA with a step-by-step visualiser.
 **Why:** AI coursework (01276342), 50% of the grade. Submit web app URL + GitHub link + 10–15 min video.
-**Where:** code → `~/Documents/University/Year-3/AI/rome-pathfinding` (`github.com/NukerDucker/rome-pathfinding`) · slides → `~/Documents/University/Year-3/AI/rome-pathfinding/slides/`
+**Where:** code → `~/Code/rome-pathfinding` (`github.com/NukerDucker/rome-pathfinding`) 
 **Stack:** Vite 8 · React 19 · TypeScript ~6.0 · bun · React Compiler. Client-only, deploys to Vercel.
 **Constraint:** the heuristic must be **custom** and derived **only** from page 2 of the assignment PDF. **GPS data and straight-line distance are banned — SLD may not even be used to derive another value.** Present ONE algorithm; showing several forfeits creativity credit.
 
@@ -85,7 +85,7 @@ subject: ai
 
 ![[slide-06-lp-diagram.html]]
 
-**File:** `~/Documents/University/Year-3/AI/rome-pathfinding/slides/slide-06-lp-diagram.png` | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
+**Export target:** `~/Code/rome-pathfinding/slides/slide-06-lp-diagram.png` *(not exported yet)* | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
 
 ### ALT — Landmarks + Triangle Inequality (`alt.ts`)
 

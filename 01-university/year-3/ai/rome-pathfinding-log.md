@@ -9,7 +9,7 @@ updated: 2026-08-21
 # Rome Pathfinding — Session Log
 
 *Reference note → [[rome-pathfinding]]*
-Repo: `~/Documents/University/Year-3/AI/rome-pathfinding`
+Repo: `~/Code/rome-pathfinding`
 
 ---
 
@@ -48,7 +48,7 @@ Branch `main` — clean, pushed.
 ### 2026-08-20
 
 - Viz enhancements shipped: heatmap, click-to-landmark, toolbar refactor
-- Slide 6 LP diagram built as SVG/HTML → PNG screenshot at `~/Documents/University/Year-3/AI/rome-pathfinding/slides/slide-06-lp-diagram.png`
+- Slide 6 LP diagram built as SVG/HTML → PNG screenshot at `~/Code/rome-pathfinding/slides/slide-06-lp-diagram.png (not yet exported)`
 - ALT save/restore: `saveALTState()` / `restoreALTState()` in `heuristic.ts`
 - CSS fixes: SVG `width="2800" height="1900"` CLS fix; font-weight 650→600; dead `.arc-toggle-btn` deleted
 

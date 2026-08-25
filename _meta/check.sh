@@ -218,6 +218,28 @@ while read -r f; do
 done < <(vault_md)
 [ "$ASSIGN_ISSUES" -eq 0 ] && echo "  all assignment notes are complete"
 
+# ------------------------------------------------- 8. external File: paths
+# Checks 1-7 only see inside the vault. A **File:** pointing at ~/Documents or
+# ~/Code can rot silently — that is how rome-pathfinding.md kept pointing at a
+# slides/ folder which never existed. Warning, not error: an export target may
+# legitimately not exist yet.
+head2 "8. External **File:** paths exist"
+EXT_ISSUES=0
+while read -r f; do
+  case "$f" in ./04-archive/*|./_meta/templates/*) continue ;; esac
+  grep -ohE '\*\*(File|Export target):\*\*[^|]*' "$f" 2>/dev/null \
+    | grep -oE '`[^`]+`' | tr -d '`' \
+    | while read -r path; do
+        case "$path" in "~/"*|/*) ;; *) continue ;; esac
+        exp="${path/#\~/$HOME}"
+        [ -e "$exp" ] || echo "$f -> $path"
+      done
+done < <(vault_md) > "$TMP/extpaths"
+while read -r line; do
+  [ -n "$line" ] && warn "File: path does not exist: $line" && EXT_ISSUES=1
+done < "$TMP/extpaths"
+[ "$EXT_ISSUES" -eq 0 ] && echo "  all external File: paths exist"
+
 # ---------------------------------------------------------------- summary
 head2 "Summary"
 echo "  errors:   $ERRORS"

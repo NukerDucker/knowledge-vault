@@ -85,7 +85,7 @@ created: 2026-08-06
 
 # Rome Pathfinding (AI Assignment)
 
-Repo: `~/Documents/University/Year-3/AI/rome-pathfinding` → `github.com/NukerDucker/rome-pathfinding`
+Repo: `~/Code/rome-pathfinding` → `github.com/NukerDucker/rome-pathfinding`
 Due: **2026-10-13** | Submission: YouTube video + Vercel URL + GitHub link
 
 *Session log and git state → [[rome-pathfinding-log]]*
@@ -147,7 +147,7 @@ Due: **2026-10-13** | Submission: YouTube video + Vercel URL + GitHub link
 
 ![[slide-06-lp-diagram.html]]
 
-**File:** `~/Documents/University/Year-3/AI/rome-pathfinding/slides/slide-06-lp-diagram.png` | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
+**File:** `~/Code/rome-pathfinding/slides/slide-06-lp-diagram.png (not yet exported)` | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
 
 ### ALT — Landmarks + Triangle Inequality (`alt.ts`)
 
@@ -312,7 +312,7 @@ updated: 2026-08-21
 # Rome Pathfinding — Session Log
 
 *Reference note → [[rome-pathfinding]]*
-Repo: `~/Documents/University/Year-3/AI/rome-pathfinding`
+Repo: `~/Code/rome-pathfinding`
 
 ---
 
@@ -350,7 +350,7 @@ Branch `main` — clean, pushed.
 ### 2026-08-20
 
 - Viz enhancements shipped: heatmap, click-to-landmark, toolbar refactor
-- Slide 6 LP diagram built as SVG/HTML → PNG screenshot at `~/Documents/University/Year-3/AI/rome-pathfinding/slides/slide-06-lp-diagram.png`
+- Slide 6 LP diagram built as SVG/HTML → PNG screenshot at `~/Code/rome-pathfinding/slides/slide-06-lp-diagram.png (not yet exported)`
 - ALT save/restore: `saveALTState()` / `restoreALTState()` in `heuristic.ts`
 - CSS fixes: SVG `width="2800" height="1900"` CLS fix; font-weight 650→600; dead `.arc-toggle-btn` deleted
 
