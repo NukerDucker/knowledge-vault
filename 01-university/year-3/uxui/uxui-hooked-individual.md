@@ -5,12 +5,14 @@ tags:
   - uxui
   - individual
   - hooked
-status: archived
+status: submitted
 created: 2026-08-09
 updated: 2026-08-22
 submitted: 2026-08-22
 due: 2026-08-31
 app: Duolingo
+points: 10
+subject: uxui
 ---
 
 # Hooked — Individual Assignment (10 pts)

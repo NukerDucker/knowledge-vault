@@ -1,8 +1,10 @@
 ---
 title: OS Homework 1–4
 tags: [university, assignment, os]
-status: active
+status: submitted
 created: 2026-07-24
+due: 2026-08-06
+subject: os
 ---
 
 # OS Homework 1–4

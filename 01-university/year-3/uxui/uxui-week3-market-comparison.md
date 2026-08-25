@@ -4,8 +4,11 @@ tags:
   - university
   - uxui
   - group-work
-status: active
+status: submitted
 created: 2026-07-24
+due: 2026-08-03
+points: 10
+subject: uxui
 ---
 
 # UX/UI Week 3 — Market Comparison

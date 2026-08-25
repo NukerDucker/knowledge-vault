@@ -4,6 +4,9 @@ tags: [rtw, assignment, resume]
 status: submitted
 created: 2026-08-16
 updated: 2026-08-17
+due: 2026-08-27
+points: 4
+subject: rtw
 ---
 
 # Resume — Individual Work

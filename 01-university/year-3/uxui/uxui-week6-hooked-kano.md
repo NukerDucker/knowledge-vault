@@ -4,8 +4,10 @@ tags:
   - university
   - uxui
   - group-work
-status: active
+status: submitted
 created: 2026-08-09
+due: 2026-08-09
+subject: uxui
 ---
 
 # UX/UI Week 6 — Hooked Loop + Kano Model

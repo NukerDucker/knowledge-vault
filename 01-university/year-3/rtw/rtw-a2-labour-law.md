@@ -1,8 +1,10 @@
 ---
 title: RTW A2 — Labour Law and Social Insurance Fund
 tags: [university, assignment, rtw]
-status: active
+status: submitted
 created: 2026-07-26
+due: 2026-08-06
+subject: rtw
 ---
 
 # RTW A2 — Labour Law and Social Insurance Fund

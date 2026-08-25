@@ -4,9 +4,11 @@ tags:
   - university
   - os
   - group-work
-status: active
+status: submitted
 created: 2026-07-24
 updated: 2026-08-08
+due: 2026-08-06
+subject: os
 ---
 
 # OS Case Studies — Overview

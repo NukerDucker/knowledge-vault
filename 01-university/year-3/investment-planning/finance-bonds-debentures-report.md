@@ -4,8 +4,11 @@ tags:
   - university
   - finance
   - individual
-status: active
+status: submitted
 created: 2026-07-24
+due: 2026-08-13
+points: 20
+subject: investment-planning
 ---
 
 # Finance — Report No. 1: Bonds / Debentures

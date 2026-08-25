@@ -1,7 +1,7 @@
 ---
 title: Stock Risk Analysis — NVIDIA (Wk 5 Worksheet)
 tags: [investment-planning, stock, risk-analysis, nvidia]
-status: active
+status: stable
 created: 2026-08-06
 ---
 

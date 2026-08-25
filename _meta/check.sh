@@ -196,6 +196,26 @@ while read -r f; do
 done < <(vault_md)
 [ "$NAME_ISSUES" -eq 0 ] && echo "  all filenames follow the rule"
 
+# --------------------------------------------------- 7. assignment fields
+# Assignment notes are the source of truth for the generated tracker.
+# A note carrying due: must carry the rest, or the generator emits half a row.
+head2 "7. Assignment notes carry due / subject / status"
+ASSIGN_ISSUES=0
+while read -r f; do
+  case "$f" in ./04-archive/*) continue ;; esac
+  head -30 "$f" | grep -qE '^due:' || continue
+  fm=$(awk 'NR>1{if($0=="---")exit; print}' "$f")
+  for field in due subject status; do
+    printf '%s\n' "$fm" | grep -qE "^${field}:" \
+      || { err "assignment note missing '${field}:' — $f"; ASSIGN_ISSUES=1; }
+  done
+  d=$(printf '%s\n' "$fm" | grep -E '^due:' | head -1 | sed 's/^due:[[:space:]]*//' | tr -d '"')
+  if [ -n "$d" ] && ! printf '%s' "$d" | grep -qE '^([0-9]{4}-[0-9]{2}-[0-9]{2}|TBA)$'; then
+    err "due '${d}' is not YYYY-MM-DD or TBA — $f"; ASSIGN_ISSUES=1
+  fi
+done < <(vault_md)
+[ "$ASSIGN_ISSUES" -eq 0 ] && echo "  all assignment notes are complete"
+
 # ---------------------------------------------------------------- summary
 head2 "Summary"
 echo "  errors:   $ERRORS"

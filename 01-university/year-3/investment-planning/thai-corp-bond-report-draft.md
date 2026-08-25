@@ -1,7 +1,7 @@
 ---
 title: Thai Corporate Bond Investment Analysis Report — Draft
 tags: [investment-planning, corporate-bond, report, draft]
-status: draft
+status: stable
 created: 2026-08-05
 ---
 

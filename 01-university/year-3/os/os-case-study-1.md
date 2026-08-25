@@ -5,8 +5,11 @@ tags:
   - os
   - group-work
   - threads
-status: active
+status: submitted
 created: 2026-08-08
+due: 2026-08-14
+points: 65%
+subject: os
 ---
 
 # OS Case Study 1 — Multithreading

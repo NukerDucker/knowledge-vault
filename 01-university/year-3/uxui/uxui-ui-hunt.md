@@ -4,10 +4,12 @@ tags:
   - university
   - uxui
   - individual
-status: archived
+status: submitted
 created: 2026-07-24
 updated: 2026-08-23
 due: 2026-09-07
+points: 6
+subject: uxui
 ---
 
 # UX/UI — UI Hunt: Capture UI Screens That Feel "Unusual"

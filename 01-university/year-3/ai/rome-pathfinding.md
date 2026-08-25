@@ -4,6 +4,9 @@ tags: [university, year-3, ai, project, assignment]
 status: active
 created: 2026-08-06
 updated: 2026-08-21
+due: 2026-10-13
+points: 50%
+subject: ai
 ---
 
 # Rome Pathfinding (AI Assignment)

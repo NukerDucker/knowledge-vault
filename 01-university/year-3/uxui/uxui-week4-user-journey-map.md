@@ -4,8 +4,10 @@ tags:
   - university
   - uxui
   - group-work
-status: active
+status: submitted
 created: 2026-07-24
+due: 2026-08-03
+subject: uxui
 ---
 
 # UX/UI Week 4 — User Journey Map
