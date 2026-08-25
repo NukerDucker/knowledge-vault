@@ -109,4 +109,4 @@ Separate power supply for multi-board setup. Clean regulated 3.3V analog rail fo
 
 ---
 
-*See also: [[session-state]] — session log, git state, dated progress*
+*See also: [[mcu-stm32-log]] — session log, git state, dated progress*

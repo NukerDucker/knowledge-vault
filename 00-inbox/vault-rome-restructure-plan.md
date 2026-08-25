@@ -69,7 +69,7 @@ git commit -m "vault: move slide PNGs to 01-university/year-3/ai/"
 **Why:** Current note mixes stable reference content with session churn (`updated:`, git state, dated notes). This rewrite removes churn, embeds slide images, adds session-log pointer.
 
 **Remove from this note:** `updated:` frontmatter, `## Git state` section, dated session entries.
-**Add:** `![[image.png]]` embeds under relevant sections, `*See also: [[session-state]]*` footer.
+**Add:** `![[image.png]]` embeds under relevant sections, `*See also: [[rome-pathfinding-log]]*` footer.
 
 - [ ] **Step 1: Write the rewritten note**
 
@@ -88,7 +88,7 @@ created: 2026-08-06
 Repo: `~/Documents/University/Year-3/AI/rome-pathfinding` → `github.com/NukerDucker/rome-pathfinding`
 Due: **2026-10-13** | Submission: YouTube video + Vercel URL + GitHub link
 
-*Session log and git state → [[session-state]]*
+*Session log and git state → [[rome-pathfinding-log]]*
 
 ---
 
@@ -279,7 +279,7 @@ Five evidence slides ranked by impact:
 
 ---
 
-*See also: [[session-state]] — session log, git state, dated progress*
+*See also: [[rome-pathfinding-log]] — session log, git state, dated progress*
 ```
 
 - [ ] **Step 2: Commit**
@@ -402,7 +402,7 @@ For projects with 3+ Claude sessions, split across two notes:
 | **Session log** | `03-ai/projects/<name>/session-state.md` | Rolling session entries, git state, open tasks, dated progress | Keep — tracks last session |
 
 **Linking:**
-- Reference note footer: `*See also: [[session-state]] — session log, git state, dated progress*`
+- Reference note footer: `*See also: [[rome-pathfinding-log]] — session log, git state, dated progress*`
 - Session log header: `*Reference note → [[<topic>]]*`
 
 **Rule:** Any note edited across 3+ sessions should be split. Churn (dated entries, git state) belongs in the session log, not the reference note.
@@ -449,7 +449,7 @@ When a project note has been edited across 3+ Claude sessions, split it:
 - `01-university/year-N/subject/topic.md` → stable facts only; omit `updated:` to avoid date churn
 - `03-ai/projects/<name>/session-state.md` → session log, git state, open questions, dated entries
 
-Linking: reference note footer links to `[[session-state]]`; session log header links back to `[[topic]]`.
+Linking: reference note footer links to `[[rome-pathfinding-log]]`; session log header links back to `[[topic]]`.
 
 Active example: `rome-pathfinding.md` ↔ `03-ai/projects/rome-pathfinding/session-state.md`
 

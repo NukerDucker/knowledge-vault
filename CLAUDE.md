@@ -4,17 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Assignment Tracker Rule
 
-**Always update `01-university/assignments-tracker.md` whenever an assignment status changes.**
+**Never hand-edit `01-university/assignments-tracker.md`.** It is generated.
 
-Triggers: assignment marked done, submitted, points corrected, status changed from draft/active to complete.
-Actions:
-- Move row from Upcoming → Completed table
-- Fix points/weight if wrong
-- Set status ✅
-- Update `updated:` frontmatter date and `<!-- Last synced -->` comment
-- Do this in the same edit session before committing
+The assignment note's frontmatter is the source of truth. When status changes,
+edit `status:` / `due:` / `points:` in the note — that is the entire action.
+`_meta/sync-tracker.py` regenerates the tracker and `HOME.md` on SessionStart.
 
-Never commit an assignment status change without syncing the tracker.
+Rows with no backing note (class sessions, peer-eval deadlines) live *outside*
+the `<!-- BEGIN GENERATED -->` markers and are hand-maintained. Leave them alone.
+
+*(Replaced 2026-08-25. The old rule required syncing the tracker by hand on every
+status change, which is a manual step this vault no longer has.)*
 
 ## What This Is
 
@@ -60,9 +60,7 @@ Numbered prefixes control sidebar order in Obsidian:
 | `01-university/year-3/investment-planning/` | Investment Planning (bonds report, stock analysis) |
 | `01-university/year-3/ai/` | Artificial Intelligence (Rome pathfinding) |
 | `02-programming` | Dev project notes and vault wiring docs |
-| `03-ai` | AI project plans and session state (rome-pathfinding, casestudy01-os, modular-synth, drunkbill) |
 | `04-archive/agoda-internship/` | Agoda IT internship 2026 — archived, read-only |
-| `03-ai` | Session log + git state for AI-assisted projects. Pair with `01-university/year-N/subject/` reference note. See Reference/Session Split rule below. |
 | `04-archive` | Retired notes |
 
 See `VAULT-GUIDE.md` for full filing rules, naming conventions, and tag taxonomy.
@@ -88,17 +86,16 @@ updated: 2026-06-01  # optional — omit on reference notes, keep on session log
 When a project is worked on across 3+ Claude sessions, split into two notes:
 
 - **`01-university/year-N/subject/topic.md`** — stable facts only (stack, design, technical content). Omit `updated:` to avoid date churn.
-- **`03-ai/projects/<name>/session-state.md`** — rolling session log, git state, open tasks, dated entries. Keep `updated:`.
+- **`<subject>/<project>-log.md`** — rolling session log, git state, open tasks, dated entries. Keep `updated:`.
 
 **Linking rule:**
-- Reference note footer: `*See also: [[session-state]] — session log, git state, dated progress*`
+- Reference note footer: `*See also: [[<project>-log]] — session log, git state, dated progress*`
 - Session log header: `*Reference note → [[topic]]*`
 
-**New AI-assisted projects:** create `session-state.md` in `03-ai/projects/<name>/` from session 1.
+**New projects:** create `<project>-log.md` beside the reference note from session 1.
 
-**Non-AI projects:** use a `-log.md` sibling in the same subject folder instead of `03-ai/`.
 
-Active example: `01-university/year-3/ai/rome-pathfinding.md` ↔ `03-ai/projects/rome-pathfinding/session-state.md`
+Active example: `01-university/year-3/ai/rome-pathfinding.md` ↔ `01-university/year-3/ai/rome-pathfinding-log.md`
 
 Full rule in `VAULT-GUIDE.md` → Reference / Session Split section.
 

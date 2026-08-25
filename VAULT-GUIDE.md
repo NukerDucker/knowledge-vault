@@ -39,12 +39,6 @@ Single source of truth for how this vault is organized. Read this before creatin
   guides/                         ← dev reference guides
   projects/                       ← per-project vault-wiring notes
 
-03-ai/
-  projects/<name>/                ← session-state.md per project
-    rome-pathfinding/             ← AI Rome pathfinding project
-    casestudy01-os/               ← OS case study session notes
-    modular-synth/                ← MCU STM32 modular synth project
-    drunkbill/                    ← Drunkbill project
 
 04-archive/                       ← closed / superseded, keep for reference
   agoda-internship/               ← Agoda IT internship 2026 — READ-ONLY
@@ -98,7 +92,7 @@ updated: 2026-07-24  # add when significantly revised
 | Internship diary / reports / forms | `04-archive/agoda-internship/` (archived, read-only) | `internship-diary.md` |
 | Dev reference guide | `02-programming/guides/` | `senior-frontend-developer-guide.md` |
 | Vault wiring notes (per repo) | `02-programming/projects/` | `nacl-nextpath-x.md` |
-| AI project session state | `03-ai/projects/<name>/` | `session-state.md` |
+| Project session log | `01-university/year-3/<subject>/` | `<project>-log.md` |
 | NACL system docs / ADRs / design specs | *(no vault folder — lives with the code)* | `~/Documents/University/Network-and-Cloud-Laboratory-KMITL/<repo>/` |
 | Agoda internship daily notes | `04-archive/agoda-internship/daily-notes/` (read-only) | `2026-05-26.md` |
 | Agoda KB articles | `04-archive/agoda-internship/knowledge-base/` (read-only) | `NH Laptop Spec.md` |
@@ -140,19 +134,19 @@ For projects with ongoing AI-assisted work (3+ Claude sessions), split across tw
 | Note type | Location | Contains | `updated:` field |
 |-----------|----------|----------|-----------------|
 | **Reference note** | `01-university/year-N/subject/<topic>.md` | Stable facts: stack, design, technical content, assignment brief | Omit — only changes when facts change |
-| **Session log** | `03-ai/projects/<name>/session-state.md` | Rolling session entries, git state, open tasks, dated progress | Keep — tracks last session |
+| **Session log** | `<subject>/<project>-log.md` | Rolling session entries, git state, open tasks, dated progress | Keep — tracks last session |
 
 **Linking:**
-- Reference note footer: `*See also: [[session-state]] — session log, git state, dated progress*`
+- Reference note footer: `*See also: [[<project>-log]] — session log, git state, dated progress*`
 - Session log header: `*Reference note → [[<topic>]]*`
 
 **Trigger:** Any note edited across 3+ Claude sessions should be split. Churn (dated entries, git state) belongs in the session log, not the reference note.
 
-**Non-AI projects** (no `03-ai` presence): keep a `-log.md` sibling in the subject folder instead (e.g., `investment-planning-log.md` next to `investment-planning.md`).
+**All projects** use a `-log.md` sibling in the subject folder. The AI / non-AI distinction is gone: everything is AI-assisted now, so it never divided anything.
 
-**New projects:** create `session-state.md` in `03-ai/projects/<name>/` from day one if the project will span multiple sessions.
+**New projects:** create `<project>-log.md` beside the reference note from day one if the project will span multiple sessions.
 
-Active example: `01-university/year-3/ai/rome-pathfinding.md` ↔ `03-ai/projects/rome-pathfinding/session-state.md`
+Active example: `01-university/year-3/ai/rome-pathfinding.md` ↔ `01-university/year-3/ai/rome-pathfinding-log.md`
 
 ---
 
@@ -184,7 +178,7 @@ Clear `00-inbox/` weekly:
 Only create a new numbered folder when content genuinely doesn't fit anywhere existing.
 
 **Rules:**
-1. Use the next sequential number after the highest non-archive folder (currently `03-ai` → next is `05` since `04` is archive; insert new folder at `05+`).
+1. Use the next sequential number after the highest non-archive folder (currently `02-programming` → `03` is free, `04` is archive; insert new folder at `05+`).
 2. Name pattern: `NN-kebab-case/` — all lowercase, hyphens only.
 3. Add a row to the **Folder Map** and **Where Things Go** table in this file before creating the folder.
 4. Add a color group entry in `.obsidian/graph.json` so the new folder gets a distinct colour in the graph.
@@ -197,7 +191,7 @@ Only create a new numbered folder when content genuinely doesn't fit anywhere ex
 | `00` | Inbox — fixed |
 | `01` | University — fixed |
 | `02` | Programming — fixed |
-| `03` | AI projects — fixed |
+| `03` | free (was AI projects, retired 2026-08-25) |
 | `04` | Archive — fixed |
 | `05+` | Future expansion |
 

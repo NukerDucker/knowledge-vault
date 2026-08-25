@@ -23,7 +23,6 @@ _meta/            rules, templates, check.sh
 00-inbox/         undecided captures — cleared every 2 weeks
 01-university/    coursework, by year/subject
 02-programming/   dev guides + personal project notes
-03-ai/            session logs (being retired — see Milestone 4)
 04-archive/       closed. READ-ONLY. Never edit, never reorganize.
 ```
 

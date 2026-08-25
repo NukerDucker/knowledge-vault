@@ -80,9 +80,6 @@ _meta/                            rules, templates, check.sh
   guides/                         dev reference guides
   projects/                       per-project vault-wiring notes
 
-03-ai/
-  projects/                       session logs — retired in Milestone 4
-
 04-archive/                       closed / superseded. READ-ONLY.
   agoda-internship/               Agoda IT internship 2026
   nacl-nextpath-x/                NACL NextPath-X system docs
@@ -109,7 +106,7 @@ chapter is churn against material that will never be edited again.
 | Diagram or screenshot a note embeds | `<subject>/assets/` |
 | Dev reference guide | `02-programming/guides/` |
 | Personal project note | `02-programming/projects/` |
-| Session log | `03-ai/projects/<name>/` → `<subject>/<name>-log.md` after M4 |
+| Session log | `<subject>/<project>-log.md`, beside its reference note |
 | Unprocessed capture | `00-inbox/` |
 | Closed / superseded | `04-archive/` |
 | PDFs, slides, submissions | `~/Documents/University/Year-N/<Subject>/` |
@@ -270,7 +267,6 @@ Vault notes reference work files with a `**File:**` path.
 
 Tracked here rather than forgotten. Cleared as milestones land.
 
-- `03-ai/` still exists — Milestone 4 retires it.
 - `VAULT-GUIDE.md` and `BRIDGE.md` still exist — Milestone 7 retires them.
 - `assignments-tracker.md` still has hand-written `## Details` sections that
   duplicate note content. Harmless, but they are the next duplication to remove.

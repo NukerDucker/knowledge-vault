@@ -14,7 +14,7 @@ subject: ai
 Repo: `~/Documents/University/Year-3/AI/rome-pathfinding` → `github.com/NukerDucker/rome-pathfinding`
 Due: **2026-10-13** | Submission: YouTube video + Vercel URL + GitHub link
 
-*Session log and git state → [[session-state]]*
+*Session log and git state → [[rome-pathfinding-log]]*
 
 ## Implementation status (2026-08-21)
 
@@ -214,4 +214,4 @@ Five evidence slides ranked by impact:
 
 ---
 
-*See also: [[session-state]] — session log, git state, dated progress*
+*See also: [[rome-pathfinding-log]] — session log, git state, dated progress*

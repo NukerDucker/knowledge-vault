@@ -81,6 +81,6 @@ Course: MCU Interfacing (01276314, Wed)
 | File | Location | Status |
 |------|----------|--------|
 | Reference note | `01-university/year-3/mcu/mcu-stm32-project.md` | ✅ Done |
-| This session state | `03-ai/projects/modular-synth/session-state.md` | ✅ Done |
+| This session state | `01-university/year-3/mcu/mcu-stm32-log.md` | ✅ Done |
 | Assignment tracker | `01-university/assignments-tracker.md` | 🔄 Update when deadline drops |
 | Code | none yet | — |
