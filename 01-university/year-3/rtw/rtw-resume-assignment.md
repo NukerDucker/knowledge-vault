@@ -1,10 +1,10 @@
 ---
-title: RTW — Resume Assignment
+title: RTW — Resume + Sep 10 Interview Presentation
 tags: [rtw, assignment, resume]
-status: submitted
+status: active
 created: 2026-08-16
-updated: 2026-08-17
-due: 2026-08-27
+updated: 2026-08-26
+due: 2026-09-10
 points: 4
 subject: rtw
 ---
