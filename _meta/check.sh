@@ -39,6 +39,9 @@ trap 'rm -rf "$TMP"' EXIT
 is_vendored() {
   case "$1" in
     ./02-programming/guides/system-design-notes/*) return 0 ;;
+    # Installed agent skills. Tooling, not vault content — SKILL.md and friends
+    # are named by their own spec and carry no vault frontmatter.
+    ./.agents/*|./.claude/*) return 0 ;;
     *) return 1 ;;
   esac
 }
@@ -90,6 +93,7 @@ vault_md | while read -r f; do
   # Templates are placeholders by definition — [[related-note]] is an example,
   # not a link, and flagging it teaches you to ignore the checker.
   case "$f" in ./04-archive/*|./_meta/templates/*) continue ;; esac
+  is_vendored "$f" && continue
   strip_code "$f" | grep -oE '\[\[[^]|#]+\]\]' 2>/dev/null \
   | sed 's/^\[\[//; s/\]\]$//' | sort -u \
   | while read -r link; do
