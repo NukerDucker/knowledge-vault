@@ -2,7 +2,7 @@
 title: KOS — Vault Governing Document
 tags: [meta, kos]
 status: active
-updated: 2026-08-25
+updated: 2026-08-26
 ---
 
 # KOS — Vault Governing Document
@@ -194,6 +194,15 @@ a hand-maintained table and are never touched.
 of date until the next session starts, or until you run the script. That is a
 visible, one-command fix; a file-watcher would be more machinery than the
 problem deserves.
+
+**Deadlines also go on Google Calendar.** A new assignment note or a new
+hand-maintained row is not done until the matching event exists on the
+`CEI Courses` calendar: all-day, free, title `<Subject> — <Assignment>`,
+description carrying subject code, points, and the vault note path.
+Reminders 1 day before; 7 days as well for anything ≥ 50 points. Check the
+date range first — do not create a duplicate — and skip anything already
+`✅ submitted`. The vault records the deadline; the calendar is what actually
+gets looked at.
 
 ---
 
