@@ -3,7 +3,6 @@ title: Agoda IT Internship — Archive
 tags: [internship, agoda, archive]
 status: archived
 created: 2026-05-22
-updated: 2026-08-26
 ---
 
 **Period:** May 22 – July 2026

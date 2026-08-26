@@ -95,6 +95,11 @@ updating, it is not archived — move it out first.
 That includes leaving upstream conventions alone. Renaming files inside a closed
 chapter is churn against material that will never be edited again.
 
+**One exception: an archive's own `_index.md`.** The hub may be maintained —
+relabelled, reorganised, relinked — because it is navigation, not content. It
+links only to its own siblings, so check 4 still holds and nothing live gains a
+dependency on archived material. Everything the hub *points at* stays frozen.
+
 ---
 
 ## Where things go
