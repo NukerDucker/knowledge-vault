@@ -3,7 +3,7 @@ title: Modular Synth — Session State
 tags: [mcu, stm32, synth, session]
 status: active
 created: 2026-08-23
-updated: 2026-08-23
+updated: 2026-09-02
 ---
 
 *Reference note → [[mcu-stm32-project]]*
@@ -58,6 +58,75 @@ Course: MCU Interfacing (01276314, Wed)
 
 ---
 
+## 2026-08-30 — Session 2 (PCB layout, DAC integration, Cream Bun review)
+
+**What happened:** KiCad `syth_mcu` board built out heavily. Full detail: [[mcu-stm32-handoff]]. Summary:
+
+- Sourced real magnetic pogo connector parts (5-pin, LCSC C41361292) via `easyeda2kicad`, added to project lib.
+- Fixed U2 footprint (40-pad `YAAJ_WeAct_BlackPill_2`), USB-C footprint confirmed (Amphenol 12401610E4-2A).
+- Integrated a full stereo DAC output stage as a hierarchical sheet (from `STM32Synth-main` reference), wired `+3V3 DAC`/`GNDDAC` out to `AMS2_3.3V`/`GND` — previously dangling. PWM pins: `PA6` (Left, TIM3_CH1) + `PB3` (Right, TIM2_CH2, own pick — free of TFT SPI conflict).
+- Resolved footprints for the whole DAC BOM (transistors, 4 cap types, fuse, trim pots, jack).
+- Fixed a malformed-courtyard DRC bug on U5 (one F.CrtYd line 0.254mm off).
+- Widened board 167×94.5mm → 286×133mm to fit a 12-key real-pitch hall row; relocated H1-H12 mounting holes to the new bottom edge.
+- Added 2× 20-pin breakout headers (J5/J6) flanking U2, net-labeled to expose every MCU pin.
+- Dropped the 5-position mode-select rotary (not sourceable in Thailand) → 3 discrete buttons (SW6/7/8, PB13/14/15) instead.
+- Swapped the TFT connector from a full module footprint to a 10-way IDC box header — screen mounts off-board via ribbon cable, not on the PCB.
+- Added F.Cu=`D_5V` / B.Cu=`GND` filled zones as a power plane (user's own GUI work, post-routing).
+- Committed + pushed to `github.com/NukerDucker/mcu-synth` — `main` and a `review/creambun` mirror branch for design review.
+
+### Newly surfaced problem
+
+- **Mux is full.** Single 74HC4051 (8 channels) is entirely consumed by hall keys 0–7. Remaining 4 hall keys + 5 pots have **zero free ADC-capable GPIO** on the real F401/411 pinout (verified against the actual U2 symbol, not assumption). 2nd mux explicitly declined by user — unresolved, real constraint, not just a TODO.
+- **Architecture drift, unconfirmed:** the 2026-08-23 master/slave zone-population plan (one Gerber, populate differently per role) doesn't obviously match the current single combined board carrying controls + DAC + keys together. Needs a straight answer from the team, not an assumption either way.
+
+### Blocked/open (carried forward, see [[mcu-stm32-handoff]] for full list)
+
+- DAC cluster physical placement not finalized (blind placement attempt reverted this session — do via GUI only).
+- H5/H7 zone thermal-relief DRC, U4/PB7 clearance, J3 edge clearance — all minor, unresolved.
+- Board name undecided (Apollo / Pandora shortlisted).
+
+---
+
+## 2026-09-01 — Session 3 (kicad-happy review, SMD-vs-THT decision, split-board joint spec)
+
+**What happened:**
+
+- Ran `kicad-happy` schematic + PCB analyzers on `syth_mcu`. Confirmed RV6/RV7 courtyard overlap (fix: smaller footprint, same coords, no relocation needed) and traced R1/R2 CC1/CC2 pull-downs as a **false-positive** analyzer warning (nets are unnamed `__unnamed_0`/`__unnamed_2` but correctly wired 5.1k to GND — analyzer just doesn't label them).
+- Verified USB-C receptacle (J3) end-to-end: `USB_C_Receptacle_PowerOnly_6P` symbol + Amphenol `12401610E4-2A` footprint, VBUS→D1 (OR-ing diode)→AMS1117, GND correct, CC1/CC2→R1/R2 5.1k pulldowns correct (standard no-PD-chip 5V/3A default-sink trick). Shield pin is `NO_CONNECT` — optional EMC improvement, not a blocker.
+- Duplicated project to `synth_smd/` to price an all-SMD BOM variant via JLCPCB assembly. Sourced real LCSC parts for the DAC passives (100nF→`C49678` basic, 1uF→`C1848` basic, 33uF elec→`C53200078` extended). **Decision: not SMD** — staying THT, hand-solder, sourcing off Shopee/Lazada. `synth_smd/` is now a dead-end reference copy, not the active project.
+- Found and fixed a real schematic bug while sourcing: **C1/C2 were specified as 80nF electrolytic — no such part exists** (electrolytics don't go below ~0.1-1uF). Fixed in `dac-pchannel.kicad_sch`: C1/C2 value 80nF→100nF, footprint `CP_Radial_D4.0mm_P2.00mm`→`C_Disc_D5.0mm_W2.5mm_P2.50mm` (ceramic disc, correct part family for that value). Also widened C6/C8 (33uF DC-block caps) footprint `CP_Radial_D4.0mm`→`D5.0mm` to match the actual sourced part body size (ELNA 5×11mm).
+- C5/C7 (1uF, rail decoupling — confirmed not in the audio signal path) still undecided between two Shopee options: CBB film 450V (check lead pitch fits `C_Rect_L9.0mm_W3.2mm_P7.50mm_MKT` footprint) vs ELNA 50V electrolytic 5×11mm (needs footprint swap to `CP_Radial_D5.0mm_P2.00mm` + polarity-correct placement, `+`→`+3V3 DAC`, `-`→`GNDDAC`).
+- **Split left/right half-octave board — clarified the internal joint spec.** Left half (5 keys, no MCU) has zero I2C-capable silicon on it, so the I2C bus arriving at the left-edge octave-chaining connector must **pass straight through** the left board to reach the right board's STM32 — it's not just analog hall-sensor lines crossing the solder seam. Joint carries **8 unique nets, 1 shared GND**: `5V, GND, SDA, SCL` (bus pass-through) + 5× hall-sensor analog outs (GND doubles as both bus ground and sensor return — no need to split it).
+- **Octave-to-octave chaining connector — dropped magnetic pogo plan.** Sourcing/aligning real pogo hardware in Thailand was flagged as unnecessary risk for the deadline. New pick: **JST-PH 2.0mm 8-pin, pre-crimped pigtail cable** (buy the whole assembly pre-terminated off Shopee, not raw connector + crimp pins) — solder one 8-pin header per board edge, plug cable between octaves. Trade mechanical "boards click together" elegance for near-zero assembly labor and reliable sourcing.
+
+### Open / carried forward
+
+- [ ] Decide C5/C7 part (CBB film vs ELNA electrolytic) and apply the matching footprint
+- [ ] Update `syth_mcu.kicad_pcb` footprints to match the schematic edits above (schematic-only fix so far — PCB will show stale footprints until "Update PCB from Schematic" is run in KiCad)
+- [ ] RV6/RV7 courtyard fix not yet applied to the PCB file
+- [ ] Shield pin on J3 — optional GND tie for EMC, not done
+- [ ] Physically confirm: is the left/right half-octave joint one continuous PCB, or two separate fabbed boards bridged by solder? Changes whether pogo-connector Z-height alignment across octaves is a real risk.
+- [ ] Order bare PCB gerbers from JLCPCB (steps scoped, not yet executed)
+
+---
+
+## 2026-09-03 — Session 4
+
+> [!warning] Reverses Session 3's "dropped magnetic pogo" call
+> Actual `syth_mcu.kicad_sch`/`.kicad_pcb` (pushed `f4e23e9`) still carry J1/J2 as
+> 5-pin magnetic pogo (`synth:CONN-TH_PR5L4015-5P-C-F`), matching the
+> [[mcu-stm32-handoff]] BOM. JST-PH pigtail plan above was never implemented —
+> board is back on pogo. Treat the JST-PH line above as abandoned, not current.
+
+**New risk flagged:** H3503 hall sensor (key row) sits ~3mm from the pogo mag
+connector. Pogo connectors hold retention magnets — stray field at 3mm is close
+enough to bias or saturate the H3503's analog output. Not yet measured on
+hardware. Added to Open Items.
+
+**Committed/pushed:** `syth_mcu.kicad_pcb`, `.kicad_sch`, `.wrl` — `f4e23e9`.
+
+---
+
 ## Open Tasks (next session)
 
 - [ ] Lock Black Pill pinout: I2C1 (SDA=PB7, SCL=PB6), I2S2 (CK=PB13, SD=PB15, WS=PB12), DIP GPIOs
@@ -75,6 +144,10 @@ Course: MCU Interfacing (01276314, Wed)
 - **Number of modules** — determines DIP address bit width needed
 
 ---
+
+## Parts Ordered
+
+- **PJ-316 3.5mm audio jack** (J4) — ฿125.00, ร้าน มหาชัยอิเล็กทรอนิกส์ (mahachaielectronics.com), Shop ID 533057, Order ID 16657 — [order link](https://lnw.me/order/mahachaielectronics/16657?s=8952f322)
 
 ## Files
 
