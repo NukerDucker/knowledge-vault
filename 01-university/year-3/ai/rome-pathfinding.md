@@ -1,12 +1,19 @@
 ---
 title: Rome Pathfinding — AI Assignment
-tags: [university, year-3, ai, project, assignment]
+tags:
+  - university
+  - year-3
+  - ai
+  - project
+  - assignment
 status: active
 created: 2026-08-06
 updated: 2026-08-21
 due: 2026-10-13
 points: 50%
 subject: ai
+feature: 01-university/year-3/ai/slide-08-base.png
+thumbnail: thumbnails/resized/7f9edaff924e9be220a749e8bc707fc8_86cf658e.webp
 ---
 
 # Rome Pathfinding (AI Assignment)
@@ -85,7 +92,7 @@ subject: ai
 
 ![[slide-06-lp-diagram.html]]
 
-**Export target:** `~/Code/rome-pathfinding/slides/slide-06-lp-diagram.png` *(not exported yet)* | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
+**Export target:** `01-university/year-3/ai/slide-06-lp-diagram.png` *(not exported yet)* — alongside the other slide PNGs | Source HTML: `01-university/year-3/ai/assets/slide-06-lp-diagram.html`
 
 ### ALT — Landmarks + Triangle Inequality (`alt.ts`)
 
@@ -209,7 +216,7 @@ Five evidence slides ranked by impact:
 
 1. **Slide 13 (UI heatmap)** ✅ `slide-13-heatmap.png`
 2. **Slide 8 (backdoor landmarks)** ✅ `slide-08-base.png`
-3. **Slide 6 (LP decomposition)** ✅ `slide-06-lp-diagram.html` → PNG in Documents/University
+3. **Slide 6 (LP decomposition)** — `slide-06-lp-diagram.html` written, PNG not exported yet
 4. **Slide 10 (landmark selection)** ✅ `slide-10-landmarks.png`
 5. **Slide 2 (motivation)** — PDF page-2 map, cited directly under image
 
