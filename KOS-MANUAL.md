@@ -340,7 +340,7 @@ Restructuring before you can verify structure is how you end up with a clean-loo
 **Value on its own:** every assignment note states its own due date, points, and status in a fixed place. Even with no script, you can search and sort by them.
 
 **Do:** Milestone 2. Add `due`, `points`, `subject`, `status` to every assignment note.
-**Validate:** `check.sh` gains a sixth check — every assignment note has all four fields, and `status` is one of `active | submitted | graded | archived`.
+**Validate:** `check.sh` gains a sixth check — every assignment note has all four fields, and `status` is one of `active | submitted | archived`.
 **Delegate:** Sonnet drafts; **you confirm the dates.** A wrong `due` is worse than a missing one.
 
 ### Phase 3 — Generate the tracker *(1 evening)*

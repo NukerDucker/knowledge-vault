@@ -53,7 +53,7 @@ Reading is always fine.
 ---
 title: Human Readable Title
 tags: [topic]
-status: active | stable | submitted | graded | archived
+status: active | stable | submitted | archived
 ---
 ```
 

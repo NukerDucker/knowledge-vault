@@ -23,7 +23,7 @@ Constraint is the highest-value line. Negative facts ("SLD is banned", "no
 generative AI") prevent more wasted work than any amount of description.
 
 due: ISO date or TBA.  points: a number, or delete the line.
-status: active -> submitted -> graded. The tracker generates itself from these;
+status: active -> submitted. The tracker generates itself from these;
 never edit the tracker by hand.
 -->
 

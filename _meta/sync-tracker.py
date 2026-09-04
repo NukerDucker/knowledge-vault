@@ -24,9 +24,9 @@ TRACKER = ROOT / "01-university/assignments-tracker.md"
 HOME = ROOT / "HOME.md"
 SKIP_DIRS = {".git", ".obsidian", "node_modules", "04-archive", "_meta"}
 
-DONE = {"submitted", "graded"}
+DONE = {"submitted"}
 LIVE = {"active", "draft"}
-ICON = {"active": "🔄", "draft": "🔄", "submitted": "✅", "graded": "🎓"}
+ICON = {"active": "🔄", "draft": "🔄", "submitted": "✅"}
 
 
 def frontmatter(path):

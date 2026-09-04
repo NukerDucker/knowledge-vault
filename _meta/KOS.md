@@ -154,7 +154,7 @@ deliberate convention.
 ---
 title: Human Readable Title
 tags: [topic]
-status: active | stable | submitted | graded | archived
+status: active | stable | submitted | archived
 ---
 ```
 
@@ -169,8 +169,7 @@ Assignment notes additionally carry `due:` (ISO date or `TBA`), `points:`, and
 |---|---|
 | `active` | being worked on now |
 | `stable` | finished and true — the normal resting state for notes |
-| `submitted` | handed in, not yet graded *(assignments only)* |
-| `graded` | returned with a mark *(assignments only)* |
+| `submitted` | handed in — the terminal state for assignments *(assignments only)* |
 | `archived` | in `04-archive/`, read-only |
 
 ---

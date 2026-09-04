@@ -192,8 +192,12 @@ subject: uxui
 **Status vocabulary.** Part 3 proposes `active | stable | archived`. Assignments need one more, because `submitted` is real, already in use, and means something the others do not — done by you, not yet graded:
 
 ```
-active → submitted → graded → archived
+active → submitted → archived
 ```
+
+*Amended 2026-09-04: `graded` was retired. No note ever used it, `sync-tracker.py`
+treated it identically to `submitted` for done-ness, and the mark itself is not
+something this vault tracks. `submitted` is the terminal state.*
 
 Non-assignment notes keep `active | stable | archived`. Two vocabularies is one more than ideal, but collapsing `submitted` into `stable` would throw away the distinction you most want to see at a glance.
 
@@ -1073,7 +1077,7 @@ Rules for execution:
    due: 2026-09-07      # ISO. Use `due: TBA` when genuinely unknown
    points: 6            # or omit if ungraded
    subject: uxui        # matches the subject folder name
-   status: active | submitted | graded | archived
+   status: active | submitted | archived
    ```
 2. Leave the body prose alone. Duplication between prose and frontmatter is acceptable here and gets cleaned up naturally as you touch each note — do not do a prose rewrite pass.
 3. Record the vocabulary in `_meta/KOS.md`.

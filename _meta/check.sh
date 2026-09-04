@@ -130,7 +130,7 @@ done < "$TMP/links"
 # Every live note needs a frontmatter block with title, tags, status.
 # Missing block = error. Missing field = warning (work to schedule).
 head2 "3. Frontmatter present and valid"
-VALID_STATUS="active|stable|submitted|graded|archived|draft"
+VALID_STATUS="active|stable|submitted|archived|draft"
 FM_ISSUES=0
 while read -r f; do
   # CLAUDE.md and AGENTS.md are agent config, not notes — no frontmatter expected.
