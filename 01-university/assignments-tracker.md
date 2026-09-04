@@ -35,12 +35,15 @@ updated: 2026-08-24
 ## Upcoming
 
 <!-- BEGIN GENERATED: upcoming -->
-<!-- regenerated 2026-08-26 — do not edit by hand -->
+<!-- regenerated 2026-09-04 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
+| 2026-09-04 | [[aws-cloud-foundations\|AWS Academy Cloud Foundations]] | aws | null | 🔄 active |
 | 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | 🔄 active |
 | 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | 🔄 active |
+| 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | 🔄 active |
+| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 
 <!-- END GENERATED: upcoming -->
@@ -52,7 +55,6 @@ touches this table.
 
 | Due          | Assignment                                            | Subject | Weight | Status |
 | ------------ | ----------------------------------------------------- | ------- | ------ | ------ |
-| Sep 3, 2026  | RTW Class — prep for Sep 10 presentation              | RTW     | —      | ⬜      |
 | Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW     | —      | ⬜      |
 
 ---
@@ -60,11 +62,15 @@ touches this table.
 ## Completed
 
 <!-- BEGIN GENERATED: completed -->
-<!-- regenerated 2026-08-26 — do not edit by hand -->
+<!-- regenerated 2026-09-04 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
 | 2026-09-07 | [[uxui-ui-hunt\|UX/UI: UI Hunt — Unusual Screens]] | uxui | 6 | ✅ submitted |
+| 2026-09-04 | [[os-activity-02\|OS Activity 02 — Synchronization I]] | os | — | ✅ submitted |
+| 2026-09-04 | [[os-activity-03\|OS Activity 03 — Synchronization II]] | os | — | ✅ submitted |
+| 2026-09-03 | [[rtw-exhibition-career-assignment\|RTW — Exhibition Attendance + Career Assignment]] | rtw | null | ✅ submitted |
+| 2026-09-01 | [[uxui-week8-user-story-mapping\|Week 8 — User Story Mapping]] | uxui | TBA | ✅ submitted |
 | 2026-08-31 | [[uxui-hooked-individual\|UX/UI — Hooked Individual Assignment]] | uxui | 10 | ✅ submitted |
 | 2026-08-25 | [[uxui-signin-signup-checklist\|UX/UI: Sign In / Sign Up Self-Checklist (Student Version)]] | uxui | 1 | ✅ submitted |
 | 2026-08-24 | [[uxui-week7-crazy8s-storyboard\|Week 7 — Crazy 8s & Storyboarding]] | uxui | 6 | ✅ submitted |
