@@ -7,13 +7,15 @@ status: active
 # HOME
 
 <!-- BEGIN GENERATED: due-next -->
-<!-- regenerated 2026-08-26 — do not edit by hand -->
+<!-- regenerated 2026-09-04 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
+| 2026-09-04 | [[aws-cloud-foundations\|AWS Academy Cloud Foundations]] | aws | null | 🔄 active |
 | 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | 🔄 active |
 | 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | 🔄 active |
-| 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
+| 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | 🔄 active |
+| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 active |
 
 <!-- END GENERATED: due-next -->
 
@@ -24,14 +26,14 @@ note — never this file.
 
 ## Year 3
 
-| Subject | Notes |
-|---|---|
-| UX/UI Design | [[uxui-facility-booking-project]] · [[uxui-week7-crazy8s-storyboard]] · [[uxui-ui-hunt]] · [[uxui-hooked-individual]] |
-| Artificial Intelligence | [[rome-pathfinding]] |
-| Operating Systems | [[os-case-study-1]] · [[os-homework-1-4]] |
-| Microcontroller | [[mcu-stm32-project]] |
-| Investment Planning | [[finance-bonds-debentures-report]] · [[thai-corp-bond-report-draft]] |
-| Ready to Work | [[rtw-resume-assignment]] · [[rtw-a1-foundation-knowledge]] · [[rtw-a2-labour-law]] |
+| Subject                 | Notes                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| UX/UI Design            | [[uxui-facility-booking-project]] · [[uxui-week7-crazy8s-storyboard]] · [[uxui-ui-hunt]] · [[uxui-hooked-individual]]       |
+| Artificial Intelligence | [[rome-pathfinding]]                                                                                                        |
+| Operating Systems       | [[os-case-study-1]] · [[os-homework-1-4]]                                                                                   |
+| Microcontroller         | [[mcu-stm32-project]]                                                                                                       |
+| Investment Planning     | [[finance-bonds-debentures-report]] · [[thai-corp-bond-report-draft]]                                                       |
+| Ready to Work           | [[rtw-resume-assignment]] · [[rtw-a1-foundation-knowledge]] · [[rtw-a2-labour-law]] · [[rtw-exhibition-career-assignment]]  |
 
 ## Everything else
 

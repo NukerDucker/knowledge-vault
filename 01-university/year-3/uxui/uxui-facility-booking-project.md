@@ -50,6 +50,7 @@ progress.** Every design decision below traces back to that sentence.
 | 5 | POV + HMW | The two POVs, and HMW 1 + 2 as the winners | [[uxui-week5-pov-hmw]] |
 | 6 | Hooked + Kano | Why those two ship first | [[uxui-week6-hooked-kano]] |
 | 7 | Crazy 8s + storyboard | What they look like | [[uxui-week7-crazy8s-storyboard]] |
+| 8 | User story mapping | Scoping topic + activities/steps/details map | [[uxui-week8-user-story-mapping]] |
 
 ### The HMW shortlist (Week 5)
 

@@ -1,0 +1,193 @@
+{
+  "calendarSources": [
+    {
+      "type": "google",
+      "name": "Holidays in Thailand",
+      "color": "#16a765",
+      "id": "google_1",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "en.th#holiday@group.v.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "Side Job",
+      "color": "#fad165",
+      "id": "google_2",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "266df4a89f9c0d7b606d15a6e5343b07f725a6a6bf9bc860832c41e6d1b1aeb5@group.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "House Staff",
+      "color": "#c2c2c2",
+      "id": "google_3",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "91a40fa3e535f2c38939435c2d85516e1adab0c4d78921ab3aa0a76923a61ffd@group.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "np.intharasing@gmail.com",
+      "color": "#9fe1e7",
+      "id": "google_4",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "np.intharasing@gmail.com"
+    },
+    {
+      "type": "google",
+      "name": "Campus Life",
+      "color": "#fa573c",
+      "id": "google_5",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "63455c39de659dc5df1f9323ba79dee0816d259dbed2d5db471934eb1eeeb3f4@group.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "Leisure Time",
+      "color": "#cd74e6",
+      "id": "google_6",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "fc4523e297f6f6c31578d7a4a4c2895171ce78b29b3035b8c0283f799c6d0e3b@group.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "Network And Cloud Laboratory",
+      "color": "#9fe1e7",
+      "id": "google_7",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "6be56809ec1e36b2934b4255549998fb35dce5fea4374119a6f09f2c724f7082@group.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "CEI Courses",
+      "color": "#a47ae2",
+      "id": "google_8",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "7b3248906eae0d1c885b4cbe8dbfe9112eca103a0d06876d352ad4aaf1b22cc9@group.calendar.google.com"
+    },
+    {
+      "type": "google",
+      "name": "ครอบครัว",
+      "color": "#f691b2",
+      "id": "google_9",
+      "googleAccountId": "gcal_np.intharasing@gmail.com",
+      "calendarId": "family00533556195869411802@group.calendar.google.com"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "timeGridWeek",
+    "mobile": "timeGrid3Days"
+  },
+  "timeFormat24h": false,
+  "clickToCreateEventFromMonthView": true,
+  "displayTimezone": "Asia/Bangkok",
+  "lastSystemTimezone": "Asia/Bangkok",
+  "enableAdvancedCategorization": false,
+  "chrono_analyser_config": null,
+  "categorySettings": [],
+  "useCustomGoogleClient": false,
+  "googleClientId": "",
+  "googleClientSecret": "",
+  "googleUseCopyPasteAuth": false,
+  "googleAccounts": [
+    {
+      "id": "gcal_np.intharasing@gmail.com",
+      "email": "np.intharasing@gmail.com",
+      "refreshToken": null,
+      "accessToken": null,
+      "expiryDate": 1788514397907,
+      "grantedScopes": "https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.events email"
+    }
+  ],
+  "useCustomMicrosoftClient": false,
+  "microsoftClientId": "",
+  "microsoftProxyBaseUrl": "",
+  "microsoftAccounts": [],
+  "enableLocalServer": false,
+  "localServerPort": 8540,
+  "useLegacyPlaintextCredentials": false,
+  "businessHours": {
+    "enabled": false,
+    "daysOfWeek": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "startTime": "09:00",
+    "endTime": "17:00"
+  },
+  "enableBackgroundEvents": true,
+  "enableReminders": true,
+  "enableDefaultReminder": true,
+  "defaultReminderMinutes": 10,
+  "workspaces": [],
+  "activeWorkspace": null,
+  "showEventInStatusBar": false,
+  "highlightCurrentOrNextEvent": true,
+  "slotMinTime": "00:00",
+  "slotMaxTime": "24:00",
+  "allDaySlot": true,
+  "timeGridDayHeaderFormat": "day-mmdd",
+  "weekends": true,
+  "hiddenDays": [],
+  "dayMaxEvents": false,
+  "activityWatch": {
+    "enabled": false,
+    "apiUrl": "http://127.0.0.1:5600",
+    "lastSyncTime": 0,
+    "autoSyncEnabled": false,
+    "autoSyncIntervalMins": 10,
+    "targetCalendarId": "",
+    "syncStrategy": "auto",
+    "customDateStart": "",
+    "customDateEnd": "",
+    "profiles": []
+  },
+  "tasksIntegration": {
+    "backlogDateTarget": "scheduledDate",
+    "calendarDisplayDateTarget": "scheduledDate",
+    "openEditModalAfterBacklogDrop": false,
+    "taskDisplayFormat": "dayPlanner",
+    "includeGlobalQueryInBacklog": false,
+    "backlogQuery": ""
+  },
+  "fcrReminderCompanion": {
+    "enabled": false,
+    "apiUrl": "http://127.0.0.1:45677"
+  },
+  "apiTokens": {},
+  "authorizedTokens": {},
+  "milestones": {
+    "counters": {},
+    "unlockedAt": {},
+    "shown": {}
+  },
+  "enableMonthlyStatsReport": false,
+  "lastMonthlyMilestonesGeneratedMonth": null,
+  "lastMonthlyMilestonesCheckDate": null,
+  "milestoneNotifierDuration": 8000,
+  "currentVersion": "0.13.5",
+  "linkedNotesDirectory": "",
+  "linkedNoteLinkStrategy": "deadline",
+  "taskBacklogLastProviderId": "",
+  "caldavTaskInboxLastCalendarId": "",
+  "linkedNoteTemplate": "# {{title}}\n\n**Date**: {{date}}\n**Time**: {{timeString}}\n**Location**: {{location}}\n**Calendar**: {{calendarName}}\n\n## Description\n{{description}}\n\n## Notes\n- ",
+  "enableLinkedNoteTemplatesPreset": false,
+  "linkedNoteTemplatesPresets": [],
+  "weatherCity": "",
+  "weatherLatitude": null,
+  "weatherLongitude": null,
+  "weatherHide": false,
+  "weatherInputMode": "city",
+  "weatherUnit": "C",
+  "openDailyNoteOnDateClick": false,
+  "breakTimer": {
+    "enabled": false,
+    "intervalMins": 60,
+    "idleThresholdMins": 30,
+    "breakDurationSecs": 30
+  }
+}
