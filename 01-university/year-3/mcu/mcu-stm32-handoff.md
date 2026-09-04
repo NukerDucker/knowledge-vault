@@ -1,3 +1,11 @@
+---
+title: MCU Modular Synth — Design Handoff
+tags: [mcu, stm32, synth, hardware, handoff]
+status: active
+updated: 2026-08-30
+subject: mcu
+---
+
 # MCU Modular Synth — Design Handoff
 
 **Session date:** 2026-08-30 (updated from 2026-08-28 baseline)

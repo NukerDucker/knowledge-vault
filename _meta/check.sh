@@ -131,8 +131,8 @@ head2 "3. Frontmatter present and valid"
 VALID_STATUS="active|stable|submitted|graded|archived|draft"
 FM_ISSUES=0
 while read -r f; do
-  # CLAUDE.md is agent config, not a note — no frontmatter expected.
-  case "$f" in ./04-archive/*|./.claude/*|./CLAUDE.md|*/CLAUDE.md|./_meta/templates/*) continue ;; esac
+  # CLAUDE.md and AGENTS.md are agent config, not notes — no frontmatter expected.
+  case "$f" in ./04-archive/*|./.claude/*|./CLAUDE.md|*/CLAUDE.md|./AGENTS.md|*/AGENTS.md|./_meta/templates/*) continue ;; esac
   is_vendored "$f" && continue
   if [ "$(head -n1 "$f")" != "---" ]; then
     err "no frontmatter block: $f"; FM_ISSUES=1; continue
