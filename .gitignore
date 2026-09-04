@@ -5,7 +5,8 @@
 
 # Agent tooling — installed, not authored. Reinstallable from skills-lock.json,
 # and nothing in the vault's content depends on it.
-# .claude/settings.json stays tracked: it holds the SessionStart tracker sync.
+# .claude/settings.json stays tracked: it holds the vault's hooks (SessionStart
+# tracker sync + report baseline, Stop reminder + session report).
 .agents/
 .claude/skills/
 .claude/settings.local.json
@@ -15,3 +16,6 @@ skills-lock.json
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Per-session agent report — churns every turn, no vault content depends on it.
+.claude/reports/
