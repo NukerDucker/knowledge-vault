@@ -41,14 +41,16 @@ is_vendored() {
     ./02-programming/guides/system-design-notes/*) return 0 ;;
     # Installed agent skills. Tooling, not vault content — SKILL.md and friends
     # are named by their own spec and carry no vault frontmatter.
-    ./.agents/*|./.claude/*) return 0 ;;
+    # .kiro/ is the same class: Kiro steering files carry `inclusion:`, its own
+    # spec, not the vault's title/tags/status.
+    ./.agents/*|./.claude/*|./.kiro/*) return 0 ;;
     *) return 1 ;;
   esac
 }
 # Root governing docs use SHOUTING.md by deliberate convention.
 is_root_doc() {
   case "$1" in
-    ./CLAUDE.md|./BRIDGE.md|./VAULT-GUIDE.md|./KOS-*.md|./MEMORY.md|./HOME.md) return 0 ;;
+    ./CLAUDE.md|./AGENTS.md|./BRIDGE.md|./VAULT-GUIDE.md|./KOS-*.md|./MEMORY.md|./HOME.md) return 0 ;;
     ./_meta/*) return 0 ;;
     *) return 1 ;;
   esac
