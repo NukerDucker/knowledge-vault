@@ -165,6 +165,51 @@ At 5 threads capped ~200 ops/sec by the fixed `Sleep`s, the herd `PulseAll` wake
 - One representative submits best `program.cs` + presentation file
 - Peer + cross-group evaluation forms, same as CaseStudy01
 
+## Variant Comparison (2026-09-05)
+
+Four team solutions compared on: (a) locking, (b) Mesa `while` loop, (c) `PulseAll` not `Pulse`, (d) print inside lock for FIFO transcript, (e) clean shutdown.
+
+| Criterion | Baseline | Napaul | Tony | Yu | **Final** |
+|---|---|---|---|---|---|
+| Lock object | ❌ none | ✅ `readonly` | ⚠️ not `readonly` | ⚠️ not `readonly` | ✅ `readonly` |
+| `while` + `Monitor.Wait` | ❌ | ✅ | ✅ | ✅ | ✅ |
+| `PulseAll` (not `Pulse`) | ❌ | ✅ | ❌ `Pulse` | ✅ | ✅ |
+| Print inside lock (FIFO transcript) | ❌ | ✅ `DeQueueAndPrint` | ❌ outside | ❌ outside | ✅ `DeQueueAndPrint` |
+| Clean consumer shutdown | ❌ | ⚠️ background kill | ✅ `producersFinished` + `Join` | ✅ `Join` (hardcoded counts) | ✅ `producersFinished` + `Join` |
+| No hardcoded sizes / counts | ❌ | ✅ `.Length` | ❌ hardcoded 10 | ⚠️ 34/34/33 | ✅ `BufferCapacity` |
+| Termination tracking | ❌ | ❌ | ❌ | ✅ | ✅ |
+
+### Per-variant notes
+
+**Baseline** — no synchronisation → data races on `Front`/`Back`/`Count`; consumers never block → 109–111 duplicates per run.
+
+**Napaul (`Program.cs`)** — pros: `readonly` lock, `while`+`PulseAll`, print inside lock (correct FIFO transcript). Con: consumers are background threads terminated by process exit rather than `Join`'d; relies on drain loop in Main, which can fail in edge-case schedules.
+
+**Tony (`tony-Program.cs`)** — pros: `producersFinished` flag + `PulseAll` on exit + `Join` all consumers (cleanest shutdown). Cons: `Monitor.Pulse` not `PulseAll` (wrong-role wakeup risk → livelock/deadlock); print outside lock (transcript order not guaranteed); lock field not `readonly`.
+
+**Yu (`yu-Program.cs`)** — pros: `Join` all consumers, thread termination order tracking. Cons: consumer loop hardcodes 34/34/33 items (breaks if producer ranges change); print outside lock; lock field not `readonly`.
+
+### Super-version rationale (textbook citations)
+
+Implemented in `Program.Final.cs`. Each design decision backed by osppv2.pdf (NotebookLM notebook `8284cfe4-738f-45d5-a105-a5554832f078`):
+
+- **`while` around `Monitor.Wait`** — textbook §5.4 (Mesa semantics): *"wait must always be called from within a loop...the state variables might have changed — in fact, they are almost certain to have changed"*. Between PulseAll and when the woken thread re-acquires the lock, another thread may have consumed the slot; rechecking is mandatory.
+- **`PulseAll` not `Pulse`** — textbook §5.5: *"broadcast is needed when...different threads are using the same condition variable to wait for different predicates"*. C# `Monitor` exposes one wait-set per lock object; producers and consumers both park there. `Pulse` wakes one arbitrary waiter — if it wakes the wrong role the wakeup is consumed and the thread that could proceed stays parked → deadlock. *"It is always safe to use broadcast."*
+- **Lock at method entry, release at return** — textbook §5.5: *"Always acquire the lock at the beginning of a method and release it right before the return...compilers and processors never re-order instructions across lock operations"*.
+- **Print inside critical section** — only way to guarantee printed transcript matches FIFO dequeue order. Trade-off: Console serialises threads briefly; acceptable because throughput is already capped by the fixed `Sleep` calls (~200 ops/sec).
+- **`producersFinished` + `Join` consumers** — `readonly` lock field prevents accidental reassignment; flag written and read under the lock (no `volatile` needed — lock boundary is the memory barrier); `PulseAll` after setting flag ensures no consumer sleeps forever on an empty queue.
+
+### Build isolation
+
+All four `.cs` files declare `class Thread_safe_buffer` with a `Main`. Compile super version standalone:
+
+```bash
+csc Program.Final.cs -out:SuperCase.exe && mono SuperCase.exe   # macOS/Linux
+csc Program.Final.cs -out:SuperCase.exe && .\SuperCase.exe      # Windows
+```
+
+Or with a `.csproj`: add `<Compile Remove="Program.cs" Remove="tony-Program.cs" Remove="yu-Program.cs" Remove="Program.Baseline.cs" />`.
+
 ## Status
 
 | Item | Status |
@@ -173,6 +218,8 @@ At 5 threads capped ~200 ops/sec by the fixed `Sleep`s, the herd `PulseAll` wake
 | Solution designed + researched (NotebookLM + Opus) | ✅ |
 | Solution empirically tested (dotnet 10 scratch harness) | ✅ |
 | Program.cs modified | ✅ |
+| Variant comparison written | ✅ |
+| Program.Final.cs authored | ✅ |
 | Presentation prepared | ⬜ |
 | Submitted | ⬜ |
 
