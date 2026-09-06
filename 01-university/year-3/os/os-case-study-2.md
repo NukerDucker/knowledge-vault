@@ -220,7 +220,7 @@ Or with a `.csproj`: add `<Compile Remove="Program.cs" Remove="tony-Program.cs" 
 | Program.cs modified | ✅ |
 | Variant comparison written | ✅ |
 | Program.Final.cs authored | ✅ |
-| Presentation prepared | ⬜ |
+| Presentation prepared | ✅ |
 | Submitted | ⬜ |
 
 ## Group Members

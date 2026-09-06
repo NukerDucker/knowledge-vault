@@ -143,8 +143,10 @@ User added filled copper zones via GUI (F.Cu = `D_5V`, B.Cu = `GND`) as a power 
 
 ## Open Items
 
+- [ ] **🔴 SI2307DS / SI2304DS pinout wrong (Q1–Q4, DAC transistors)** — confirmed by kicad-happy analysis (2026-09-06). Symbol has pad1=D, pad2=G, pad3=S; actual Vishay SOT-23 is pin1=Gate, pin2=Source, pin3=Drain. Audio stage will not switch. Fix in schematic editor + re-route Q1–Q4 pads. See [[mcu-stm32-log]] Session 5.
+- [ ] **🔴 PB7 I2C trace cut** — confirmed by kicad-happy (2026-09-06). Two isolated copper islands on F.Cu; gap at bbox (182.26, 122.67)→(191.53, 130.30). Route one trace segment on F.Cu to bridge. See [[mcu-stm32-log]] Session 5.
 - [ ] **Resolve architecture drift** — is `syth_mcu` now the whole instrument on one board, or is the master/slave zone-population multi-board plan still current? Confirm with team before committing further.
-- [ ] Mux is full (8/8 channels, hall 0–7) with no free ADC GPIO for the remaining 4 hall keys + 5 pots — 2nd mux was explicitly declined; needs a decision (drop the 4 extra keys, drop some pots, or reconsider the mux).
+- [ ] Mux is full (8/8 channels, hall 0–7) with no free ADC GPIO for the remaining 4 hall keys + 5 pots — **HC4067 (16-ch) now in hand as a drop-in replacement for the HC4051** (see [[mcu-hc4067-mux]]): handles all 12 keys + 4 pots on one chip at cost of +1 GPIO (S3). Needs a schematic swap before next PCB revision.
 - [ ] Finalize physical placement of the 19-part DAC cluster on the real PCB (previous attempt reverted — do via GUI, not blind edit).
 - [ ] H5/H7 mounting-hole pads → switch Zone Connection to Solid, refill zones, re-DRC.
 - [ ] U4/PB7 clearance (2µm), J3 edge clearance (DRC-exclude) — both trivial, unresolved.
@@ -167,7 +169,7 @@ User added filled copper zones via GUI (F.Cu = `D_5V`, B.Cu = `GND`) as a power 
 | Velostat | No reliable velocity gradient |
 | MX switches | Hall-only custom mechanism chosen |
 | MPR121 cap touch | Binary on/off only |
-| CD4067 | Sourcing — use 74HC4051 instead |
+| CD4067 | Sourcing (CD variant) — **74HC4067 breakout now in hand**, supersedes this rejection; see [[mcu-hc4067-mux]] |
 | I2S DAC IC | Replaced by discrete P-channel gate-driver DAC stage (see above) — not PWM+RC either anymore |
 | Buck for 3.3V rail | Switching noise on audio rail |
 | 12V / 9V distribution | 5V USB-C per board sufficient |

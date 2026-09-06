@@ -127,8 +127,42 @@ hardware. Added to Open Items.
 
 ---
 
+## 2026-09-06 — Session 5 (Cream Bun review triage, kicad-happy analysis)
+
+Ran kicad-happy analyzers (schematic + PCB --full + cross-analysis) against `syth_mcu` to triage Cream Bun's review list. Enabled kicad-happy MCP plugin.
+
+### Confirmed findings
+
+**Serious — schematic fix + PCB rework required:**
+- **SI2307DS / SI2304DS pinout wrong (Q1–Q4):** Symbol encodes pad1=D, pad2=G, pad3=S. Actual Vishay SOT-23 pin1=Gate, pin2=Source, pin3=Drain. Gate driver PWM wired to Source physical pin; audio stage will not switch. Fix: correct symbol pin assignments in schematic editor, re-route two pads per transistor (4×). Added to Open Items.
+- **PB7 I2C trace cut — confirmed:** PB7 net has 2 isolated copper islands on F.Cu. Gap bbox: (182.26, 122.67) → (191.53, 130.30). Island 0: J2:3, J5:15, J10:15, D10:1, SDAPullUpM1:2. Island 1: J1:3, D11:1. Fix: route one trace segment on F.Cu across the gap. Added to Open Items.
+
+**Slightly serious — assembly/layout:**
+- **Fuse height:** RXEF160 = 20.8mm tall, RXEF040 = 13.4mm. 5mm footprint pitch is correct for bent horizontal mounting. Assembly instruction only: bend all three fuses (F1–F3) flat before soldering.
+- **BlackPill header edge distance:** +1mm from measured. GUI fix — nudge J5/J10 pair toward board center.
+
+**MUX:**
+- J7 (MUX channel socket, 1×16) moved −2.54mm in x: `(154.35, 142.2175)` → `(151.81, 142.2175)`. Applied directly to `syth_mcu.kicad_pcb`. ✅
+- J8/J9 misalignment: J9 does not exist in PCB. Cream Bun clarification needed — which two connectors she measured.
+- C0 mux label: move to GND side by relabeling hall sensors in schematic (no trace rework).
+
+**Also found by cross-analysis:**
+- GND plane: 15 copper islands, 49 signals crossing splits — EMI risk. Pre-existing; not from Cream Bun's list.
+- 3V3 plane: 2 islands, 9 signals crossing.
+
+---
+
 ## Open Tasks (next session)
 
+**PCB fixes (Cream Bun — in priority order):**
+- [ ] **Fix SI2307DS / SI2304DS symbol pinout** in schematic editor: pin1=Gate, pin2=Source, pin3=Drain. Then Update PCB from Schematic + re-route Q1–Q4 (2 pads per transistor swapped).
+- [ ] **Bridge PB7 trace gap** on F.Cu at bbox (182.26, 122.67)→(191.53, 130.30) — route one segment connecting J1:3 island to SDAPullUpM1/J2 island.
+- [ ] **BlackPill header edge distance** — measure board edge at J5/J10 y-position, shift both +1mm toward board center in GUI.
+- [ ] **Relabel hall sensors** so C0 appears on GND side of mux (schematic label change only).
+- [ ] **Clarify with Cream Bun**: J8/J9 alignment — J9 doesn't exist in PCB; which connectors she measured.
+- [ ] Minor PCB items (GUI): C14-18 caps move up, silkscreen collisions, ground bridge moves/additions, 5V corner smoothing, 2-pin voltage source headers.
+
+**From previous sessions:**
 - [ ] Lock Black Pill pinout: I2C1 (SDA=PB7, SCL=PB6), I2S2 (CK=PB13, SD=PB15, WS=PB12), DIP GPIOs
 - [ ] CubeMX IOC: enable I2C1 + TIM3/TIM4 PWM channels (stereo) — pull from `stereo` branch IOC
 - [ ] MPR121 wiring diagram (ADDR pin config for each module)
