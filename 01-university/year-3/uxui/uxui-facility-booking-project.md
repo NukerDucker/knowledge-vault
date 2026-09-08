@@ -51,6 +51,7 @@ progress.** Every design decision below traces back to that sentence.
 | 6 | Hooked + Kano | Why those two ship first | [[uxui-week6-hooked-kano]] |
 | 7 | Crazy 8s + storyboard | What they look like | [[uxui-week7-crazy8s-storyboard]] |
 | 8 | User story mapping | Scoping topic + activities/steps/details map | [[uxui-week8-user-story-mapping]] |
+| 9 | Sitemap + app comparison | IA structure for student/prof/staff + 3-app benchmark | [[uxui-week9-sitemap]] |
 
 ### The HMW shortlist (Week 5)
 
