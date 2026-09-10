@@ -11,9 +11,6 @@ status: active
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
-| 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | 🔄 active |
-| 2026-09-11 | [[os-case-study-2-presentation\|OS Case Study 2 — Presentation Outline]] | os | — | 🔄 active |
-| 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | 🔄 active |
 | 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 

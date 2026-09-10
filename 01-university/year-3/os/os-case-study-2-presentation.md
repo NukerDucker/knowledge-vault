@@ -6,7 +6,7 @@ tags:
   - group-work
   - synchronization
   - presentation
-status: active
+status: submitted
 created: 2026-09-06
 due: 2026-09-11
 subject: os

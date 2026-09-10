@@ -5,7 +5,7 @@ tags:
   - os
   - group-work
   - synchronization
-status: active
+status: submitted
 created: 2026-08-30
 due: 2026-09-11
 points: 15%
