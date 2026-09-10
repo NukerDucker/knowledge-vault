@@ -35,13 +35,10 @@ updated: 2026-08-24
 ## Upcoming
 
 <!-- BEGIN GENERATED: upcoming -->
-<!-- regenerated 2026-09-08 — do not edit by hand -->
+<!-- regenerated 2026-09-10 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
-| 2026-09-04 | [[aws-cloud-foundations\|AWS Academy Cloud Foundations]] | aws | null | 🔄 active |
-| 2026-09-08 | [[mcu-lab05-adc\|Lab 05 — ADC]] | mcu | — | 🔄 active |
-| 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | 🔄 active |
 | 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | 🔄 active |
 | 2026-09-11 | [[os-case-study-2-presentation\|OS Case Study 2 — Presentation Outline]] | os | — | 🔄 active |
 | 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | 🔄 active |
@@ -64,10 +61,12 @@ touches this table.
 ## Completed
 
 <!-- BEGIN GENERATED: completed -->
-<!-- regenerated 2026-09-08 — do not edit by hand -->
+<!-- regenerated 2026-09-10 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
+| 2026-09-08 | [[mcu-lab05-adc\|Lab 05 — ADC]] | mcu | — | ✅ submitted |
+| 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | ✅ submitted |
 | 2026-09-07 | [[uxui-ui-hunt\|UX/UI: UI Hunt — Unusual Screens]] | uxui | 6 | ✅ submitted |
 | 2026-09-04 | [[os-activity-02\|OS Activity 02 — Synchronization I]] | os | — | ✅ submitted |
 | 2026-09-04 | [[os-activity-03\|OS Activity 03 — Synchronization II]] | os | — | ✅ submitted |

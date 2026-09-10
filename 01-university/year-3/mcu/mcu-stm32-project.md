@@ -1,7 +1,7 @@
 ---
 title: Modular Synthesizer — Piano Project
 tags: [mcu, stm32, hardware, synth, piano]
-status: active
+status: submitted
 created: 2026-08-23
 due: 2026-09-08
 points: 100

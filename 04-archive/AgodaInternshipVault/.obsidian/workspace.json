@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "e162f94abe9722a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "c79c124fbb8915a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4ab4c054b821f6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 Daily Notes/Internship_Diary_Complete.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Internship_Diary_Complete"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "abd1ca7c3611397c",
+    "type": "split",
+    "children": [
+      {
+        "id": "91a3125ab10ca5fd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e907d7351c1f507",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9a291c67f60dd96e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "internship",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f1bd6a85834dc8d6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "a06b1b991332fbb8",
+    "type": "split",
+    "children": [
+      {
+        "id": "bd6c666501f1fec0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea146e07f3babed6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01 Daily Notes/2026-05-26.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2026-05-26"
+            }
+          },
+          {
+            "id": "f022bdab46146f3d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01 Daily Notes/2026-05-26.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2026-05-26"
+            }
+          },
+          {
+            "id": "7605204be392ff44",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "505c4f4ff6fae30d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "edf4cf000d8194a9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01 Daily Notes/2026-05-26.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2026-05-26"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "e4ab4c054b821f6b",
+  "lastOpenFiles": [
+    "01 Daily Notes/Internship_Diary_Complete.md.tmp.13272.f17fb8b60c32",
+    "01 Daily Notes/2026-07-30.md.tmp.13272.c9cbe6aeb119",
+    "01 Daily Notes/Internship_Diary_Complete.md.tmp.13272.6d7c7904ccaf",
+    "01 Daily Notes/Internship_Diary_Complete.md.tmp.13272.50daf8a6ec0e",
+    "04 Knowledge Base/NH Laptop Spec.md",
+    "01 Daily Notes/2026-07-30.md",
+    "01 Daily Notes/2026-07-30.md.tmp.13272.7ac306aead09",
+    "01 Daily Notes/2026-07-29.md",
+    "01 Daily Notes/2026-07-29.md.tmp.13272.6e462f27eb51",
+    "01 Daily Notes/2026-07-27.md",
+    "01 Daily Notes/2026-07-27.md.tmp.13272.fbaf37d38776",
+    "01 Daily Notes/2026-07-24.md",
+    "04 Knowledge Base/Windows Related/Windows Laptop Build.md",
+    "04 Knowledge Base/Windows Related/PPID.md",
+    "04 Knowledge Base/Windows Related/Autopilot Training Summary.md",
+    "04 Knowledge Base/Mac Related/Troubleshoot Of MacBook.md",
+    "03 Tasks/Replacement/Replacement - Ravitpong Mahaariyatip.md",
+    "03 Tasks/Replacement/Replacement - Sanuja Saji.md",
+    "03 Tasks/Laptop Upgrade Batch - 2026-06.md",
+    "06 Projects/Project Keep Alive/WallKeeper.md",
+    "06 Projects/Project Keep Alive/WallKeeper.md.tmp.29076.222c8ca34327",
+    "videowall.ps1",
+    "06 Projects/Project Keep Alive/WallKeeper.md.tmp.29076.497bf738e5be",
+    "06 Projects/Project Keep Alive/WallKeeper.md.tmp.29076.6b0eaa892957",
+    "07 Templates/Daily Note.md",
+    "06 Projects/Project Keep Alive/Uptime Kuma Setup.md",
+    "06 Projects/Project Keep Alive/Keep Alive.md",
+    "07 Templates/NH Laptop Tracker.md",
+    "99 Archive/NH Laptop Tracker - 2026-06.md",
+    "99 Archive/Tech Camp - Kace Update.md",
+    "docs/superpowers/plans/2026-06-26-wallkeeper.md",
+    "CLAUDE.md",
+    "2026-07-07-nextpath-camellya-booking-sync-design.md",
+    "01 Daily Notes/Internship_Diary_Complete.md",
+    "01 Daily Notes/2026-07-17.md",
+    "04 Knowledge Base/General/Agoda Company Overview.md",
+    "Untitled.canvas"
+  ]
+}

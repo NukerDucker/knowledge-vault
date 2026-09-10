@@ -1,7 +1,7 @@
 ---
 title: AWS Academy Cloud Foundations
 tags: [aws, workshop]
-status: active
+status: dropped
 created: 2026-08-30
 updated: 2026-08-30
 due: 2026-09-04
