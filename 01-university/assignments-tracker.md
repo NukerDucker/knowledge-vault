@@ -35,7 +35,7 @@ updated: 2026-08-24
 ## Upcoming
 
 <!-- BEGIN GENERATED: upcoming -->
-<!-- regenerated 2026-09-10 — do not edit by hand -->
+<!-- regenerated 2026-09-11 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
@@ -58,7 +58,7 @@ touches this table.
 ## Completed
 
 <!-- BEGIN GENERATED: completed -->
-<!-- regenerated 2026-09-10 — do not edit by hand -->
+<!-- regenerated 2026-09-11 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
