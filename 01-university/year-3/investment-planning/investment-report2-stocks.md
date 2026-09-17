@@ -4,7 +4,7 @@ tags:
   - university
   - finance
   - individual
-status: draft
+status: submitted
 created: 2026-09-02
 due: 2026-09-17
 points: 20

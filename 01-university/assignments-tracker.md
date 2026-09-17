@@ -39,7 +39,7 @@ updated: 2026-08-24
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
-| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 draft |
+| 2026-09-24 | [[rtw-assignment-writing-report\|RTW Assignment - Writing Report + In-Class Presentation]] | rtw | 8 | 🔄 active |
 | 2026-09-24 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations Assignments]] | rtw | — | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 
@@ -69,6 +69,7 @@ touches this table.
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
 | TBA | [[os-activity-01\|OS Activity 01 — Introduction to Threads]] | os | — | ✅ submitted |
+| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | ✅ submitted |
 | 2026-09-11 | [[os-case-study-2-presentation\|OS Case Study 2 — Presentation Outline]] | os | — | ✅ submitted |
 | 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | ✅ submitted |
 | 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | ✅ submitted |
