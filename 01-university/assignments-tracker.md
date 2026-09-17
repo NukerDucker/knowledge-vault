@@ -35,11 +35,12 @@ updated: 2026-08-24
 ## Upcoming
 
 <!-- BEGIN GENERATED: upcoming -->
-<!-- regenerated 2026-09-11 — do not edit by hand -->
+<!-- regenerated 2026-09-17 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
-| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 active |
+| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 draft |
+| 2026-09-24 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations Assignments]] | rtw | — | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 
 <!-- END GENERATED: upcoming -->
@@ -51,17 +52,23 @@ touches this table.
 
 | Due          | Assignment                                            | Subject | Weight | Status |
 | ------------ | ----------------------------------------------------- | ------- | ------ | ------ |
-| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW     | —      | ⬜      |
+| Sep 10, 2026 | In-class: Introduce + Summary Profile + Interview Q&A | RTW     | —      | ✅      |
+| Sep 17, 2026 | Lecture: Writing Reports + Work Presentations         | RTW     | —      | ⬜      |
+| Sep 24, 2026 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations (both assignments)]] | RTW | — | ⬜ |
+| Sep 24, 2026 | No lecture — work session day                         | RTW     | —      | —      |
+| Oct 1, 2026  | Lecture: Positive/Negative Thinking + Teamwork Mgmt   | RTW     | —      | ⬜      |
+| Oct 8, 2026  | **Final Test** — 4 topics (20 pts)                    | RTW     | 20 pts | ⬜      |
 
 ---
 
 ## Completed
 
 <!-- BEGIN GENERATED: completed -->
-<!-- regenerated 2026-09-11 — do not edit by hand -->
+<!-- regenerated 2026-09-17 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
+| TBA | [[os-activity-01\|OS Activity 01 — Introduction to Threads]] | os | — | ✅ submitted |
 | 2026-09-11 | [[os-case-study-2-presentation\|OS Case Study 2 — Presentation Outline]] | os | — | ✅ submitted |
 | 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | ✅ submitted |
 | 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | ✅ submitted |

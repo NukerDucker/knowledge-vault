@@ -96,7 +96,7 @@
       "email": "np.intharasing@gmail.com",
       "refreshToken": null,
       "accessToken": null,
-      "expiryDate": 1789010334036,
+      "expiryDate": 1789616246328,
       "grantedScopes": "https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.events email"
     }
   ],
@@ -177,9 +177,9 @@
   "linkedNoteTemplate": "# {{title}}\n\n**Date**: {{date}}\n**Time**: {{timeString}}\n**Location**: {{location}}\n**Calendar**: {{calendarName}}\n\n## Description\n{{description}}\n\n## Notes\n- ",
   "enableLinkedNoteTemplatesPreset": false,
   "linkedNoteTemplatesPresets": [],
-  "weatherCity": "",
-  "weatherLatitude": null,
-  "weatherLongitude": null,
+  "weatherCity": "Bangkok",
+  "weatherLatitude": 13.75398,
+  "weatherLongitude": 100.50144,
   "weatherHide": false,
   "weatherInputMode": "city",
   "weatherUnit": "C",

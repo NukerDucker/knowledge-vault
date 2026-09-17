@@ -5,7 +5,7 @@ tags:
   - os
   - individual
   - threads
-status: active
+status: submitted
 created: 2026-09-11
 due: TBA
 subject: os

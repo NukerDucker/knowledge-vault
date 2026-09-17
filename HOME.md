@@ -7,11 +7,12 @@ status: active
 # HOME
 
 <!-- BEGIN GENERATED: due-next -->
-<!-- regenerated 2026-09-11 — do not edit by hand -->
+<!-- regenerated 2026-09-17 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
-| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 active |
+| 2026-09-17 | [[investment-report2-stocks\|Report No. 2: Common Stocks / Alternative Investment]] | investment-planning | 20 | 🔄 draft |
+| 2026-09-24 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations Assignments]] | rtw | — | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 
 <!-- END GENERATED: due-next -->

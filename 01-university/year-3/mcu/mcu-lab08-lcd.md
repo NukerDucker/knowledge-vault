@@ -1,8 +1,8 @@
 ---
 title: Lab 08 — LCD and Touch Sensor
 tags: [mcu, stm32, lcd, touch, rgb, am2320, lab]
-status: active
-updated: 2026-09-09
+status: submitted
+updated: 2026-09-16
 subject: mcu
 ---
 
@@ -57,21 +57,26 @@ For capacitive touch (FT6206) via I2C:
 
 **AM2320 read sequence:**
 ```c
-// 1. Wake sensor (expect NACK, ignore error)
-HAL_I2C_Master_Transmit(&hi2c1, 0xB8, NULL, 0, 10);
+// HAL uses 8-bit address: 0x5C<<1 = 0xB8 (write); HAL sets bit0 for read internally
+uint8_t cmd[3] = {0x03, 0x00, 0x04};  // func, start_reg, count
+uint8_t buf[8] = {0};
+
+// 1. Wake sensor (expect NACK — ignore error)
+HAL_I2C_Master_Transmit(&hi2c1, 0x5C<<1, NULL, 0, 10);  // 0-byte payload = wake only
 HAL_Delay(1);
 
-// 2. Send read command: func=0x03, start reg=0x00, count=4
-uint8_t cmd[3] = {0x03, 0x00, 0x04};
-HAL_I2C_Master_Transmit(&hi2c1, 0xB8, cmd, 3, 10);
+// 2. Send read command
+HAL_I2C_Master_Transmit(&hi2c1, 0x5C<<1, cmd, 3, 10);
 HAL_Delay(2);
 
-// 3. Read 8 bytes: [func, len, RH_H, RH_L, T_H, T_L, CRC_H, CRC_L]
-uint8_t buf[8];
-HAL_I2C_Master_Receive(&hi2c1, 0xB9, buf, 8, 10);
+// 3. Read 8 bytes: [func, len, RH_H, RH_L, T_H, T_L, CRC_L, CRC_H]
+// Simplified — no CRC check, no error check; see read_am2320() below for full version
+HAL_I2C_Master_Receive(&hi2c1, 0x5C<<1, buf, 8, 10);
 
+// Temperature sign bit: buf[4] bit7 = negative flag
+uint16_t raw_t = ((buf[4] & 0x7F) << 8) | buf[5];
+float temperature = (buf[4] & 0x80) ? -(raw_t / 10.0f) : (raw_t / 10.0f);
 float humidity    = ((buf[2] << 8) | buf[3]) / 10.0f;
-float temperature = ((buf[4] << 8) | buf[5]) / 10.0f;
 ```
 
 ### 5. ILI9341 driver (if no BSP)
@@ -105,12 +110,12 @@ ILI9341_FillCircle(cx, cy, r, color); // colour dot
 White background, black text. Layout (Fig 1.1):
 
 ```
-┌────────────────────────────┐
+┌──────────────────────────────┐
 │  27.1 C   ●(mixed)  55.6 %RH │
-│ ●  ████░░░░░░  80 %          │   ← Red
-│ ●  ████░░░░░░  40 %          │   ← Green
-│ ●  ████░░░░░░  70 %          │   ← Blue
-└────────────────────────────┘
+│ ●  ████░░░░░░  80 %          │  ← Red
+│ ●  ████░░░░░░  40 %          │  ← Green
+│ ●  ████░░░░░░  70 %          │  ← Blue
+└──────────────────────────────┘
 ```
 
 Requirements:
@@ -126,12 +131,12 @@ Requirements:
 
 White background, text colour = mixed colour from Screen 1:
 ```
-┌────────────────────────────┐
-│ [photo]  Group No.XX        │
-│          First name         │
-│          Last name          │
-│          Student ID         │
-└────────────────────────────┘
+┌──────────────────────────────┐
+│ [photo]  Group No.XX         │
+│          First name          │
+│          Last name           │
+│          Student ID          │
+└──────────────────────────────┘
 ```
 
 **SP2.2 — Touch to switch screens**
@@ -143,96 +148,129 @@ White background, text colour = mixed colour from Screen 1:
 
 ## Checkpoints
 
-- [ ] Exp 1 (Screen 1)
-- [ ] SP2 (Screen 2 + touch switching)
+- [x] Exp 1 (Screen 1)
+- [x] SP2 (Screen 2 + touch switching)
 
 ---
 
----
+## Solutions (working — NUCLEO-F767ZI, ILI9341 driver, XPT2046 touch)
 
-## Solutions
+### Hardware
 
-### Exp 1 — Screen 1 approach
+| Signal | Pin | Notes |
+|--------|-----|-------|
+| LCD SPI | SPI5: PF7/PF8/PF9 | SCK/MISO/MOSI |
+| LCD CS | PG0 | CubeMX label "CS" |
+| LCD DC | PG1 | |
+| LCD RST | PD1 | CubeMX label "RES" |
+| Touch IRQ | PE2 | T_IRQ |
+| Touch CLK | PE3 | bit-bang |
+| Touch MISO | PE4 | CubeMX label "T_DO" |
+| Touch MOSI | PE5 | CubeMX label "T_DIN" |
+| Touch CS | PE6 | T_CS |
+| Backlight PWM | PB0 | TIM3 CH3 |
+| Potentiometer | PC0 | ADC1 CH10 |
+| AM2320 | I2C1 | 7-bit addr 0x5C |
 
-Board has built-in LCD (ILI9341 or similar) + BSP drivers. Use `BSP_LCD_*` HAL from STM32 BSP.
+**Pin alias gotcha:** driver expects `RST_Pin`, `T_MISO_Pin`, `T_MOSI_Pin` but CubeMX generates `RES_Pin`, `T_DO_Pin`, `T_DIN_Pin`. Add to `main.h` USER CODE Private defines:
 
-**Key functions:**
 ```c
-BSP_LCD_Init();
-BSP_LCD_LayerDefaultInit(0, LCD_FB_START_ADDRESS);
-BSP_LCD_SetLayerVisible(0, ENABLE);
-BSP_LCD_SelectLayer(0);
-
-BSP_LCD_Clear(LCD_COLOR_WHITE);
-BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
-BSP_LCD_SetFont(&Font24);
-
-// Draw text
-BSP_LCD_DisplayStringAt(x, y, (uint8_t*)"27.1 C", LEFT_MODE);
-
-// Draw filled rectangle (scroll bar fill)
-BSP_LCD_SetTextColor(LCD_COLOR_RED);
-BSP_LCD_FillRect(x, y, width * r_pct / 100, height);
-
-// Draw circle (colour button)
-BSP_LCD_FillCircle(cx, cy, radius);
+#define RST_Pin          RES_Pin
+#define RST_GPIO_Port    RES_GPIO_Port
+#define T_MISO_Pin       T_DO_Pin
+#define T_MISO_GPIO_Port T_DO_GPIO_Port
+#define T_MOSI_Pin       T_DIN_Pin
+#define T_MOSI_GPIO_Port T_DIN_GPIO_Port
 ```
 
-**AM2320 (I2C temp/humidity):** read via `HAL_I2C_Master_Transmit` / `HAL_I2C_Master_Receive`.
-Wake sequence: send address, expect NACK, then read 8 bytes (function code, length, RH_H, RH_L, T_H, T_L, CRC_H, CRC_L).
+### TIM3 — backlight PWM
 
-**Touch detection:**
+CubeMX: TIM3 CH3, PSC=99, ARR=999 (1 kHz). In loop:
+
 ```c
-TS_StateTypeDef ts;
-BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
+uint32_t adc = HAL_ADC_GetValue(&hadc1);
+uint32_t duty = 200 + (adc * 800) / 4095;  // 200–999 = 20–100%
+__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, duty);
+```
 
-// in loop:
-BSP_TS_GetState(&ts);
-if (ts.touchDetected) {
-    uint16_t tx = ts.touchX[0];
-    uint16_t ty = ts.touchY[0];
-    // check if (tx, ty) inside red circle bounding box → r += 0.1f; etc.
-    if (r > 1.0f) r = 0.0f;
+### Touch coordinate mapping
+
+XPT2046 axes are **swapped** relative to screen (SCREEN_HORIZONTAL_1). Constants below are raw ADC readings from 4-corner calibration on this board — they will differ on other hardware:
+
+```c
+// pos[1] = raw X ADC: min≈25 (left) .. max≈320 (right)
+// pos[0] = raw Y ADC: min≈25 (top)  .. max≈227 (bottom) — axis inverted
+int32_t sx = ((int32_t)pos[1] - 25) * 320 / 295;
+int32_t sy = (227 - (int32_t)pos[0]) * 240 / 202;
+// clamp: ADC glitch can push values out of range
+if (sx < 0) sx = 0; else if (sx > 319) sx = 319;
+if (sy < 0) sy = 0; else if (sy > 239) sy = 239;
+```
+
+### AM2320 read
+
+```c
+static uint16_t CRC16_2(uint8_t *buf, uint8_t len); // forward decl
+
+static uint8_t read_am2320(void) {
+    uint8_t cmd[3] = {0x03, 0x00, 0x04}, buf[8] = {0};
+    HAL_I2C_Master_Transmit(&hi2c1, 0x5C<<1, NULL, 0, 200); // wake (expect NACK)
+    HAL_Delay(1);
+    if (HAL_I2C_Master_Transmit(&hi2c1, 0x5C<<1, cmd, 3, 200) != HAL_OK) return 0;
+    HAL_Delay(2);
+    if (HAL_I2C_Master_Receive(&hi2c1, 0x5C<<1, buf, 8, 200) != HAL_OK) return 0;
+    uint16_t rcrc = (buf[7]<<8) | buf[6];
+    if (rcrc != CRC16_2(buf, 6)) return 0;
+    uint16_t raw_t = ((buf[4]&0x7F)<<8) | buf[5];
+    temp_c = (buf[4]&0x80) ? -(raw_t/10.0f) : (raw_t/10.0f);
+    hum_rh = ((buf[2]<<8)|buf[3]) / 10.0f;
+    return 1;
 }
 ```
 
-**PWM for brightness:** connect LED backlight pin to a timer PWM channel; `__HAL_TIM_SET_COMPARE` to adjust from potentiometer ADC value mapped 20–100%.
-
----
-
-### SP2 — Screen switching
+CRC16-IBM (polynomial 0xA001). Call `read_am2320()` every 2 s in main loop.
 
 ```c
-typedef enum { SCREEN_1, SCREEN_2 } Screen;
-Screen current = SCREEN_1;
-uint32_t screen2_enter_tick = 0;
+static uint16_t CRC16_2(uint8_t *buf, uint8_t len) {
+    uint16_t crc = 0xFFFF;
+    for (uint8_t i = 0; i < len; i++) {
+        crc ^= buf[i];
+        for (uint8_t b = 0; b < 8; b++)
+            crc = (crc & 1) ? (crc >> 1) ^ 0xA001 : (crc >> 1);
+    }
+    return crc;
+}
+```
 
-// in loop:
-BSP_TS_GetState(&ts);
-if (current == SCREEN_1 && ts.touchDetected) {
-    if (/* touch on mixed-colour circle */) {
-        current = SCREEN_2;
-        screen2_enter_tick = HAL_GetTick();
-        draw_screen2();
+### Float formatting
+
+`--specs=nano.specs` disables float in `snprintf`. Use integer math:
+
+```c
+// Scale to tenths first, then split — handles negatives correctly
+int32_t t10 = (int32_t)roundf(temp_c * 10);  // roundf from <math.h>
+int32_t h10 = (int32_t)roundf(hum_rh * 10);
+snprintf(buf, sizeof(buf), "%d.%dC",    t10 / 10, (t10 < 0 ? -t10 : t10) % 10);
+snprintf(buf, sizeof(buf), "%d.%d%%RH", h10 / 10, h10 % 10);
+```
+
+> **Note:** The simpler form `(int)(temp_c*10+0.5f)%10` is wrong for values like 27.96 (rounds decimal independently of integer part → shows 27.0 instead of 28.0) and breaks for negatives.
+
+### Photo on Screen 2
+
+Convert image to 100×120 RGB565 C array → `photo.h`. Draw:
+
+```c
+static void draw_region(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, const uint16_t *data) {
+    ILI9341_Set_Address(x0, y0, x1, y1);
+    ILI9341_Write_Command(0x2C);
+    uint32_t n = (uint32_t)(x1-x0+1) * (y1-y0+1);
+    for (uint32_t i = 0; i < n; i++) {
+        ILI9341_Write_Data(data[i] >> 8);
+        ILI9341_Write_Data(data[i] & 0xFF);
     }
 }
-if (current == SCREEN_2) {
-    if (ts.touchDetected && /* touch on photo area */) {
-        current = SCREEN_1;
-        draw_screen1();
-    } else if (HAL_GetTick() - screen2_enter_tick >= 5000) {
-        current = SCREEN_1;
-        draw_screen1();
-    }
-}
-```
-
-**Backlight (potentiometer 20–100%):**
-```c
-// ADC value 0–4095 → duty 20–100%
-float duty = 0.20f + (adc_val / 4095.0f) * 0.80f;
-__HAL_TIM_SET_COMPARE(&htimX, TIM_CHANNEL_Y, (uint32_t)((period) * duty));
+// usage: draw_region(5, 10, 104, 129, photo_data);
 ```
 
 ---
