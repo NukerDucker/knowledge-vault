@@ -52,6 +52,8 @@ progress.** Every design decision below traces back to that sentence.
 | 7 | Crazy 8s + storyboard | What they look like | [[uxui-week7-crazy8s-storyboard]] |
 | 8 | User story mapping | Scoping topic + activities/steps/details map | [[uxui-week8-user-story-mapping]] |
 | 9 | Sitemap + app comparison | IA structure for student/prof/staff + 3-app benchmark | [[uxui-week9-sitemap]] |
+| ~10 | Wireframe & Wireflow | 15 screens combined on one Figma page, snake wireflow | see below |
+| ~11 | UI Prototype + Usability Test | Hi-fi prototype → UT with 5 participants → improve | [[uxui-usability-test]] |
 
 ### The HMW shortlist (Week 5)
 
@@ -121,6 +123,40 @@ deadline), and can be disabled entirely.
 |---|---|
 | 6 | `TeamNumber_Hooked_Kano.pdf` |
 | 7 | `GroupNumber_Crazy8s_Storyboard.pdf` |
+| ~10 | Wireframe & Wireflow (Figma) |
+
+---
+
+## Wireframe & Wireflow (Week ~10)
+
+**Figma file:** "UX/UI 2026 — Wirefame (Copy)" (working copy)  
+**Status (2026-09-23):** ✅ Complete. All 15 screens on one Figma page (Nuker), snake wireflow layout.
+
+**15 screens — 3 members × 5 each:**
+
+| # | Screen | Member |
+|---|---|---|
+| 1 | Home | Name |
+| 2 | Search Result | Name |
+| 3 | Filter Search | Name |
+| 4 | Room Detail | Name |
+| 5 | Room Map | Name |
+| 6 | Select Date & Time | Nuker |
+| 7 | Booking Details | Nuker |
+| 8 | Upload Document | Nuker |
+| 9 | Review Booking | Nuker |
+| 10 | Booking Submitted | Nuker |
+| 11 | My Bookings (Past) | Noey |
+| 12 | Booking Detail | Noey |
+| 13 | Edit Booking | Noey |
+| 14 | My Bookings (Upcoming) | Noey |
+| 15 | Me (Profile) | Noey |
+
+**Layout:** Snake/Z wireflow — row 1 left→right (1–5), row 2 right→left (6–10, connects from 5 via vertical drop on right, wraps left), row 3 left→right (11–15, connects from 10 via vertical drop on left). Flow arrows: ▶ ◀ ▼. Row labels with member names.
+
+**Submission:** PDF export from Figma. Assignment says capture in sections if too small to read.
+
+**Next step:** → [[uxui-usability-test]] (hi-fi prototype + UT, due 2026-10-05)
 
 ---
 

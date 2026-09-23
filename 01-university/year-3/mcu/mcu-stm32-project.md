@@ -1,9 +1,9 @@
 ---
 title: Modular Synthesizer — Piano Project
 tags: [mcu, stm32, hardware, synth, piano]
-status: submitted
+status: in-progress
 created: 2026-08-23
-due: 2026-09-08
+due: 2026-10-09
 points: 100
 subject: mcu
 ---
@@ -11,7 +11,7 @@ subject: mcu
 # Modular Synthesizer — Piano Project
 
 > [!note] Updated 2026-08-30 — see [[mcu-stm32-handoff]] for current architecture (architecture drift flagged there — master/slave zone plan unconfirmed against current single-board layout)
-> Key sensing: **H3503 hall effect** (not Velostat/MPR121). Role: **compile-time #define** (not DIP switch). Mux: **74HC4051** (not CD4051) — full at 8/8 channels, no spare ADC GPIO for remaining 4 keys + 5 pots. KiCad schematic: `~/Documents/University/Year-3/Microcon/synth/syth_mcu/`, repo `github.com/NukerDucker/mcu-synth` (main + review/creambun). ERC: 0 pin_not_connected, 2 minor power-pin warnings open. Board now 286×133mm with DAC audio stage + 12-key hall row on one PCB.
+> Key sensing: **H3503 hall effect** (not Velostat/MPR121). Role: **compile-time #define** (not DIP switch). Mux: **74HC4067** (16-ch, not CD4051/HC4051) — all 12 keys on one mux, confirmed V1 (0.9-creambun) and V2. KiCad schematic: `~/Documents/University/Year-3/Microcon/synth/syth_mcu/`, repo `github.com/NukerDucker/mcu-synth` (main + review/creambun). ERC: 0 pin_not_connected, 2 minor power-pin warnings open. Board now 286×133mm with DAC audio stage + 12-key hall row on one PCB.
 >
 > **Updated 2026-09-01 — see [[mcu-stm32-log]] Session 3 for full detail.** Session 3 proposed dropping the magnetic pogo connector for a JST-PH 2.0mm 8-pin pigtail cable — **never implemented; reversed 2026-09-03 (Session 4).** Actual `syth_mcu` board still uses **5-pin magnetic pogo** (J1/J2, `CONN-TH_PR5L4015-5P-C-F`), confirmed against pushed kicad (`f4e23e9`). See [[mcu-stm32-handoff]] for the real connector BOM. Build path confirmed **THT hand-solder** (Shopee/Lazada sourcing), not SMD/JLC-assembly — `synth_smd/` folder exists as an abandoned pricing-comparison copy, not the active project. Fixed a real bug in `dac-pchannel.kicad_sch`: C1/C2 were spec'd as 80nF electrolytic (no such part exists) — now 100nF ceramic disc.
 
@@ -34,8 +34,9 @@ the final one — update it as each passes so `HOME.md` shows what is actually n
 |---|---|---|
 | **Sept 8** | Proposal — [form](https://forms.gle/ZktBTfTz4MVToxwMA) | 10 pts |
 | Sept 9 | Proposal comments in lab; development starts | — |
-| Sept 23 | Progress report — [form](https://forms.gle/jjktDcC4a98Wker4A) | 10 pts |
+| ~~Sept 23~~ | ~~Progress report~~ — submitted ✅ | 10 pts |
 | Oct 7 | Answer questions, in class or online | — |
+| Oct 9 | Progress report submission | — |
 | Oct 21 | Demonstrate the project | 60 pts |
 | Oct 21 | Report + demo clip + code — [form](https://forms.gle/n2s17x8d1tJonu2b9) | 20 pts |
 | Oct 21 | Return all lab equipment | — |

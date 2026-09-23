@@ -35,12 +35,13 @@ updated: 2026-08-24
 ## Upcoming
 
 <!-- BEGIN GENERATED: upcoming -->
-<!-- regenerated 2026-09-17 — do not edit by hand -->
+<!-- regenerated 2026-09-24 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
 | 2026-09-24 | [[rtw-assignment-writing-report\|RTW Assignment - Writing Report + In-Class Presentation]] | rtw | 8 | 🔄 active |
 | 2026-09-24 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations Assignments]] | rtw | — | 🔄 active |
+| 2026-10-05 | [[uxui-usability-test\|UX/UI Usability Test & UI Improvement — Individual]] | uxui | 10 | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 
 <!-- END GENERATED: upcoming -->
@@ -64,7 +65,7 @@ touches this table.
 ## Completed
 
 <!-- BEGIN GENERATED: completed -->
-<!-- regenerated 2026-09-17 — do not edit by hand -->
+<!-- regenerated 2026-09-24 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
@@ -74,7 +75,6 @@ touches this table.
 | 2026-09-11 | [[os-case-study-2\|OS Case Study 2 — Synchronization]] | os | 15% | ✅ submitted |
 | 2026-09-10 | [[rtw-resume-assignment\|RTW — Resume + Sep 10 Interview Presentation]] | rtw | 4 | ✅ submitted |
 | 2026-09-08 | [[mcu-lab05-adc\|Lab 05 — ADC]] | mcu | — | ✅ submitted |
-| 2026-09-08 | [[mcu-stm32-project\|Modular Synthesizer — Piano Project]] | mcu | 100 | ✅ submitted |
 | 2026-09-07 | [[uxui-ui-hunt\|UX/UI: UI Hunt — Unusual Screens]] | uxui | 6 | ✅ submitted |
 | 2026-09-04 | [[os-activity-02\|OS Activity 02 — Synchronization I]] | os | — | ✅ submitted |
 | 2026-09-04 | [[os-activity-03\|OS Activity 03 — Synchronization II]] | os | — | ✅ submitted |

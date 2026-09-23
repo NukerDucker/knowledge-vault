@@ -7,12 +7,13 @@ status: active
 # HOME
 
 <!-- BEGIN GENERATED: due-next -->
-<!-- regenerated 2026-09-17 — do not edit by hand -->
+<!-- regenerated 2026-09-24 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
 | 2026-09-24 | [[rtw-assignment-writing-report\|RTW Assignment - Writing Report + In-Class Presentation]] | rtw | 8 | 🔄 active |
 | 2026-09-24 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations Assignments]] | rtw | — | 🔄 active |
+| 2026-10-05 | [[uxui-usability-test\|UX/UI Usability Test & UI Improvement — Individual]] | uxui | 10 | 🔄 active |
 | 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
 
 <!-- END GENERATED: due-next -->

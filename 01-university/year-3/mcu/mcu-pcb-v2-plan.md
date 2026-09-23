@@ -23,10 +23,11 @@ See [[mcu-stm32-project]] for project schedule.
 **Action:** Fix symbol in KiCad schematic editor → reroute Q1–Q4 pads.  
 **Scope:** Schematic + layout.
 
-### 2. PB7 I2C SDA Trace Cut
+### 2. PB7 I2C SDA Trace Cut ✅ FIXED
 **Problem:** Two isolated copper islands on F.Cu. Gap at bbox (182.26, 122.67)→(191.53, 130.30). I2C bus non-functional.  
 **Action:** Route one trace segment on F.Cu to bridge the gap.  
-**Scope:** Layout only.
+**Scope:** Layout only.  
+**Status:** Fixed 2026-09-21.
 
 ---
 
@@ -42,7 +43,7 @@ See [[mcu-stm32-project]] for project schedule.
 | Y0–Y11 | Hall keys H1–H12 |
 | Y12–Y15 | RV1–RV4 (vol, attack, decay, filter) |
 
-**Note:** RV5 (effect wet) needs either a free ADC GPIO or a second mux. Check PA4/PA5.  
+**Note:** RV5–RV12 are new pots (not DAC channel related). RV13/RV14 renumbered from RV6/RV7 in dac-pchannel sub-sheet (schematic v2 commit).  
 **Scope:** Schematic swap + layout (same interface footprint, +1 GPIO trace).
 
 ### 4. Pogo Pin 5 — GND → CHAIN GPIO (J1 and J2)
@@ -94,7 +95,7 @@ Do in this order to minimise re-spins:
 
 - [ ] Confirm PA15/PC14/PC15 free in `.ioc`
 - [ ] Fix Q1–Q4 symbol and reroute
-- [ ] Bridge PB7 trace
+- [x] Bridge PB7 trace ✅ 2026-09-21
 - [ ] Swap HC4051 → HC4067 in schematic; add S3 trace
 - [ ] Relabel J1/J2 pin 5 nets; add CHAIN_IN/CHAIN_OUT traces
 - [ ] Wire U2 pins 20/21
