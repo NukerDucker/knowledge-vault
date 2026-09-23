@@ -61,7 +61,7 @@ Present the content of your report in class on **22 Oct 2026, 9:00–11:30**.
 ## My Draft (Case 2)
 
 **Case:** Late Attendance Report (student no. 12 → last digit 2)
-**Status:** Final — 9-section format, ai-check passed (Likely Human)
+**Status:** Final — 9-section format (matches sample), ai-check Likely Human
 
 ---
 
@@ -72,62 +72,46 @@ Position: Human Resources Officer
 Department: Human Resources Department
 Company: SiamPro Manufacturing Co., Ltd.
 Reporting Period: August 2026
-Date Submitted: 18 September 2026
+Date Submitted: 24 September 2026
 
 ### 1. Objective
 
-The objective of this report is to identify the causes of late attendance among Production Department employees during August 2026, assess the effects on daily operations and production schedules, and recommend measures to reduce future recurrences.
+This report aims to identify the causes of late attendance among Production Department employees in August 2026 and recommend actions to prevent recurrence.
 
 ### 2. Background
 
-During August 2026, the Human Resources Department reviewed attendance records for the Production Department following a noticeable rise in late arrivals. This review was requested by the Production Manager after the production line experienced repeated delays at the start of each shift.
+The Human Resources Department reviewed attendance records after the Production Manager reported repeated delays at shift start times throughout August 2026.
 
-### 3. Findings
+### 3. Activities Completed
 
-A review of attendance records for August 2026 revealed the following:
+During this reporting period, the HR Department:
 
-- 12 out of 30 Production Department employees (40%) arrived late at least once
-- 35 late arrivals were recorded in total across the month
+- Reviewed attendance records for all 30 Production Department employees
+- Conducted individual interviews to identify reasons for late arrivals
+- Compiled findings and prepared this report for management review
 
 ### 4. Results
 
-As a result of these late arrivals, the production line started 10 to 15 minutes behind schedule on several occasions throughout the month, reducing output and disrupting daily operations and production schedules.
+The review found that 12 out of 30 employees (40%) arrived late at least once, with 35 late arrivals recorded in total. As a result, the production line started 10 to 15 minutes late on multiple occasions, reducing daily output.
 
-### 5. Problems / Causes
+### 5. Problems / Challenges
 
-The main causes reported by employees were:
-
-- Heavy traffic congestion on commuting routes
-- Long commuting distances from employees' homes
-- Shuttle bus breakdowns with no backup schedule
-- Oversleeping due to early shift start times
-
-No formal investigation was conducted during the reporting period, so the same problems and difficulties continued. Furthermore, the absence of a clear follow-up process also meant that workers were left without any support or guidance in the weeks that followed.
+The main causes reported by employees included heavy traffic congestion, long commuting distances, shuttle bus breakdowns with no backup schedule, and oversleeping due to early shift start times.
 
 ### 6. Actions Taken
 
-To address the attendance issues, the Human Resources Department:
-
-- Reviewed attendance records for all 30 Production Department employees
-- Conducted brief interviews to identify the main reasons for lateness
-- Compiled all findings and submitted this report to the Production Manager
+The HR Department issued verbal reminders to employees with repeated late arrivals and notified the Production Manager of the attendance patterns identified in this review.
 
 ### 7. Recommendations
 
-The following actions are recommended:
-
-- Add an earlier morning shuttle before peak traffic hours
-- Introduce flexible start times to reduce conflicts from unavoidable traffic delays
-- Review attendance records monthly to identify patterns and difficulties early
+- Arrange an earlier morning shuttle to reduce the impact of peak traffic
+- Introduce flexible start times for employees with long commuting distances
+- Review attendance records monthly to detect patterns early
 
 ### 8. Next Steps
 
-During the next reporting period, the department will:
-
-- Present recommendations to senior management for approval
-- Monitor attendance records weekly to track any improvement
-- Follow up with employees regarding available transportation arrangements
+During the next reporting period, the department will present these recommendations to senior management, monitor attendance records weekly, and follow up with employees on available transportation arrangements.
 
 ### 9. Conclusion
 
-Late arrivals in August 2026 stemmed from transportation problems and commuting difficulties that went uninvestigated. This combination of problems and difficulties persisted throughout the month and affected production output. Implementing the recommended scheduling changes and a monthly attendance review will support employees in meeting their responsibilities.
+Late arrivals in August 2026 stemmed mainly from transportation and commuting difficulties. With revised shuttle arrangements and flexible scheduling, the department expects attendance to improve in the following month.
