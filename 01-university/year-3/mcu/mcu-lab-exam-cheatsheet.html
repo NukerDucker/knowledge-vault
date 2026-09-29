@@ -1,0 +1,756 @@
+<title>MCU Lab Exam Sheet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --bg: #0F172A;
+    --surface: #1E293B;
+    --surface-hi: #263348;
+    --text: #F1F5F9;
+    --text2: #94A3B8;
+    --border: #334155;
+    --code-bg: #0D1829;
+
+    --c-timer: #3B82F6;
+    --c-timer-bg: #1E3A5F;
+    --c-adc: #10B981;
+    --c-adc-bg: #022C22;
+    --c-pwm: #F59E0B;
+    --c-pwm-bg: #451A03;
+    --c-lcd: #A855F7;
+    --c-lcd-bg: #2E1065;
+    --c-exti: #EF4444;
+    --c-exti-bg: #450A0A;
+    --c-i2c: #06B6D4;
+    --c-i2c-bg: #0C4A6E;
+    --c-warn: #F59E0B;
+    --c-warn-bg: #451A03;
+    --c-ok: #10B981;
+    --c-ok-bg: #022C22;
+
+    color-scheme: dark;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-hi: #EFF6FF;
+      --text: #0F172A;
+      --text2: #475569;
+      --border: #CBD5E1;
+      --code-bg: #EEF2FF;
+      --c-timer: #1D4ED8;
+      --c-timer-bg: #DBEAFE;
+      --c-adc: #047857;
+      --c-adc-bg: #D1FAE5;
+      --c-pwm: #B45309;
+      --c-pwm-bg: #FEF3C7;
+      --c-lcd: #7C3AED;
+      --c-lcd-bg: #EDE9FE;
+      --c-exti: #DC2626;
+      --c-exti-bg: #FEE2E2;
+      --c-i2c: #0E7490;
+      --c-i2c-bg: #CFFAFE;
+      --c-warn: #B45309;
+      --c-warn-bg: #FEF3C7;
+      --c-ok: #065F46;
+      --c-ok-bg: #D1FAE5;
+      color-scheme: light;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #F8FAFC; --surface: #FFFFFF; --surface-hi: #EFF6FF; --text: #0F172A;
+    --text2: #475569; --border: #CBD5E1; --code-bg: #EEF2FF;
+    --c-timer: #1D4ED8; --c-timer-bg: #DBEAFE; --c-adc: #047857; --c-adc-bg: #D1FAE5;
+    --c-pwm: #B45309; --c-pwm-bg: #FEF3C7; --c-lcd: #7C3AED; --c-lcd-bg: #EDE9FE;
+    --c-exti: #DC2626; --c-exti-bg: #FEE2E2; --c-i2c: #0E7490; --c-i2c-bg: #CFFAFE;
+    --c-warn: #B45309; --c-warn-bg: #FEF3C7; --c-ok: #065F46; --c-ok-bg: #D1FAE5;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 0 12px;
+  }
+
+  pre, code { font-family: 'JetBrains Mono', monospace; }
+
+  .page { max-width: 860px; margin: 0 auto; padding-block: 10px; }
+
+  /* ── HEADER ── */
+  .hdr {
+    background: linear-gradient(135deg, #1D4ED8 0%, #7C3AED 100%);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+  .hdr h1 { font-size: 14px; font-weight: 900; letter-spacing: -0.02em; }
+  .hdr .sub { font-size: 9px; opacity: 0.8; margin-top: 1px; }
+  .hdr .ws { font-size: 9.5px; text-align: right; line-height: 1.7; }
+  .hdr code { background: rgba(255,255,255,0.2); color: #fff; padding: 0 4px; border-radius: 3px; font-size: 9px; }
+
+  /* ── EXAM START RITUAL ── */
+  .ritual {
+    background: var(--surface);
+    border: 2px solid #F59E0B;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+    align-items: center;
+  }
+  .ritual-title {
+    grid-column: 1 / -1;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #F59E0B;
+    margin-bottom: 2px;
+  }
+  .r-steps { grid-column: 1 / -1; display: flex; gap: 6px; flex-wrap: wrap; }
+  .r-step {
+    display: flex; align-items: center; gap: 5px;
+    background: var(--surface-hi);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 9.5px;
+    flex: 1; min-width: 150px;
+  }
+  .r-num {
+    background: #F59E0B; color: #000;
+    width: 16px; height: 16px; border-radius: 50%;
+    font-size: 8px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* ── NUMBERS STRIP ── */
+  .nums {
+    display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .num-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    flex: 1; min-width: 120px;
+    text-align: center;
+  }
+  .num-card .big {
+    font-size: 18px; font-weight: 900; letter-spacing: -0.02em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .num-card .lbl { font-size: 8.5px; color: var(--text2); margin-top: 1px; }
+
+  /* ── SECTION LABEL ── */
+  .slabel {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 9px; font-weight: 800; letter-spacing: 0.1em;
+    padding: 2px 9px; border-radius: 3px; margin-bottom: 8px;
+    text-transform: uppercase; color: #fff;
+  }
+
+  /* ── RECIPE CARDS ── */
+  .recipes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+  .recipe {
+    background: var(--surface);
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .recipe-hdr {
+    padding: 6px 10px;
+    display: flex; align-items: center; gap: 7px;
+    border-bottom: 1px solid var(--border);
+  }
+  .recipe-hdr .emoji { font-size: 14px; }
+  .recipe-hdr .title { font-size: 11px; font-weight: 800; }
+  .recipe-hdr .subtitle { font-size: 9px; color: var(--text2); margin-top: 1px; }
+  .recipe-body { padding: 8px 10px; }
+
+  .step-row {
+    display: flex; gap: 7px; align-items: flex-start;
+    margin-bottom: 3px; font-size: 9.5px;
+  }
+  .sn {
+    width: 16px; height: 16px; border-radius: 50%;
+    font-size: 8px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+    color: #fff;
+  }
+
+  pre {
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 5px 7px;
+    margin: 4px 0;
+    font-size: 8px;
+    line-height: 1.55;
+    overflow-x: auto;
+    white-space: pre;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  code {
+    background: var(--code-bg);
+    padding: 1px 3px; border-radius: 2px;
+    font-size: 8.5px; color: #60A5FA;
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9px; margin: 3px 0; }
+  th {
+    background: var(--surface-hi); text-align: left;
+    padding: 2px 5px; font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    color: var(--text2); font-size: 8.5px;
+  }
+  td { padding: 2px 5px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  td code { font-size: 8px; }
+
+  .ok { background: var(--c-ok-bg); border-left: 3px solid var(--c-ok); border-radius: 3px; padding: 3px 7px; margin: 3px 0; font-size: 9px; color: var(--text); }
+  .warn { background: var(--c-warn-bg); border-left: 3px solid var(--c-warn); border-radius: 3px; padding: 3px 7px; margin: 3px 0; font-size: 9px; color: var(--text); }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 5px 0; }
+  p { margin: 2px 0; font-size: 9.5px; }
+  .fw7 { font-weight: 700; }
+  .sm { font-size: 9px; color: var(--text2); }
+
+  /* ── BOTTOM GRID ── */
+  .bottom { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px; overflow: hidden;
+  }
+  .block-t {
+    background: var(--surface-hi);
+    border-bottom: 1px solid var(--border);
+    padding: 4px 8px;
+    font-size: 9px; font-weight: 800; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--text2);
+  }
+  .block-b { padding: 6px 8px; }
+
+  @media (max-width: 640px) {
+    .recipes, .bottom { grid-template-columns: 1fr; }
+    .nums { flex-direction: column; }
+  }
+
+  @media print {
+    :root {
+      --bg:#fff; --surface:#fff; --surface-hi:#F5F7FF; --text:#000; --text2:#444;
+      --border:#CCC; --code-bg:#F0F0F0;
+      --c-timer:#1546C0; --c-timer-bg:#E8EEFF; --c-adc:#065F46; --c-adc-bg:#DCFCE7;
+      --c-pwm:#92400E; --c-pwm-bg:#FEF3C7; --c-lcd:#5B21B6; --c-lcd-bg:#EDE9FE;
+      --c-exti:#991B1B; --c-exti-bg:#FEE2E2; --c-i2c:#0E7490; --c-i2c-bg:#CFFAFE;
+      --c-warn:#92400E; --c-warn-bg:#FEF3C7; --c-ok:#065F46; --c-ok-bg:#DCFCE7;
+      color-scheme: light;
+    }
+    body { font-size: 8px; padding: 4px 5px; }
+    pre { font-size: 7px; page-break-inside: avoid; }
+    .recipe { page-break-inside: avoid; }
+    .nums .big { font-size: 14px; }
+  }
+</style>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div>
+      <h1>MCU Interfacing — Exam Cheat Sheet</h1>
+      <div class="sub">Napaul Intharasing · 67011178 · Lab 19 · Exam Group 1 · 7 Oct 2026 · 17:30–18:45 · ECC-704</div>
+    </div>
+    <div class="ws">
+      Workspace: File → Switch Workspace → <code>D:\67011178_exam</code><br>
+      After exam: <strong>Shift+Delete</strong> the folder · Max <strong>2 submissions/question</strong>
+    </div>
+  </div>
+
+  <!-- EXAM START RITUAL -->
+  <div class="ritual">
+    <div class="ritual-title">⚡ EXAM START — DO THESE FIRST (every time)</div>
+    <div class="r-steps">
+      <div class="r-step"><div class="r-num">1</div><div>File → Switch Workspace → <strong>D:\67011178_exam</strong></div></div>
+      <div class="r-step"><div class="r-num">2</div><div>New Project → <strong>Board Selector</strong> tab → NUCLEO-F767ZI → Init all: <strong>No</strong></div></div>
+      <div class="r-step"><div class="r-num">3</div><div>Clock Config → HCLK = <strong>216 MHz</strong></div></div>
+      <div class="r-step"><div class="r-num">4</div><div>USART3 → Async · 115200 · Project Mgr → STM32CubeIDE → Generate</div></div>
+      <div class="r-step"><div class="r-num">5</div><div><code>#include &lt;stdio.h&gt;</code> + <code>#include &lt;string.h&gt;</code> in main.c</div></div>
+      <div class="r-step"><div class="r-num">6</div><div>Read question → pick recipe below → follow steps</div></div>
+    </div>
+  </div>
+
+  <!-- NUMBERS TO MEMORIZE -->
+  <div class="nums">
+    <div class="num-card">
+      <div class="big" style="color:var(--c-timer)">216</div>
+      <div class="lbl">MHz — APB2 timer (TIM1)</div>
+    </div>
+    <div class="num-card">
+      <div class="big" style="color:var(--c-timer)">108</div>
+      <div class="lbl">MHz — APB1 timer (TIM2–5)</div>
+    </div>
+    <div class="num-card">
+      <div class="big" style="color:var(--c-adc)">4095</div>
+      <div class="lbl">ADC max (12-bit, 3.3V)</div>
+    </div>
+    <div class="num-card">
+      <div class="big" style="color:var(--c-pwm)">9999</div>
+      <div class="lbl">PWM ARR (10ms period, PSC=107)</div>
+    </div>
+    <div class="num-card">
+      <div class="big" style="color:var(--c-exti)">PC13</div>
+      <div class="lbl">B1 Button → EXTI15_10_IRQn</div>
+    </div>
+    <div class="num-card">
+      <div class="big" style="color:var(--c-i2c)">0x5C</div>
+      <div class="lbl">AM2320 I2C addr (use &lt;&lt;1)</div>
+    </div>
+  </div>
+
+  <!-- RECIPE CARDS -->
+  <div style="margin-bottom:6px;">
+    <span class="slabel" style="background:var(--c-timer)">📋 Exam Recipes — Match question → follow steps</span>
+  </div>
+  <div class="recipes">
+
+    <!-- RECIPE 1: TIMER BLINK/COUNTER -->
+    <div class="recipe">
+      <div class="recipe-hdr" style="background:var(--c-timer-bg); border-color:var(--c-timer)">
+        <div>
+          <div class="title" style="color:var(--c-timer)">⏱ Recipe 1 — Timer Interrupt</div>
+          <div class="subtitle">Blink LED · Counter · MM:SS stopwatch · Periodic task</div>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="fw7">CubeMX:</p>
+        <div class="step-row"><div class="sn" style="background:var(--c-timer)">1</div><div>TIM1 → Clock Source: Internal Clock · PSC=<strong>215</strong>, ARR=<strong>999</strong> (= 1 ms, APB2 216MHz)</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-timer)">2</div><div>TIM1 NVIC: <em>TIM1 update interrupt and TIM10 global interrupt</em> ✓ · PreemptPriority=1 Sub=0</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-timer)">3</div><div>Optional TIM2 for slower flag (PSC=107, ARR=399999 → 400ms, APB1 108MHz)</div></div>
+        <hr>
+        <pre>/* USER CODE BEGIN 0 */
+uint32_t ms = 0;
+uint8_t  flag = 0;
+
+/* USER CODE BEGIN 2 */
+HAL_TIM_Base_Start_IT(&htim1);
+HAL_TIM_Base_Start_IT(&htim2); /* optional */
+
+/* USER CODE BEGIN WHILE */
+while (1) {
+  if (flag) {
+    flag = 0;
+    /* --- DO TASK HERE --- */
+    uint32_t s = ms/1000, m = s/60;
+    char b[32];
+    int n = sprintf(b, "%02lu:%02lu\r", m, s%60);
+    HAL_UART_Transmit(&huart3,(uint8_t*)b,n,100);
+    HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+  }
+}
+
+/* --- CALLBACKS (outside main, in main.c) --- */
+void HAL_TIM_PeriodElapsedCallback(
+      TIM_HandleTypeDef *htim) {
+  if (htim->Instance == TIM1) ms++;     /* 1ms */
+  if (htim->Instance == TIM2) flag = 1; /* 400ms */
+}</pre>
+        <div class="warn">TIM1 ARR is 16-bit (max 65535). Use <strong>TIM2</strong> for intervals &gt;~300ms.</div>
+        <table style="margin-top:4px;">
+          <tr><th>Want</th><th>Timer</th><th>PSC</th><th>ARR</th></tr>
+          <tr><td>1 ms</td><td>TIM1/APB2</td><td>215</td><td>999</td></tr>
+          <tr><td>10 ms</td><td>TIM2/APB1</td><td>107</td><td>9999</td></tr>
+          <tr><td>500 ms</td><td>TIM2/APB1</td><td>107</td><td>499999</td></tr>
+          <tr><td>1 s</td><td>TIM2/APB1</td><td>107</td><td>999999</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- RECIPE 2: EXTI BUTTON -->
+    <div class="recipe">
+      <div class="recipe-hdr" style="background:var(--c-exti-bg); border-color:var(--c-exti)">
+        <div>
+          <div class="title" style="color:var(--c-exti)">⚡ Recipe 2 — EXTI Button</div>
+          <div class="subtitle">Button press → instant action · Count presses · Toggle state</div>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="fw7">CubeMX:</p>
+        <div class="step-row"><div class="sn" style="background:var(--c-exti)">1</div><div>PC13 → GPIO_EXTI13 (B1 button)</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-exti)">2</div><div>System Core → NVIC → Priority Group: <strong>NVIC_PriorityGroup_1</strong></div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-exti)">3</div><div>GPIO → PC13 → Mode: <strong>External Interrupt Rising edge</strong> · Pull: No pull</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-exti)">4</div><div>NVIC → <em>EXTI line[15:10] interrupts</em> ✓ · PreemptPriority=1 Sub=0</div></div>
+        <hr>
+        <pre>/* USER CODE BEGIN 0 */
+uint32_t btn_count = 0;
+
+/* No USER CODE BEGIN 2 needed for EXTI */
+
+/* USER CODE BEGIN WHILE */
+while (1) {
+  /* can do other things here */
+  /* btn_count is updated by interrupt */
+  char b[32];
+  int n = sprintf(b,"Count=%lu\r\n",btn_count);
+  HAL_UART_Transmit(&huart3,(uint8_t*)b,n,100);
+  HAL_Delay(200);
+}
+
+/* --- CALLBACK (outside main, in main.c) --- */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+  if (GPIO_Pin == GPIO_PIN_13) {
+    btn_count++;
+    HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+  }
+}</pre>
+        <div class="ok">No need to start anything — EXTI is always listening once CubeMX configures it.</div>
+        <hr>
+        <p class="fw7" style="margin-top:4px;">GPIO write/read:</p>
+        <pre>HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+/* Read: GPIO_PinState s = HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13); */</pre>
+        <table style="margin-top:4px;">
+          <tr><th>LED alias</th><th>Pin</th><th>Color</th></tr>
+          <tr><td>LD1_GPIO_Port / LD1_Pin</td><td>PB0</td><td>Green</td></tr>
+          <tr><td>LD2_GPIO_Port / LD2_Pin</td><td>PB7</td><td>Blue</td></tr>
+          <tr><td>LD3_GPIO_Port / LD3_Pin</td><td>PB14</td><td>Red</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- RECIPE 3: ADC → UART -->
+    <div class="recipe">
+      <div class="recipe-hdr" style="background:var(--c-adc-bg); border-color:var(--c-adc)">
+        <div>
+          <div class="title" style="color:var(--c-adc)">📡 Recipe 3 — ADC → UART</div>
+          <div class="subtitle">Read potentiometer · Print voltage / raw value to serial</div>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="fw7">CubeMX:</p>
+        <div class="step-row"><div class="sn" style="background:var(--c-adc)">1</div><div>PC0 → ADC1_IN10 (potentiometer)</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-adc)">2</div><div>ADC1: Resolution=12bit · Align=Right · <strong>Continuous=Enabled</strong> · DMA=Disabled</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-adc)">3</div><div>Rank 1: Channel 10, Sampling Time: 3 Cycles</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-adc)">4</div><div>USART3: Async 115200 (already should be there)</div></div>
+        <hr>
+        <pre>/* USER CODE BEGIN 2 */
+HAL_ADC_Start(&hadc1);
+
+/* USER CODE BEGIN WHILE */
+uint32_t adc_val = 0;
+char buf[64];
+while (1) {
+  HAL_ADC_PollForConversion(&hadc1, 100);
+  adc_val = HAL_ADC_GetValue(&hadc1);
+  float v = (adc_val / 4095.0f) * 3.3f;
+
+  int n = sprintf(buf,
+    "ADC=%4lu  V=%.2fV\r\n", adc_val, v);
+  HAL_UART_Transmit(&huart3,
+    (uint8_t*)buf, n, 100);
+  HAL_Delay(100);
+}</pre>
+        <hr>
+        <p class="fw7">Channel → Pin (ADC1):</p>
+        <table>
+          <tr><th>CH</th><th>Pin</th><th>CH</th><th>Pin</th></tr>
+          <tr><td>CH0</td><td>PA0</td><td>CH10</td><td>PC0 ★</td></tr>
+          <tr><td>CH6</td><td>PA6</td><td>CH12</td><td>PC2</td></tr>
+          <tr><td>CH8</td><td>PB0</td><td>CH13</td><td>PC3</td></tr>
+        </table>
+        <hr>
+        <p class="fw7">Smooth noisy ADC readings:</p>
+        <pre>int avg8(int x) {
+  static int s[8]={0},i=0,tot=0;
+  tot+=x-s[i]; s[i]=x; i=(i>=7?0:i+1);
+  return tot>>3; /* ÷8 */
+}
+adc_val = avg8(HAL_ADC_GetValue(&hadc1));</pre>
+      </div>
+    </div>
+
+    <!-- RECIPE 4: ADC → PWM -->
+    <div class="recipe">
+      <div class="recipe-hdr" style="background:var(--c-pwm-bg); border-color:var(--c-pwm)">
+        <div>
+          <div class="title" style="color:var(--c-pwm)">〰️ Recipe 4 — ADC → PWM</div>
+          <div class="subtitle">Pot controls LED brightness · Servo · RGB color via ADC</div>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="fw7">CubeMX (add to ADC setup above):</p>
+        <div class="step-row"><div class="sn" style="background:var(--c-pwm)">1</div><div>TIM2 → Channel 3: <strong>PWM Generation CH3</strong> · Clock Source: Internal Clock</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-pwm)">2</div><div>PSC=<strong>107</strong>, ARR=<strong>9999</strong>, Pulse=2499, Mode=PWM mode 1, Preload=<strong>Enable</strong></div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-pwm)">3</div><div>Pin: <strong>PB10</strong> (NOT PA2 — conflict with UART2!). No NVIC needed.</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-pwm)">4</div><div>Still need ADC1 configured (Recipe 3 steps 1–3)</div></div>
+        <hr>
+        <pre>/* USER CODE BEGIN 2 */
+HAL_ADC_Start(&hadc1);
+HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+
+/* USER CODE BEGIN WHILE */
+while (1) {
+  HAL_ADC_PollForConversion(&hadc1, 100);
+  uint32_t adc = HAL_ADC_GetValue(&hadc1);
+
+  /* Map 0–4095 → duty 20%–100% of ARR=9999 */
+  float duty = 0.20f + (adc/4095.0f)*0.80f;
+  uint32_t ccr = (uint32_t)(duty * 10000.0f);
+  __HAL_TIM_SET_COMPARE(&htim2,
+    TIM_CHANNEL_3, ccr);
+
+  /* UART debug (optional) */
+  char b[48];
+  int n = sprintf(b,"ADC=%lu duty=%.0f%%\r\n",
+    adc, duty*100.0f);
+  HAL_UART_Transmit(&huart3,(uint8_t*)b,n,100);
+}</pre>
+        <div class="ok">Duty% = CCR/(ARR+1)×100. CCR=0 → always OFF. CCR=ARR → always ON.</div>
+        <hr>
+        <p class="fw7">RGB (TIM3, same PSC/ARR):</p>
+        <pre>/* CH1→PB4 Red, CH2→PB5 Green, CH3→PB0 Blue */
+HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+/* Then: __HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,val) */</pre>
+      </div>
+    </div>
+
+    <!-- RECIPE 5: ADC → LCD -->
+    <div class="recipe">
+      <div class="recipe-hdr" style="background:var(--c-lcd-bg); border-color:var(--c-lcd)">
+        <div>
+          <div class="title" style="color:var(--c-lcd)">🖥 Recipe 5 — ADC → LCD Display</div>
+          <div class="subtitle">Show value on screen · Progress bar · Numeric display</div>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <div class="ok" style="margin-bottom:5px;">Start from <strong>767_SPI_ILI9341 v2.zip</strong> — already has LCD init, drivers, fonts. Then add ADC in CubeMX.</div>
+        <p class="fw7">After opening the demo project in CubeMX:</p>
+        <div class="step-row"><div class="sn" style="background:var(--c-lcd)">1</div><div>Add PC0 → ADC1_IN10 · Continuous=ON · 12bit · Right align</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-lcd)">2</div><div>Add TIM2 for periodic refresh if needed (PSC=107, ARR=99999 = 100ms)</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-lcd)">3</div><div>Regenerate code (USER CODE blocks preserved)</div></div>
+        <hr>
+        <pre>/* USER CODE BEGIN 2 */
+ILI9341_Init();
+ILI9341_FillScreen(WHITE);
+HAL_ADC_Start(&hadc1);
+
+/* USER CODE BEGIN WHILE */
+uint32_t adc = 0;
+char line[32];
+while (1) {
+  HAL_ADC_PollForConversion(&hadc1, 100);
+  adc = HAL_ADC_GetValue(&hadc1);
+  float v = (adc/4095.0f)*3.3f;
+
+  /* Text display */
+  sprintf(line, "ADC: %4lu   ", adc);
+  ILI9341_WriteString(10,10,line,Font_11x18,BLACK,WHITE);
+  sprintf(line, "V:  %.2fV   ", v);
+  ILI9341_WriteString(10,40,line,Font_11x18,BLACK,WHITE);
+
+  /* Progress bar — ERASE old bar first! */
+  ILI9341_FillRect(10, 80, 200, 20, WHITE);
+  uint16_t w = (adc * 200) / 4095;
+  ILI9341_FillRect(10, 80, w, 20, BLUE);
+
+  HAL_Delay(100);
+}</pre>
+        <hr>
+        <p class="fw7">LCD functions:</p>
+        <pre>ILI9341_Init();
+ILI9341_FillScreen(WHITE);          /* clear */
+ILI9341_WriteString(x,y,"text",
+  Font_11x18, BLACK, WHITE);         /* text */
+ILI9341_FillRect(x,y,w,h, BLUE);   /* rect */
+ILI9341_FillCircle(cx,cy,r, RED);  /* circle */</pre>
+        <p class="sm">Colors: WHITE BLACK RED GREEN BLUE YELLOW CYAN MAGENTA ORANGE</p>
+        <div class="warn">Always erase (FillRect white) before redrawing a number — otherwise old digits leave ghost pixels.</div>
+      </div>
+    </div>
+
+    <!-- RECIPE 6: AM2320 → LCD -->
+    <div class="recipe">
+      <div class="recipe-hdr" style="background:var(--c-i2c-bg); border-color:var(--c-i2c)">
+        <div>
+          <div class="title" style="color:var(--c-i2c)">🌡 Recipe 6 — AM2320 Temp+Humidity → LCD</div>
+          <div class="subtitle">I2C sensor read · Parse raw bytes · Display on screen</div>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="fw7">CubeMX (add to LCD project):</p>
+        <div class="step-row"><div class="sn" style="background:var(--c-i2c)">1</div><div>Connectivity → I2C1 → <strong>I2C</strong> mode · Standard Mode (100 kHz)</div></div>
+        <div class="step-row"><div class="sn" style="background:var(--c-i2c)">2</div><div>No NVIC needed for polling I2C</div></div>
+        <hr>
+        <pre>/* --- FUNCTION (put above main) --- */
+void read_am2320(float *temp, float *hum) {
+  uint8_t cmd[3] = {0x03, 0x00, 0x04};
+  uint8_t buf[8] = {0};
+
+  /* 1. Wake sensor (NACK expected — IGNORE error) */
+  HAL_I2C_Master_Transmit(&hi2c1,
+    0x5C<<1, NULL, 0, 10);
+  HAL_Delay(1);
+
+  /* 2. Send read command */
+  HAL_I2C_Master_Transmit(&hi2c1,
+    0x5C<<1, cmd, 3, 10);
+  HAL_Delay(2);
+
+  /* 3. Read 8 bytes back */
+  HAL_I2C_Master_Receive(&hi2c1,
+    0x5C<<1, buf, 8, 10);
+
+  /* Parse buf: [func,len,RH_H,RH_L,T_H,T_L,CRC_L,CRC_H] */
+  *hum = ((buf[2]<<8)|buf[3]) / 10.0f;
+  uint16_t rt = ((buf[4]&0x7F)<<8)|buf[5];
+  *temp = (buf[4]&0x80) ? -(rt/10.0f) : rt/10.0f;
+}
+
+/* USER CODE BEGIN 2 */
+ILI9341_Init();
+ILI9341_FillScreen(WHITE);
+
+/* USER CODE BEGIN WHILE */
+float temp=0, hum=0;
+char line[32];
+while (1) {
+  read_am2320(&temp, &hum);
+
+  sprintf(line, "Temp: %.1f C  ", temp);
+  ILI9341_WriteString(10,10,line,Font_11x18,BLACK,WHITE);
+  sprintf(line, "Humi: %.1f %%  ", hum);
+  ILI9341_WriteString(10,40,line,Font_11x18,BLACK,WHITE);
+
+  HAL_Delay(500); /* don't spam sensor */
+}</pre>
+        <div class="ok">NACK on the wake step is NORMAL. HAL returns error — ignore it and continue.</div>
+        <p class="sm" style="margin-top:3px;">buf[4] bit7 = sign flag (1=negative temp). buf[2..3]=humidity raw. Divide all by 10.0f.</p>
+      </div>
+    </div>
+
+  </div><!-- /recipes -->
+
+  <!-- BOTTOM ROW -->
+  <div class="bottom">
+
+    <div class="block">
+      <div class="block-t">🔴 If It's Broken — Check In Order</div>
+      <div class="block-b">
+        <table>
+          <tr><th>#</th><th>Check</th><th>Fix</th></tr>
+          <tr><td>1</td><td>Clock not 216 MHz</td><td>Clock Config → set HCLK=216</td></tr>
+          <tr><td>2</td><td>Timer no interrupt</td><td>Used <code>Start_IT</code> not <code>Start</code>?</td></tr>
+          <tr><td>3</td><td>Callback never fires</td><td>NVIC enabled in CubeMX? Name exact?</td></tr>
+          <tr><td>4</td><td>ADC reads garbage</td><td>Call <code>PollForConversion</code> before <code>GetValue</code></td></tr>
+          <tr><td>5</td><td>PWM no output</td><td>Called <code>HAL_TIM_PWM_Start()</code>?</td></tr>
+          <tr><td>6</td><td>PWM on PA2</td><td>Conflict with UART2 — use <strong>PB10</strong></td></tr>
+          <tr><td>7</td><td>LCD shows nothing</td><td>Called <code>ILI9341_Init()</code> first?</td></tr>
+          <tr><td>8</td><td>AM2320 timeout</td><td>NACK on wake = normal, ignore it</td></tr>
+          <tr><td>9</td><td>sprintf crash/empty</td><td>Missing <code>#include &lt;stdio.h&gt;</code></td></tr>
+          <tr><td>10</td><td>Code disappeared</td><td>Was it outside USER CODE blocks?</td></tr>
+          <tr><td>11</td><td>Numbers ghost on LCD</td><td>Draw WHITE rect over old value first</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-t">📋 Callback Names (EXACT spelling)</div>
+      <div class="block-b">
+        <pre>/* Timer overflow */
+void HAL_TIM_PeriodElapsedCallback(
+  TIM_HandleTypeDef *htim) {
+  if (htim->Instance == TIM1) { }
+  if (htim->Instance == TIM2) { }
+}
+
+/* Button / EXTI */
+void HAL_GPIO_EXTI_Callback(
+  uint16_t GPIO_Pin) {
+  if (GPIO_Pin == GPIO_PIN_13) { }
+}
+
+/* ADC DMA half done */
+void HAL_ADC_ConvHalfCpltCallback(
+  ADC_HandleTypeDef* hadc) {
+  if (hadc->Instance == ADC1) { }
+}
+
+/* ADC DMA fully done */
+void HAL_ADC_ConvCpltCallback(
+  ADC_HandleTypeDef* hadc) {
+  if (hadc->Instance == ADC1) { }
+}</pre>
+        <div class="warn">These are weak functions in HAL. Define same name in main.c → overrides. Wrong spelling = never called.</div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-t">⚙️ UART Printf + sprintf Patterns</div>
+      <div class="block-b">
+        <pre>char buf[128];
+int n;
+
+/* Basic */
+n = sprintf(buf,"Hello\r\n");
+HAL_UART_Transmit(&huart3,
+  (uint8_t*)buf, n, 100);
+
+/* Numbers */
+n = sprintf(buf,
+  "ADC=%lu V=%.2f\r\n", adc, v);
+
+/* MM:SS clock (overwrite line) */
+n = sprintf(buf,
+  "%02lu:%02lu\r", ms/60000,
+  (ms%60000)/1000);
+
+/* Temperature */
+n = sprintf(buf,
+  "T=%.1fC H=%.1f%%\r\n", t, h);</pre>
+        <hr>
+        <p class="fw7">Format codes:</p>
+        <table>
+          <tr><td><code>%lu</code></td><td>uint32_t</td></tr>
+          <tr><td><code>%d</code></td><td>int</td></tr>
+          <tr><td><code>%.1f</code></td><td>float 1 decimal</td></tr>
+          <tr><td><code>%02lu</code></td><td>zero-padded 2 digits</td></tr>
+          <tr><td><code>%%</code></td><td>literal % sign</td></tr>
+          <tr><td><code>\r</code></td><td>overwrite same line</td></tr>
+          <tr><td><code>\r\n</code></td><td>new line</td></tr>
+        </table>
+        <hr>
+        <p class="fw7" style="margin-top:4px;">HAL one-liners:</p>
+        <pre>HAL_Delay(ms);
+HAL_GetTick();          /* ms since boot */
+HAL_GPIO_TogglePin(Port,Pin);
+HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_3);
+__HAL_TIM_SET_COMPARE(&htim2,
+  TIM_CHANNEL_3, ccr_val); /* 0–ARR */</pre>
+      </div>
+    </div>
+
+  </div><!-- /bottom -->
+
+</div><!-- /page -->

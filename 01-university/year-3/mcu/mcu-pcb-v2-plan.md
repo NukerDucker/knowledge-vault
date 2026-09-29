@@ -14,6 +14,49 @@ and add the features needed for the full multi-board architecture.
 See [[mcu-stm32-handoff]] for open items inherited into this plan.
 See [[mcu-stm32-project]] for project schedule.
 
+## File Paths
+
+| File | Path |
+|---|---|
+| KiCad project | `~/Documents/University/Year-3/Microcon/synth/syth_mcu/syth_mcu.kicad_pro` |
+| PCB | `~/Documents/University/Year-3/Microcon/synth/syth_mcu/syth_mcu.kicad_pcb` |
+| Main schematic | `~/Documents/University/Year-3/Microcon/synth/syth_mcu/syth_mcu.kicad_sch` |
+| Sub-sheets | `power.kicad_sch`, `dac-pchannel.kicad_sch`, `MuxAnalog.kicad_sch` (same dir) |
+| Hotswap library | `~/Documents/University/Year-3/Microcon/synth/libs/` (kiswitch + marbastlib) |
+| Analysis outputs | `syth_mcu/analysis/` (gitignored, manifest tracked) |
+| Git repo | `~/Documents/University/Year-3/Microcon/synth/` · branch `1.9` |
+
+> Note: `STM32Synth-main/kicad/` is the old/inactive copy — PCB is empty there. Active work is in `synth/syth_mcu/`.
+
+---
+
+## Review Findings — 2026-09-25 (automated, branch 1.9)
+
+### ✅ Fixed this session
+- **SW1–SW6 hotswap footprint** → `PCM_marbastlib-mx:SW_MX_HS_KS-2P02B01-01_1u` (Gateron KS-2P02 correct match)
+- **J4↔J7 pins 1–4 routed** — Net-(J4-Pin_1..4) connecting J4.1–4 to J7.13–16
+- Committed `6c733ac` on branch `1.9`
+
+### 🔴 Still blocking fab
+- ~~**U2 not placed**~~ — intentional: BlackPill mounts via headers (XV-001 false positive, ignore)
+- **Routing incomplete** — `routing_complete: False`
+- **LeftConn1 courtyard overhangs board edge 8.09mm** — unfabricable
+- **USB5VFused1 courtyard overhangs board edge 0.32mm**
+- 5V_On1 / D4 / F3 / MCU5VFuse1 / RightConn1 / SW7 / USB1 all <0.35mm from edge
+
+### 🟠 High priority
+- **GND plane (B.Cu) 10 islands** — routing cuts the pour; 54 signals cross splits. Add stitching vias.
+- **3V3 plane 2 islands** — no dedicated pour. Add PWR_FLAG to suppress RS-001.
+- **U4 (AMS1117-3.3) 0 thermal vias** on 71mm² tab pad — min 35 recommended; will overheat
+- **Annular ring 0.1mm** — needs advanced process tier (JLCPCB standard min 0.125mm)
+- ~~**Only 6 MX switches**~~ — 6 keys by design (one octave per board), not missing
+
+### 🟡 Warnings
+- 7× via-in-pad untented (D2, D4, D7–D11, SW10, SW13, USB1)
+- J7 connector no ground pins (16-pin)
+- U5 MISO pin no pull-up resistor
+- Courtyard overlaps: 5V_On1 ↔ GND2 and USB5VFused1
+
 ---
 
 ## 🔴 Critical Fixes (blocks functionality)
@@ -105,7 +148,11 @@ Do in this order to minimise re-spins:
 - [ ] Verify track widths vs JLCPCB minimums
 - [ ] Full DRC — target 0 errors
 - [ ] Decide board name
-- [ ] Add MPNs to all BOM parts
+- [ ] Add MPNs to all BOM parts (0/35 currently — pre-fab blocker SS-001)
+- [ ] Fix edge clearance violations (LeftConn1, USB5VFused1, 7 others)
+- [ ] Add thermal vias to U4 AMS1117 tab pad (target ≥35)
+- [ ] Stitch GND pour islands — add vias where B.Cu routing cuts GND plane
+- [ ] Check annular ring size vs JLCPCB process tier
 - [ ] Send Gerbers to JLCPCB (order 5 boards)
 
 ---

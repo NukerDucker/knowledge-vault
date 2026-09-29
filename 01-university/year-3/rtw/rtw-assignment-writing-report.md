@@ -1,7 +1,7 @@
 ---
 title: RTW Assignment - Writing Report + In-Class Presentation
 tags: [rtw, assignment]
-status: active
+status: submitted
 due: 2026-09-24
 points: 8
 subject: rtw
@@ -61,7 +61,7 @@ Present the content of your report in class on **22 Oct 2026, 9:00–11:30**.
 ## My Draft (Case 2)
 
 **Case:** Late Attendance Report (student no. 12 → last digit 2)
-**Status:** Final — 9-section format (matches sample), ai-check Likely Human
+**Status:** Final — 9-section format (matches sample), ai-check Likely Human (High confidence), napaul-voice applied, trimmed to ~220 words, docx updated 2026-09-24
 
 ---
 
