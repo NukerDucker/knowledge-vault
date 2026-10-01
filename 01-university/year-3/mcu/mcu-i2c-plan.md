@@ -35,7 +35,7 @@ int16_t  baseline[8][12];      // boot-cal rest values
 int16_t  prev_keys[8][12];     // previous tick snapshot
 KeyState key_state[8][12];     // IDLE or PRESSED
 int16_t  key_velocity[8][12];  // locked on note-on
-uint32_t last_update_tick[8];  // stale detection
+// last_update_tick removed — stale_check dropped, I2C error handles absence
 ```
 
 S=0 → C0, S=7 → C7 (full 8-octave range). Flat key ID: `key_id = (s * 12) + k`.
@@ -53,8 +53,33 @@ void process_keys(VoiceManager *vm,
 - `key_id = (slave_index * 12) + key_index` — flat uint16_t
 - Mind side: derive frequency from `key_id` inside note_on wrapper (no freq on wire)
 - `note_on` returns 0 = voice pool full or duplicate key_id
-- Callbacks wrapped in `__disable_irq`/`__enable_irq` — audio ISR reads VoiceManager concurrently
+- `note_off` callback sets `voice.state = RELEASING` only — single aligned-word write, atomic on Cortex-M, no IRQ disable needed here
+- `__disable_irq`/`__enable_irq` needed only in `voice_manager_update()` if freeing a voice resets multiple fields simultaneously
 - Max slaves: **8** — addresses 0x10–0x17
+
+## Note-off model (updated 2026-09-30)
+
+`note_off` is a **request**, not an immediate voice free. Voice stays alive through ADSR release tail.
+
+- `note_off_cb(vm, key_id)` → marks voice `RELEASING`
+- `voice_manager_update(vm)` runs in main loop each tick, scans for voices where `state == RELEASING && adsr_is_idle()` → frees them
+- `adsr_is_idle()`: amplitude < epsilon OR envelope stage == IDLE (Putt's ADSR module must expose this)
+- IRQ disable only if freeing resets multiple fields:
+
+```c
+void voice_manager_update(VoiceManager *vm) {
+    for each voice:
+        if (voice.state == RELEASING && adsr_is_idle(&voice.adsr)) {
+            __disable_irq();
+            voice.state = FREE;   // + any other field resets
+            __enable_irq();
+        }
+}
+```
+
+If freeing is just `voice.state = FREE`, no critical section needed (single aligned write = atomic).
+
+**Pending:** coordinate `adsr_is_idle()` API with Putt before implementing `voice_manager_update()`.
 
 ## Velocity (updated 2026-09-29)
 
@@ -86,9 +111,15 @@ note_off(s, k);
 3. Scan 0x10–0x15 → count responding slaves
 4. Enter 10ms poll loop
 
-## Stale detection
+## Slave absence handling (updated 2026-09-30)
 
-If slave silent >30ms → zero its `keys[][]` row (release all notes).
+`scan_slaves()` removed — no boot discovery needed.
+`stale_check()` + `last_update_tick[8]` removed — keys held seconds; frozen row is acceptable.
+
+`poll_slaves()` always tries all 8 (0x10–0x17). On `HAL_I2C_Master_Receive` error:
+- Zero `keys[s][]`
+- Call `note_off` for any `KEY_PRESSED` on that slave
+- I2C timeout = slave absence signal; no separate tracking needed.
 
 ## Implementation order
 
@@ -100,21 +131,37 @@ If slave silent >30ms → zero its `keys[][]` row (release all notes).
 6. ~~Stale detection~~ ✅ 2026-09-25
 7. ~~Wire `note_on` / `note_off` to synth engine~~ ✅ 2026-09-25
 
-**Phase 2 — VoiceManager integration (pending approval):**
-8. New branch `feat/i2c-integrate` off `origin/waveform-gen`; cherry-pick `82da076`
-9. API update: MAX_SLAVES→8, process_keys new sig, time-based velocity, drop g_active_freq
-10. Pin abstraction: `#define` block for all GPIO/ADC pins (V1/V2 swappable)
-11. IOC fix: add PA0 GPIO_Out, PA7 TIM3_CH2
-12. main.c: wire VoiceManager into audio ISR + callbacks into process_keys
+**Phase 2 — VoiceManager integration:**
+8. ~~New branch `feat/i2c-integrate` off `origin/waveform-gen`; cherry-pick `82da076`~~ ✅ 2026-09-29
+9. ~~API update: MAX_SLAVES→8, process_keys new sig, time-based velocity, drop g_active_freq~~ ✅ 2026-09-29
+10. ~~Pin abstraction: `#define` block for all GPIO/ADC pins (V1/V2 swappable)~~ ✅ 2026-09-29
+11. ~~IOC fix: add PA0 GPIO_Out, PA7 TIM3_CH2~~ ✅ 2026-09-29
+12. ~~main.c: wire VoiceManager into audio ISR + callbacks into process_keys~~ ✅ 2026-09-29
+
+**Pending Mind:**
+13. Swap `stub_note_on` → real `voice_manager_note_on` wrapper (sig: `uint8_t fn(VoiceManager*, uint16_t key_id, uint8_t vel)`) in `process_keys()` call in `main.c`
+
+**Pending Putt:**
+14. Add ADSR fields to `WaveformConfig` in `waveform.h` → Nuker wires `controls.c` ch 2–11
 
 ## Implementation notes
 
-**Branch:** `feat/i2c-comms` — pushed to `origin/feat/i2c-comms` (push-blocked note in memory was stale)
+**Branches:**
+- `feat/i2c-comms` — original I2C layer (pushed to origin)
+- `feat/i2c-integrate` — **active branch**, cherry-picked onto `origin/waveform-gen`, pushed 2026-09-29. All Phase 2 complete.
 
-**Files created:**
-- `STM32/Core/Inc/synth_comms.h` + `Src/synth_comms.c` — master/slave logic, IS_MASTER guard
-- `STM32/Core/Inc/mux_adc.h` + `Src/mux_adc.c` — HC4067 mux_read(), uses CubeMX hadc1
+**Files created/updated (feat/i2c-integrate):**
+- `STM32/Core/Inc/synth_comms.h` + `Src/synth_comms.c` — master/slave logic, IS_MASTER guard, VoiceManager callbacks, time-based velocity
+- `STM32/Core/Inc/mux_adc.h` + `Src/mux_adc.c` — `mux_adc_init()` + `mux_read()`, channel configured once at startup
+- `STM32/Core/Inc/controls.h` + `Src/controls.c` — pots via mux (ch 0–1 wired, ch 2–11 stubbed), debounced buttons PB0/PB1
+- `STM32/Core/Inc/audio_out.h` + `Src/audio_out.c` — TIM3 CCR1/CCR2 DAC, 48kHz TIM4 ISR using `voice_manager_get_sample`
 - `STM32/Core/Src/i2c.c` / `adc.c` / `i2c.h` / `adc.h` — CubeMX-generated
+- `STM32/STM32.ioc` — merged: PA0–PA3 mux GPIO, PA4 ADC_IN4, PA6/PA7 TIM3, PB0/PB1 input, PB6/PB7 I2C1 Fast Mode
+
+**Ponytail review fixes (2026-09-29):**
+- `init_slave()`: added `HAL_I2C_DeInit` before re-init (safe OwnAddress1 override post-CubeMX)
+- `HAL_I2C_ErrorCallback`: clears AF/BERR/ARLO/OVR flags before re-enabling listen (prevents error loop)
+- `mux_adc_init()`: ADC channel configured once at startup, not on every `mux_read` call
 
 **Confirmed pins (from syth_mcu schematic):**
 - I2C1: PB6 (SCL), PB7 (SDA) — AF4, Open-Drain
