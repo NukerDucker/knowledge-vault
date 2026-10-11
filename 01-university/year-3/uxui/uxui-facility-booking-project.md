@@ -2,11 +2,12 @@
 title: "UX/UI Project: KMITL Campus Facility Booking System"
 tags:
   - university
-  - uxui
   - group-work
   - project
 status: active
+due: 2026-10-19
 subject: uxui
+course: 01276545
 ---
 
 # KMITL Campus Facility Booking System
@@ -156,7 +157,17 @@ deadline), and can be disabled entirely.
 
 **Submission:** PDF export from Figma. Assignment says capture in sections if too small to read.
 
-**Next step:** → [[uxui-usability-test]] (hi-fi prototype + UT, due 2026-10-05)
+**Next step:** Hi-fi prototype → [[uxui-usability-test]] (UT with 5 participants, due 2026-10-05)
+
+---
+
+## Hi-fi Prototype — Final Submission (2026-10-06)
+
+The full prototype specification — screens, node ids, and build order — now lives in
+[[uxui-prototype-reference]]. It describes the 2026-10-06 file state and was superseded in part by
+the 2026-10-10 fix batch ([[uxui-prototype-buglist-2026-10-10]]).
+
+Project-wide status: [[uxui-project-state]].
 
 ---
 

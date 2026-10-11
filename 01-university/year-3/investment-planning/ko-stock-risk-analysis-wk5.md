@@ -1,7 +1,8 @@
 ---
 title: Stock Risk Analysis — Coca-Cola (Wk 5 Worksheet)
-tags: [investment-planning, stock, risk-analysis, coca-cola]
+tags: [finance]
 status: stable
+course: 96643026
 created: 2026-08-06
 ---
 

@@ -1,10 +1,11 @@
 ---
 title: RTW — Writing Reports + Work Presentations Assignments
-tags: [university, assignment, rtw]
-status: active
+tags: [university, assignment, workplace-english]
+status: submitted
 created: 2026-09-14
 due: 2026-09-24
 subject: rtw
+course: 96642162
 points: —
 ---
 
@@ -45,13 +46,20 @@ Both assignments given on 17 Sep. Submit both by 24 Sep 22:00.
 | 17 Sep | Lecture: Writing Reports + Work Presentations |
 | 24 Sep | Work session — no lecture; assignment deadline 22:00 |
 | 1 Oct | Lecture: Positive/Negative Thinking + Teamwork Management (no assignment) |
-| 8 Oct | **Final test** — 4 topics, 20 pts |
+| 8 Oct | Presentation delivered (online) — both assignments submitted 24 Sep |
+| 22 Oct | **Final exam** — 4 topics, 20 pts (Thu) |
 
-### Final Test Topics (8 Oct, 20 pts)
+## Status — assignments closed 2026-09-24
+
+Both assignments (writing report + work presentation) submitted to MS Teams. In-class presentation done — no video clip, no further in-class presentation.
+
+**Remaining for this course:** final exam only — Thu 2026-10-22 (15 Oct is a special holiday). See [[semester-schedule-2026]].
+
+### Final Exam Topics (22 Oct, 20 pts)
 
 1. Positive & negative thinking
 2. Teamwork management
 3. Writing reports
 4. Work presentations
 
-> ⚠️ Instructor: most absences not accepted for this test. It follows the normal schedule.
+> ⚠️ Instructor: most absences not accepted for this exam.

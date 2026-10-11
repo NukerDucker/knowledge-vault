@@ -1,6 +1,6 @@
 ---
 title: Knowledge Operating System — Architecture
-tags: [meta, kos, architecture]
+tags: [meta, kos]
 status: draft
 created: 2026-08-25
 ---

@@ -1,6 +1,6 @@
 ---
 title: KMITL University Rules & Regulations Summary
-tags: [kmitl, university, rules, regulations, computer-engineering, international-program]
+tags: [kmitl, university]
 status: active
 created: 2026-06-17
 source: NotebookLM (KMITL University Rules & Regulations notebook)

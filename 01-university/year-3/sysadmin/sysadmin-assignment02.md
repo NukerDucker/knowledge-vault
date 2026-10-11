@@ -1,14 +1,19 @@
 ---
 title: SysAdmin Assignment 02 — Basic Linux Server Config
-tags: [sysadmin, linux, assignment, kmitl]
+tags: [assignment, kmitl]
 status: active
-updated: 2026-09-27
-due: 2026-09-30
+updated: 2026-10-09
+due: TBA
 points: 15
 subject: sysadmin
+course: 01276521
 ---
 
 # SysAdmin Assignment 02 — Basic Linux Server Config
+
+> **2026-10-09 — merged into Assignment 03.** This assignment is no longer
+> separately due; it is folded into A03, whose brief will be announced later.
+> `due:` is `TBA` until that brief lands.
 
 **Course:** 01276521 Practice of System Administration  
 **Weight:** 15% of total score  

@@ -1,7 +1,8 @@
 ---
 title: OS Case Study 1 — Benchmark Comparison
-tags: [university, os]
+tags: [university]
 status: stable
+course: 01276324
 ---
 
 # OS CaseStudy01 — Full Benchmark + Comparison

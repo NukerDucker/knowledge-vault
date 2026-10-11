@@ -1,6 +1,6 @@
 ---
 title: NaCL CE Cloud Infrastructure Planning
-tags: [nacl, networking, cloudstack, infrastructure, mikrotik, dgx]
+tags: [nacl]
 status: active
 updated: 2026-09-06
 ---

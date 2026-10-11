@@ -2,6 +2,7 @@
 title: Rome Pathfinding — Assignment Brief
 tags: [university, ai, assignment]
 status: active
+course: 01276342
 ---
 
 

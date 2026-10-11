@@ -1,9 +1,10 @@
 ---
 title: MCU Modular Synth — Design Handoff
-tags: [mcu, stm32, synth, hardware, handoff]
+tags: [stm32, synth, hardware]
 status: active
 updated: 2026-08-30
 subject: mcu
+course: 01276314
 ---
 
 # MCU Modular Synth — Design Handoff

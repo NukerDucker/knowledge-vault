@@ -1,6 +1,6 @@
 ---
 title: CEI Study Plan — Road to CEI Graduate
-tags: [university, cei, kmitl, study-plan, degree-progress]
+tags: [university, kmitl]
 status: active
 created: 2026-06-22
 ---
@@ -93,7 +93,7 @@ Computer Engineering (CEI), KMITL. Degree progress tracker.
 | Required | 01276324 | Operating Systems                               | 3   |
 | Required | 01276342 | Artificial Intelligence                         | 3   |
 | Elective | 01276521 | Practice of System Administration               | 3   |
-| Elective | 01276551 | UX/UI                                           | 3   |
+| Elective | 01276545 | UX/UI                                           | 3   |
 | Elective | 96642162 | Ready to Work                                   | 3   |
 | Elective | 96643026 | Investment Planning                             | 3   |
 | Elective | 0100655  | Practice Under Personal & Professional Skills 1 | 1   |

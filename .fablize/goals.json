@@ -1,0 +1,13 @@
+{
+ "brief": "UXUI individual UT submission for Napaul, on the KMITL-BApp Figma file bhuuET1PKmzZSGMkVr2de7, responsible UI task screens S6-S10 (Select Date and Time, Booking Details Empty, Booking Details Filled, Upload Documents Empty, Upload Documents Uploaded, Review Booking, Booking Submitted). Prep work: define test objectives and hypotheses; prepare scenarios and tasks for the usability testing; get the flow and prototype ready for testing; assign roles to group members; run the UT for each scheduled round; record data and observations from participants in the template. Then the eight graded deliverables: (1) brief profile of the five test participants, using pseudonyms; (2) summarise the feedback from each participant; (3) show all UI screens for the responsible task, including how the grid and pattern design were set; (4) capture every page with the grid setting visible, as a PDF; (5) a second PDF containing each page separately with no grid; (6) compare before and after of the UI improvements, framing or highlighting each improved point, where one page may carry more than one point; (7) a brief explanation of the reasons and details of each improvement; (8) submit the updated and finalised Figma link. Important: sixteen fixes landed in the Figma file on 2026-10-10, so any screenshots, PDFs or before-after pairs produced earlier are stale and must be regenerated from the current file. If fewer than five improvement points can be reached, future designs or written explanations are acceptable per the brief. Carry-over that must not be lost: GX_FinalReport.pdf and GX_FinalPresentation.pdf for the UXUI 2026 final exam, Group 2 Mookrata, KMITL-BApp, remain owed and are due 2026-10-19.",
+ "created": "2026-10-10T10:52:54.586227+00:00",
+ "goals": [
+  {
+   "id": "G001",
+   "title": "UXUI individual Usability Test submission",
+   "objective": "Produce the graded individual UT submission for Napaul covering screens S6-S10 of the KMITL-BApp prototype, regenerated from the current Figma file",
+   "status": "in_progress",
+   "evidence": null
+  }
+ ]
+}

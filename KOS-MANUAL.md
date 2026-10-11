@@ -1,6 +1,6 @@
 ---
 title: Knowledge Operating System — User Manual
-tags: [meta, kos, manual]
+tags: [meta, kos]
 status: draft
 created: 2026-08-25
 ---

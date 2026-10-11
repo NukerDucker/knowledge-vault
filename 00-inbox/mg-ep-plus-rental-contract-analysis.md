@@ -1,7 +1,7 @@
 ---
 title: MG EP Plus Rental Contract Analysis
 date: 2026-09-07
-tags: [legal, contract, vehicle, rental]
+tags: [legal]
 status: review
 ---
 

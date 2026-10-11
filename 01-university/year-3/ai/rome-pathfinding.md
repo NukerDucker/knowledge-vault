@@ -2,16 +2,16 @@
 title: Rome Pathfinding — AI Assignment
 tags:
   - university
-  - year-3
   - ai
   - project
   - assignment
 status: active
 created: 2026-08-06
-updated: 2026-08-21
+updated: 2026-10-01
 due: 2026-10-13
 points: 50%
 subject: ai
+course: 01276342
 feature: 01-university/year-3/ai/slide-08-base.png
 thumbnail: thumbnails/resized/7f9edaff924e9be220a749e8bc707fc8_86cf658e.webp
 ---
@@ -26,14 +26,46 @@ thumbnail: thumbnails/resized/7f9edaff924e9be220a749e8bc707fc8_86cf658e.webp
 
 *Session log and git state → [[rome-pathfinding-log]]*
 
-## Implementation status (2026-08-21)
+## Implementation status (2026-10-01)
 
 - ✅ Heuristic fully implemented — LP+ALT combined, mean h/road 0.986
 - ✅ All 9 algorithms wired and self-checked
 - ✅ UI complete — bento two-lane, heatmap, click-to-landmark, toolbar
 - ✅ Docs updated — `README.md` and `HEURISTIC_GUIDE.md` reflect current state
-- ⏳ Slides — 4/5 evidence slides captured, slide-2 (motivation) pending
-- ⏳ YouTube video + final Vercel URL
+- ✅ Slides — 4/5 evidence slides captured, slide-2 (motivation) pending
+- ⏳ UI rework in progress (friends doing UXUI polish)
+- ⏳ YouTube video — Manim animation rendered, needs voiceover + DaVinci editing
+- ⏳ Final Vercel URL
+
+## Video production (2026-10-01)
+
+**Manim animation repo:** `~/Code/romania-video` (github.com/ttithipan/romania-video)
+**Rendered clips:** `media/chapters/ch_00.mp4` → `ch_27.mp4` — 28 chapters, 1080p60, silent
+**Narration script:** `narration.md` in repo + `01-university/year-3/ai/romania-video-script.md`
+**Timeline JSON:** `timeline.json` in repo — chapter start times for DaVinci sync
+
+### What the animation covers (28 chapters, ~9 min silent)
+Journey intro → route comparison → UCS live trace (g labels + frontier panel) → UCS proof → UCS waste → A* intro → admissibility → LP heuristic → LP proof → landmark (camera zoom) → triangle inequality → LP+ALT combine → ensemble → admissibility scatter → tightness → landmark count → exact estimates → consistency → A* live trace (g/f labels) → expansion bars → per-city coverage → savings scatter → optimality table → optimality proof → bidirectional trace → stopping problem (camera zoom) → stopping condition → final metrics
+
+### Visual improvements made (vs original)
+- `MovingCameraScene`: zoom on Giurgiu (ch_09), zoom on Sibiu/Pitesti fork (ch_25)
+- Cost labels live on nodes during search: cyan while waiting, purple when settled
+- A* trace shows both g (purple) and f (green) per node
+- Frontier panel (top-5 sorted, right side) updates each step in UCS and A*
+- All `say()` captions trimmed to 2–6 words (narration goes in DaVinci)
+- Chapter counter removed from top-left
+
+### DaVinci workflow
+1. Import all 28 clips in order (named `ch_00`–`ch_27`)
+2. Align narration audio to chapter timestamps from `narration.md`
+3. Add cold open, music bed, sfx, end card
+4. Screen-record web app demo (~2–3 min) and splice in after ch_18 or at end
+
+### Still needed
+- Record or generate narration voice (script in `narration.md` / `rome-video-script.md`)
+- UI rework freeze → screen-record app demo
+- DaVinci edit → export → YouTube upload
+- Submit YouTube link + web app URL + GitHub link via Google Form
 
 ---
 

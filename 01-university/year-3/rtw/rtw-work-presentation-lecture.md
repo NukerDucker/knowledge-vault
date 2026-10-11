@@ -1,7 +1,8 @@
 ---
 title: RTW - Work Presentation (Lecture Notes)
-tags: [rtw, lecture, presentation, workplace-english]
+tags: [workplace-english]
 status: stable
+course: 96642162
 ---
 
 # Work Presentation

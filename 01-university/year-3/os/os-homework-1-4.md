@@ -1,10 +1,11 @@
 ---
 title: OS Homework 1–4
-tags: [university, assignment, os]
+tags: [university, assignment]
 status: submitted
 created: 2026-07-24
 due: 2026-08-06
 subject: os
+course: 01276324
 ---
 
 # OS Homework 1–4

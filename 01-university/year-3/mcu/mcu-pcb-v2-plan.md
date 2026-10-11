@@ -1,9 +1,10 @@
 ---
 title: PCB V2 — Change Plan
-tags: [mcu, stm32, hardware, pcb, v2]
+tags: [stm32, hardware]
 status: active
 created: 2026-09-14
 subject: mcu
+course: 01276314
 ---
 
 # PCB V2 — Change Plan

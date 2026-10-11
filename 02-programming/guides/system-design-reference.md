@@ -1,6 +1,6 @@
 ---
 title: System Design Interview — Reference
-tags: [programming, system-design, reference, vendored]
+tags: [programming]
 status: stable
 created: 2026-08-26
 ---

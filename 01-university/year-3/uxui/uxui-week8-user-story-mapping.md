@@ -1,10 +1,8 @@
 ---
 title: Week 8 — User Story Mapping
 tags:
-  - uxui
   - assignment
   - group-work
-  - user-story-mapping
 status: submitted
 created: 2026-09-01
 updated: 2026-09-03
@@ -14,6 +12,7 @@ type: group-work
 submit: G2_UserStory.pdf
 team: G2
 subject: uxui
+course: 01276545
 ---
 
 # Week 8 Assignment — User Story Mapping

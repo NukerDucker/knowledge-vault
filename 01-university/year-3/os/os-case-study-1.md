@@ -2,14 +2,13 @@
 title: OS Case Study 1 — Multithreading
 tags:
   - university
-  - os
   - group-work
-  - threads
 status: submitted
 created: 2026-08-08
 due: 2026-08-14
 points: 65%
 subject: os
+course: 01276324
 ---
 
 # OS Case Study 1 — Multithreading

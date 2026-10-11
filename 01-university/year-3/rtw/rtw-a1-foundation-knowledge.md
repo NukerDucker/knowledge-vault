@@ -1,10 +1,11 @@
 ---
 title: RTW A1 — Foundation Knowledge for New Graduates
-tags: [university, assignment, rtw]
+tags: [university, assignment, workplace-english]
 status: submitted
 created: 2026-07-26
 due: 2026-08-06
 subject: rtw
+course: 96642162
 ---
 
 # RTW A1 — Foundation Knowledge for New Graduates

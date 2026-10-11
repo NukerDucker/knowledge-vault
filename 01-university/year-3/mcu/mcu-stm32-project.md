@@ -1,11 +1,12 @@
 ---
 title: Modular Synthesizer — Piano Project
-tags: [mcu, stm32, hardware, synth, piano]
+tags: [stm32, hardware, synth]
 status: in-progress
 created: 2026-08-23
-due: 2026-10-09
+due: 2026-10-28
 points: 100
 subject: mcu
+course: 01276314
 ---
 
 # Modular Synthesizer — Piano Project
@@ -27,8 +28,10 @@ subject: mcu
 
 ## Schedule
 
-**Next up: proposal, 2026-09-08.** `due:` tracks the nearest open deadline, not
+**Next up: submission, 2026-10-28.** `due:` tracks the nearest open deadline, not
 the final one — update it as each passes so `HOME.md` shows what is actually next.
+
+> [!warning] Revised 2026-10-10 — submission block moved Oct 21 → **Oct 28** ("MicroCon Project submission Due: 28/10/26"). All three Oct 21 deliverables shifted together. Late penalty unchanged: −10 pts/day.
 
 | Deadline | Item | Weight |
 |---|---|---|
@@ -37,9 +40,9 @@ the final one — update it as each passes so `HOME.md` shows what is actually n
 | ~~Sept 23~~ | ~~Progress report~~ — submitted ✅ | 10 pts |
 | Oct 7 | Answer questions, in class or online | — |
 | Oct 9 | Progress report submission | — |
-| Oct 21 | Demonstrate the project | 60 pts |
-| Oct 21 | Report + demo clip + code — [form](https://forms.gle/n2s17x8d1tJonu2b9) | 20 pts |
-| Oct 21 | Return all lab equipment | — |
+| ~~Oct 21~~ | ~~Demonstrate the project~~ → **Oct 28** | 60 pts |
+| ~~Oct 21~~ | ~~Report + demo clip + code~~ → **Oct 28** — [form](https://forms.gle/n2s17x8d1tJonu2b9) | 20 pts |
+| ~~Oct 21~~ | ~~Return all lab equipment~~ → **Oct 28** | — |
 
 **Penalty: −10 points per day, applied after *each* deadline.** With the proposal
 worth only 10, two days late on it is worth zero — the deadline matters more than

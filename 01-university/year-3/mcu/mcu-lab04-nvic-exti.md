@@ -1,9 +1,10 @@
 ---
 title: Lab 04 — NVIC and EXTI
-tags: [mcu, stm32, nvic, exti, interrupt, lab]
+tags: [stm32, lab]
 status: active
 updated: 2026-08-26
 subject: mcu
+course: 01276314
 ---
 
 # Lab 04 — NVIC and EXTI

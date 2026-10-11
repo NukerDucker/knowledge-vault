@@ -67,16 +67,18 @@ _meta/                            rules, templates, check.sh
 
 01-university/
   assignments-tracker.md          hub for all deadlines and status
-  courses/                        semester schedule, degree/study plans
+  courses/                        course registry, semester schedule, degree plans
   regulations/                    university rules, CEI regulations
+  nacl/                           NACL company engagement — not a course
   year-3/
-    ai/                           Artificial Intelligence
+    ai/                           Artificial Intelligence · 01276342
       assets/                     embedded diagrams and sources
-    mcu/                          Microcontroller Interfacing
-    os/                           Operating Systems
-    rtw/                          Ready to Work
-    uxui/                         UX/UI Design
-    investment-planning/          Investment Planning
+    mcu/                          Microcontroller Interfacing · 01276314
+    os/                           Operating Systems · 01276324
+    sysadmin/                     Practice of System Administration · 01276521
+    rtw/                          Ready to Work · 96642162
+    uxui/                         User Experience and User Interface Design · 01276545
+    investment-planning/          Investment Planning · 96643026
 
 02-programming/
   guides/                         dev reference guides
@@ -106,8 +108,9 @@ dependency on archived material. Everything the hub *points at* stays frozen.
 
 | Content | Path |
 |---|---|
-| Assignment note | `01-university/year-3/<subject>/` |
+| Assignment note | `01-university/year-<N>/<subject>/` |
 | Assignment tracker | `01-university/assignments-tracker.md` |
+| Course code ↔ folder | `01-university/courses/course-registry.md` |
 | Semester schedule, study plan | `01-university/courses/` |
 | University regulations | `01-university/regulations/` |
 | Diagram or screenshot a note embeds | `<subject>/assets/` |
@@ -160,8 +163,14 @@ status: active | stable | submitted | archived
 
 `updated:` only on `active` notes. On finished notes it is date churn.
 
-Assignment notes additionally carry `due:` (ISO date or `TBA`), `points:`, and
-`subject:`. **These are the source of truth for the tracker.**
+Assignment notes additionally carry `due:` (ISO date or `TBA`), `points:`,
+`subject:` and `course:`. **These are the source of truth for the tracker.**
+
+`subject:` is the **folder key** (`uxui`, `mcu`) — the tracker groups by it.
+`course:` is the **registrar code** (`01276545`) — what the university, the
+Calendar event, and any submission portal use. Codes are defined in exactly one
+place, `01-university/courses/course-registry.md`. `check.sh` enforces that every
+`subject:` matches a folder and every `course:` matches a registry row.
 
 ### Status vocabulary
 
@@ -197,7 +206,8 @@ problem deserves.
 **Deadlines also go on Google Calendar.** A new assignment note or a new
 hand-maintained row is not done until the matching event exists on the
 `CEI Courses` calendar: all-day, free, title `<Subject> — <Assignment>`,
-description carrying subject code, points, and the vault note path.
+description carrying the `course:` code (from `courses/course-registry.md`),
+points, and the vault note path.
 Reminders 1 day before; 7 days as well for anything ≥ 50 points. Check the
 date range first — do not create a duplicate — and skip anything already
 `✅ submitted`. The vault records the deadline; the calendar is what actually
@@ -268,11 +278,25 @@ AI-assisted now.
 ## Tags
 
 Cross-cutting topics only. If a tag matches exactly one folder, delete it — the
-folder already says it. Keep the list under twenty, and merge anything used
-fewer than three times at the yearly review.
+folder already says it. Merge anything used fewer than three times.
 
-Current: `university` `assignment` `kmitl` `nacl` `ai` `programming` `guide`
-`project` `group-work` `meta` `kos` `dashboard` `tracker`
+Subject tags are **merged, not deleted**: `investment-planning` → `finance`,
+`rtw` → `workplace-english`.
+
+Current (22): `university` `assignment` `group-work` `individual` `project`
+`kmitl` `ai` `programming` `guide` `hardware` `stm32` `adc` `lab` `synth`
+`nacl` `meta` `kos` `dashboard` `tracker` `finance` `workplace-english` `work`
+
+The original cap of twenty was too tight — it did not survive contact with three
+live subject vocabularies (embedded, finance, workplace English). Cap is now
+twenty-five.
+
+Three notes keep a single subject tag because it is their only signal: `legal`,
+`homelab`, `career`. If a fourth appears, the tag is wrong, not the rule.
+
+Applied vault-wide 2026-10-11: 127 distinct tags → 25, across 73 notes. A note
+is never stripped to zero tags — if every tag would go, the first is kept as a
+safety valve.
 
 ---
 
@@ -337,14 +361,19 @@ re-exported images. Do not adopt Git LFS before then.
 
 Symlink: `university-files/` → `~/Documents/University/` (excluded from indexing).
 
-| Subject | Work files |
-|---|---|
-| UX/UI Design | `university-files/Year-3/UXUI/` |
-| Operating Systems | `university-files/Year-3/OS/` |
-| Investment Planning | `university-files/Year-3/Investment Planning/` |
-| Artificial Intelligence | code at `~/Code/rome-pathfinding/` |
-| Microcontroller | `university-files/Year-3/Microcon/` |
-| Ready to Work | `university-files/Year-3/Ready To Work/` |
+| Code | Subject | Work files |
+|---|---|---|
+| `01276545` | UX/UI Design | `university-files/Year-3/UXUI/` |
+| `01276324` | Operating Systems | `university-files/Year-3/OS/` |
+| `96643026` | Investment Planning | `university-files/Year-3/Investment Planning/` |
+| `01276342` | Artificial Intelligence | code at `~/Code/rome-pathfinding/` |
+| `01276314` | Microcontroller Interfacing | `university-files/Year-3/Microcon/` |
+| `01276521` | Practice of System Administration | *(none yet)* |
+| `96642162` | Ready to Work | `university-files/Year-3/Ready To Work/` |
+
+Folder names on disk are the university's, not ours — `Microcon/` is the MCU
+folder, `UXUI/` is UX/UI. `year-<N>/<subject>/` in the vault is the stable key;
+the Documents folder name is whatever the university calls it.
 
 Vault notes reference work files with a `**File:**` path. `check.sh` check 8
 verifies those paths still exist.

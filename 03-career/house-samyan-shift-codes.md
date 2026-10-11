@@ -1,6 +1,6 @@
 ---
 title: House Samyan Shift Codes & Calendar Rules
-tags: [work, house-samyan, calendar, planning]
+tags: [work]
 status: active
 updated: 2026-09-11
 ---

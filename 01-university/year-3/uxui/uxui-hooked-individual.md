@@ -2,9 +2,7 @@
 title: "UX/UI — Hooked Individual Assignment"
 tags:
   - university
-  - uxui
   - individual
-  - hooked
 status: submitted
 created: 2026-08-09
 updated: 2026-08-22
@@ -13,6 +11,7 @@ due: 2026-08-31
 app: Duolingo
 points: 10
 subject: uxui
+course: 01276545
 ---
 
 # Hooked — Individual Assignment (10 pts)

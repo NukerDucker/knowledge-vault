@@ -1,10 +1,11 @@
 ---
 title: Lab 05 — ADC
-tags: [mcu, stm32, adc, dma, lab]
+tags: [stm32, adc, lab]
 status: submitted
 due: 2026-09-08
 updated: 2026-09-05
 subject: mcu
+course: 01276314
 ---
 
 # Lab 05 — ADC

@@ -246,6 +246,45 @@ while read -r line; do
 done < "$TMP/extpaths"
 [ "$EXT_ISSUES" -eq 0 ] && echo "  all external File: paths exist"
 
+# ------------------------------------- 9. subject <-> course <-> folder
+# The registry (01-university/courses/course-registry.md) is the single home
+# for course codes. A note whose subject: disagrees with its folder, or whose
+# course: is not the registry's code for that folder, is a broken row: the
+# tracker still renders, but the note no longer points at a real course.
+head2 "9. subject / course agree with folders and registry"
+COURSE_ISSUES=0
+REG=01-university/courses/course-registry.md
+if [ ! -f "$REG" ]; then
+  err "course registry missing: $REG"; COURSE_ISSUES=1
+else
+  # "| `ai` | `01276342` |" -> "ai 01276342", from the Subject key table only.
+  sed -n '/^## Subject key/,/^## Not courses/p' "$REG" \
+    | awk -F'`' '/^[|] `/ {print $2, $4}' > "$TMP/subjmap"
+  while read -r f; do
+    case "$f" in ./01-university/year-*/*) ;; *) continue ;; esac
+    rest=${f#./01-university/year-*/}
+    folder=${rest%%/*}
+    [ "$folder" = "$rest" ] && continue          # file sits directly under year-N
+    [ "$(head -n1 "$f")" = "---" ] || continue   # no frontmatter: check 3 owns it
+    fm=$(awk 'NR>1{if($0=="---")exit; print}' "$f")
+    subj=$(printf '%s\n' "$fm" | grep -E '^subject:' | head -1 | sed 's/^subject:[[:space:]]*//' | tr -d '"')
+    code=$(printf '%s\n' "$fm" | grep -E '^course:'  | head -1 | sed 's/^course:[[:space:]]*//'  | tr -d '"')
+    if [ -n "$subj" ] && [ "$subj" != "$folder" ]; then
+      err "subject '$subj' does not match folder '$folder' — $f"; COURSE_ISSUES=1
+    fi
+    if [ -z "$code" ]; then
+      warn "no 'course:' — $f"; COURSE_ISSUES=1; continue
+    fi
+    want=$(awk -v k="$folder" '$1==k {print $2; exit}' "$TMP/subjmap")
+    if [ -z "$want" ]; then
+      err "folder '$folder' has no row in the course registry — $f"; COURSE_ISSUES=1
+    elif [ "$code" != "$want" ]; then
+      err "course '$code' != registry '$want' for '$folder' — $f"; COURSE_ISSUES=1
+    fi
+  done < <(vault_md)
+fi
+[ "$COURSE_ISSUES" -eq 0 ] && echo "  every note's subject and course resolve"
+
 # ---------------------------------------------------------------- summary
 head2 "Summary"
 echo "  errors:   $ERRORS"

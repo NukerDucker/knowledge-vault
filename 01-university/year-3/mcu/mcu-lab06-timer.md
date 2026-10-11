@@ -1,9 +1,10 @@
 ---
 title: Lab 06 — Timer
-tags: [mcu, stm32, timer, interrupt, lab]
+tags: [stm32, lab]
 status: active
 updated: 2026-09-09
 subject: mcu
+course: 01276314
 ---
 
 # Lab 06 — Timer

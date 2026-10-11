@@ -1,6 +1,6 @@
 ---
 title: DumbassCPU
-tags: [programming, vhdl, fpga, cpu, hardware, personal-project]
+tags: [programming, hardware]
 status: stable
 ---
 

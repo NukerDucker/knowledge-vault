@@ -9,6 +9,7 @@ created: 2026-09-02
 due: 2026-09-17
 points: 20
 subject: investment-planning
+course: 96643026
 ---
 
 # Report No. 2: Common Stocks / Alternative Investment

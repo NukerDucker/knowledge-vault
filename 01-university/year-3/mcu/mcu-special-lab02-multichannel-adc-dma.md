@@ -1,9 +1,10 @@
 ---
 title: Special Lab 02 — Multichannel ADC with DMA
-tags: [mcu, adc, dma, uart, stm32]
+tags: [adc, stm32]
 status: active
 updated: 2026-09-08
 subject: mcu
+course: 01276314
 ---
 
 # Special Lab 02 — Multichannel ADC with DMA

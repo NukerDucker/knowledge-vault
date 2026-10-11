@@ -1,9 +1,10 @@
 ---
 title: Lab Exam — Cheat Sheet
-tags: [mcu, stm32, exam, cheatsheet, lab]
+tags: [stm32, lab]
 status: active
 updated: 2026-09-28
 subject: mcu
+course: 01276314
 ---
 
 # MCU Lab Exam — Cheat Sheet

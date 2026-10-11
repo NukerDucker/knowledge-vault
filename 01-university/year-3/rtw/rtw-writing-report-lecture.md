@@ -1,7 +1,8 @@
 ---
 title: RTW - Writing Reports (Lecture Notes)
-tags: [rtw, lecture, writing, workplace-english]
+tags: [workplace-english]
 status: stable
+course: 96642162
 ---
 
 # How to Write a Workplace Report

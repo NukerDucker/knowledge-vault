@@ -1,7 +1,8 @@
 ---
 title: Modular Synth — Session State
-tags: [mcu, stm32, synth, session]
+tags: [stm32, synth]
 status: active
+course: 01276314
 created: 2026-08-23
 updated: 2026-09-02
 ---

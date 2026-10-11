@@ -1,6 +1,6 @@
 ---
 title: "Week 7 — Crazy 8s & Storyboarding"
-tags: [uxui, assignment, group-work, ideation, storyboard]
+tags: [assignment, group-work]
 status: submitted
 created: 2026-08-11
 updated: 2026-08-23
@@ -10,6 +10,7 @@ type: group-work
 submit: G2_UserCases_Concept_Storyboard.pptx.pdf
 team: G2
 subject: uxui
+course: 01276545
 ---
 
 # Week 7 Assignment — Crazy 8s & Storyboarding

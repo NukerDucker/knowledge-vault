@@ -1,9 +1,10 @@
 ---
 title: YSEALI AFP 2027 — Application Essays
-tags: [career, fellowship, application, yseali]
+tags: [career]
 status: draft
 created: 2026-09-24
 due: 2026-10-12
+subject: career
 ---
 
 # YSEALI Academic Fellows Program 2027 — Essays

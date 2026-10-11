@@ -1,11 +1,12 @@
 ---
 title: RTW Unit 3 — Corporate Culture Assignments
-tags: [university, assignment, rtw]
+tags: [university, assignment, workplace-english]
 status: submitted
 created: 2026-07-24
 updated: 2026-07-26
 due: 2026-08-06
 subject: rtw
+course: 96642162
 ---
 
 # RTW Unit 3 — Corporate Culture

@@ -1,11 +1,11 @@
 ---
 title: Group Workshop — Tom Retirement Portfolio
-tags: [investment-planning, group-work, portfolio, retirement]
-status: active
-updated: 2026-09-24
+tags: [finance, group-work]
+status: submitted
 due: 2026-10-08
 points: 20
 subject: investment-planning
+course: 96643026
 ---
 
 # Group Workshop — Tom Retirement Portfolio
@@ -25,6 +25,12 @@ subject: investment-planning
 **Submit:** PPT file + PDF report (5 content pages; max 9 pages including cover/intro/TOC/references)  
 **Presenters:** 2 representatives per group  
 **Q&A:** answer 1 question from another group + 1 from lecturer
+
+## Status — closed 2026-10-08
+
+Presentation delivered and final report (PPT + PDF) submitted 2026-10-08. All 20% deliverables done.
+
+**Remaining for this course:** final exam only — Thu 2026-10-22. Time + details in [[semester-schedule-2026]].
 
 ---
 

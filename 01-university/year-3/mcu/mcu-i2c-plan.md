@@ -1,9 +1,10 @@
 ---
 title: I2C Implementation Plan — Modular Synth
-tags: [mcu, stm32, i2c, synth, piano]
+tags: [stm32, synth]
 status: in-progress
 created: 2026-09-23
 subject: mcu
+course: 01276314
 ---
 
 # I2C Implementation Plan

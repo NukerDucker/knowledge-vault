@@ -1,7 +1,8 @@
 ---
 title: Stock Risk Analysis — NVIDIA (Wk 5 Worksheet)
-tags: [investment-planning, stock, risk-analysis, nvidia]
+tags: [finance]
 status: stable
+course: 96643026
 created: 2026-08-06
 ---
 

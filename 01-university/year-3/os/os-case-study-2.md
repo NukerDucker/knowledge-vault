@@ -2,14 +2,13 @@
 title: OS Case Study 2 — Synchronization
 tags:
   - university
-  - os
   - group-work
-  - synchronization
 status: submitted
 created: 2026-08-30
 due: 2026-09-11
 points: 15%
 subject: os
+course: 01276324
 ---
 
 # OS Case Study 2 — Synchronization

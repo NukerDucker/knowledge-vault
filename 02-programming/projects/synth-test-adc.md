@@ -1,6 +1,6 @@
 ---
 title: Synth Test ADC — Hall Effect Sensor Mux
-tags: [stm32, adc, mux, hall-effect, embedded]
+tags: [stm32, adc]
 status: active
 updated: 2026-09-23
 ---

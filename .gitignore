@@ -19,3 +19,13 @@ skills-lock.json
 
 # Per-session agent report — churns every turn, no vault content depends on it.
 .claude/reports/
+
+# Generated calendar export — derived from note frontmatter; nothing imports it.
+# Regenerate with: python3 _meta/sync-calendar.py
+# The script stays tracked: it is the only vault-to-external-calendar path.
+_meta/assignments.ics
+
+# Private notes — symlinks into ~/Documents/Personal/, which lives outside the
+# vault. This repo is public; nothing here is ever meant to be committed.
+# Folder name stays generic on purpose: naming a file here would publish its topic.
+_private/

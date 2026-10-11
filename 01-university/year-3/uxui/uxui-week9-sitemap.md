@@ -1,19 +1,17 @@
 ---
 title: Week 9 — Sitemap & App Comparison
 tags:
-  - uxui
   - assignment
   - group-work
-  - sitemap
-  - information-architecture
-status: in-progress
+status: submitted
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-10-11
 due: TBA
 points: TBA
 type: group-work
 team: G2
 subject: uxui
+course: 01276545
 ---
 
 # Week 9 — Sitemap & App Comparison

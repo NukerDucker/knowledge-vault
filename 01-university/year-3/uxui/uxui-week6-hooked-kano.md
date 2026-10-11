@@ -2,12 +2,12 @@
 title: "UX/UI Wk6: Hooked + Kano — Facility Booking"
 tags:
   - university
-  - uxui
   - group-work
 status: submitted
 created: 2026-08-09
 due: 2026-08-09
 subject: uxui
+course: 01276545
 ---
 
 # UX/UI Week 6 — Hooked Loop + Kano Model

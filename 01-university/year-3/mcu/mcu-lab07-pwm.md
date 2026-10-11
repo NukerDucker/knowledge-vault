@@ -1,9 +1,10 @@
 ---
 title: Lab 07 — PWM
-tags: [mcu, stm32, pwm, timer, rgb, lab]
+tags: [stm32, lab]
 status: active
 updated: 2026-09-09
 subject: mcu
+course: 01276314
 ---
 
 # Lab 07 — PWM

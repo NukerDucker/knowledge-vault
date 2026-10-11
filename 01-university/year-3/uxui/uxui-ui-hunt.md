@@ -2,14 +2,14 @@
 title: "UX/UI: UI Hunt — Unusual Screens"
 tags:
   - university
-  - uxui
   - individual
 status: submitted
 created: 2026-07-24
 updated: 2026-08-23
-due: 2026-09-07
+due: 2026-09-21
 points: 6
 subject: uxui
+course: 01276545
 ---
 
 # UX/UI — UI Hunt: Capture UI Screens That Feel "Unusual"

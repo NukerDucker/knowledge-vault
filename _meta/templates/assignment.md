@@ -5,6 +5,7 @@ status: active
 due: 
 points: 
 subject: 
+course: 
 ---
 
 # 
@@ -23,6 +24,8 @@ Constraint is the highest-value line. Negative facts ("SLD is banned", "no
 generative AI") prevent more wasted work than any amount of description.
 
 due: ISO date or TBA.  points: a number, or delete the line.
+subject: the folder key (uxui, mcu).  course: the registrar code (01276545).
+Both are required — codes come from courses/course-registry.md, never invented.
 status: active -> submitted. The tracker generates itself from these;
 never edit the tracker by hand.
 -->

@@ -2,12 +2,12 @@
 title: "UX/UI Wk5: POV + HMW — Facility Booking"
 tags:
   - university
-  - uxui
   - group-work
 status: submitted
 created: 2026-08-09
 due: 2026-08-09
 subject: uxui
+course: 01276545
 ---
 
 # UX/UI Week 5 — POV Statement + HMW ✅ DONE

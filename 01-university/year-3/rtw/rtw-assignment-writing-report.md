@@ -1,10 +1,11 @@
 ---
 title: RTW Assignment - Writing Report + In-Class Presentation
-tags: [rtw, assignment]
+tags: [workplace-english, assignment]
 status: submitted
 due: 2026-09-24
 points: 8
 subject: rtw
+course: 96642162
 updated: 2026-09-17
 ---
 
@@ -12,7 +13,7 @@ updated: 2026-09-17
 
 **Report Deadline:** 24 Sep 2026 / 10:00 PM — submit to MS Teams
 
-> **Format change:** Task 2 changed from video clip submission → in-class presentation on 22 Oct 2026.
+> **Format change:** Task 2 changed from video clip submission → in-class presentation. Presented online 8 Oct 2026 — done, no further in-class presentation.
 
 ## Task 1: Write a Report (4/60 points)
 
@@ -27,9 +28,9 @@ Write a report from the assigned situation using the given format.
 
 → Choose one case from [[rtw-writing-report-lecture]] (Case 1, 2, or 3)
 
-## Task 2: In-Class Presentation (4/60 points)
+## Task 2: In-Class Presentation (4/60 points) — DONE
 
-Present the content of your report in class on **22 Oct 2026, 9:00–11:30**.
+Presented online 8 Oct 2026. Script: [[rtw-writing-report-presentation-script]]
 
 - **Order:** by name-list number
 - **Rule:** leave after your presentation is done
@@ -46,10 +47,10 @@ Present the content of your report in class on **22 Oct 2026, 9:00–11:30**.
 | 17 Sep 2026 | Lecture: Writing Reports + Work Presentations |
 | 24 Sep 2026 | **Report deadline (10 PM)** — no lecture, work day |
 | 1 Oct 2026 | Lecture: Positive & Negative Thinking + Teamwork Management |
-| 8 Oct 2026 | **Final Test** (20 pts) — all 4 topics |
-| 22 Oct 2026 | **In-Class Presentation** (9:00–11:30) — by name-list number, leave after done |
+| 8 Oct 2026 | In-class presentation delivered (online) |
+| 22 Oct 2026 (Thu) | **Final exam** (20 pts) — all 4 topics |
 
-## Final Test Topics (8 Oct, 20 points)
+## Final Exam Topics (22 Oct, 20 points)
 
 1. Positive & negative thinking
 2. Teamwork management

@@ -1,9 +1,10 @@
 ---
 title: 74HC4067 — 16-Channel Analog MUX
-tags: [mcu, stm32, hardware, component, adc, mux]
+tags: [stm32, hardware, adc]
 status: active
 updated: 2026-09-06
 subject: mcu
+course: 01276314
 ---
 
 # 74HC4067 — 16-Channel Analog MUX

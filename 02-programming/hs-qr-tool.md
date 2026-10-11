@@ -1,6 +1,6 @@
 ---
 title: House Samyan QR Ticket Generator
-tags: [work, house-samyan, tools, programming]
+tags: [work, programming]
 status: stable
 ---
 

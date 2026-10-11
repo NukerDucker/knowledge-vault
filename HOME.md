@@ -7,15 +7,14 @@ status: active
 # HOME
 
 <!-- BEGIN GENERATED: due-next -->
-<!-- regenerated 2026-09-29 — do not edit by hand -->
+<!-- regenerated 2026-10-11 — do not edit by hand -->
 
 | Due | Assignment | Subject | Points | Status |
 | --- | ---------- | ------- | ------ | ------ |
-| 2026-09-24 | [[rtw-writing-report-presentation\|RTW — Writing Reports + Work Presentations Assignments]] | rtw | — | 🔄 active |
-| 2026-09-30 | [[sysadmin-assignment02\|SysAdmin Assignment 02 — Basic Linux Server Config]] | sysadmin | 15 | 🔄 active |
-| 2026-10-05 | [[uxui-usability-test\|UX/UI Usability Test & UI Improvement — Individual]] | uxui | 10 | 🔄 active |
-| 2026-10-08 | [[group-workshop-tom-retirement\|Group Workshop — Tom Retirement Portfolio]] | investment-planning | 20 | 🔄 active |
-| 2026-10-12 | [[yseali-afp-2027-essays\|YSEALI AFP 2027 — Application Essays]] | — | — | 🔄 draft |
+| 2026-10-12 | [[yseali-afp-2027-essays\|YSEALI AFP 2027 — Application Essays]] | career | — | 🔄 draft |
+| 2026-10-13 | [[rome-pathfinding\|Rome Pathfinding — AI Assignment]] | ai | 50% | 🔄 active |
+| 2026-10-19 | [[uxui-facility-booking-project\|UX/UI Project: KMITL Campus Facility Booking System]] | uxui | — | 🔄 active |
+| TBA | [[sysadmin-assignment02\|SysAdmin Assignment 02 — Basic Linux Server Config]] | sysadmin | 15 | 🔄 active |
 
 <!-- END GENERATED: due-next -->
 

@@ -2,15 +2,14 @@
 title: "UX/UI: Sign In / Sign Up Self-Checklist (Student Version)"
 tags:
   - university
-  - uxui
   - individual
-  - figma
 status: submitted
 created: 2026-08-25
 updated: 2026-08-26
 due: 2026-08-25
 points: 1
 subject: uxui
+course: 01276545
 ---
 
 # UX/UI — Sign In / Sign Up Self-Checklist
@@ -152,3 +151,7 @@ Frames were generated through the Figma MCP plugin API, not drawn by hand. Two t
 - [ ] Confirm whether the brief wants clickable navigation only or a graded state demo — if the latter, add resting-state duplicates of `4:2` / `5:2`
 - [ ] Confirm deadline + point value, then add `due:`/`points:` to frontmatter (the tracker row generates itself)
 - [x] Export final submission PDF — submitted 2026-08-26
+
+---
+
+*See also: [[assignments-tracker]] · [[uxui-project-state]]*

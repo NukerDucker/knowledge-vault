@@ -1,12 +1,13 @@
 ---
 title: RTW — Exhibition Attendance + Career Assignment
-tags: [rtw, assignment]
+tags: [workplace-english, assignment]
 status: submitted
 created: 2026-08-28
 updated: 2026-09-03
 due: 2026-09-03
 points: null
 subject: rtw
+course: 96642162
 ---
 
 # Exhibition Attendance + Career Assignment

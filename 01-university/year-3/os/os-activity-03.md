@@ -2,13 +2,12 @@
 title: OS Activity 03 — Synchronization II
 tags:
   - university
-  - os
   - individual
-  - synchronization
 status: submitted
 created: 2026-08-30
 due: 2026-09-04
 subject: os
+course: 01276324
 ---
 
 # OS Activity 03 — Synchronization II

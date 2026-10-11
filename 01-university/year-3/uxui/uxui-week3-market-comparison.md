@@ -2,13 +2,13 @@
 title: "UX/UI Wk3: Market Comparison"
 tags:
   - university
-  - uxui
   - group-work
 status: submitted
 created: 2026-07-24
 due: 2026-08-03
 points: 10
 subject: uxui
+course: 01276545
 ---
 
 # UX/UI Week 3 — Market Comparison

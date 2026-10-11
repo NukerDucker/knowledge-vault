@@ -1,9 +1,10 @@
 ---
 title: Lab 08 — LCD and Touch Sensor
-tags: [mcu, stm32, lcd, touch, rgb, am2320, lab]
+tags: [stm32, lab]
 status: submitted
 updated: 2026-09-16
 subject: mcu
+course: 01276314
 ---
 
 # Lab 08 — LCD and Touch Sensor

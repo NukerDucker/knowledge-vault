@@ -1,7 +1,8 @@
 ---
 title: Rome Pathfinding — Session State
-tags: [ai, project, session-log]
+tags: [ai, project]
 status: active
+course: 01276342
 created: 2026-08-06
 updated: 2026-08-21
 ---

@@ -2,13 +2,12 @@
 title: OS Activity 01 — Introduction to Threads
 tags:
   - university
-  - os
   - individual
-  - threads
 status: submitted
 created: 2026-09-11
 due: TBA
 subject: os
+course: 01276324
 ---
 
 # OS Activity 01 — Introduction to Threads
